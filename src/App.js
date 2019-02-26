@@ -12,6 +12,7 @@ class App extends Component {
      <div>
       <Route path='/' component={Header}/>
       <Route path='/syllabus' component={Head} />
+      
       </div>
       </Router>
     );

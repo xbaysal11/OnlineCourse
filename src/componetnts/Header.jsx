@@ -29,7 +29,7 @@ class Header extends Component {
 
   render() {
     return (
-      <Bg>
+      <div>
         <Col span={18} offset={3}>
           <Menu
             onClick={this.handleClick}
@@ -59,9 +59,10 @@ class Header extends Component {
             <Button className={"head_btn2"}>Register</Button>
 
           </Menu>
-
         </Col>
-      </Bg>
+        
+      </div>
+      
     );
   }
 }
@@ -78,7 +79,5 @@ const SearchItem = styled.input`
     padding-left:20px;
 }
 ;`
-const Bg = styled.div`
-background: papayawhip;
-`;
+
 

@@ -5,11 +5,14 @@ import { Button } from 'antd';
 import styled from 'styled-components';
 import bgImg from '../img/rawpixel-798163-unsplash.jpg'
 import '../css/index.css';
+import Intro from './Intro';
+
 
 
 class Head extends Component {
     render() {
         return (
+            <>
             <BgImg>
                 <Col span={18} offset={3}>
                     <MyInput placeholder="Search Catalog"></MyInput>
@@ -17,6 +20,8 @@ class Head extends Component {
                 </Col>
 
             </BgImg>
+            <Intro/>
+            </>
         );
     }
 }
@@ -26,13 +31,13 @@ export default Head;
 
 const BgImg = styled.div`
     text-align:center;
-  height: 300px;
+  height: 200px;
  background-image:linear-gradient(rgb(254, 254, 254),rgb(244, 207, 189))
 
 `;
 
 const MyInput = styled.input`
-margin-top: 80px;
+margin-top: 50px;
 width:300px;
 background-color:white;
   border: 1px solid white;
