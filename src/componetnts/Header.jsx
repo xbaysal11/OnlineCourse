@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { Menu, Icon } from 'antd';
 import { Row, Col } from 'antd';
 import { Button } from 'antd';
+import styled from 'styled-components';
+import '../css/index.css';
+
+
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -19,9 +23,12 @@ class Header extends Component {
     });
   }
 
+
+
+
   render() {
     return (
-      <div>
+      <Bg>
     <Col span={18} offset={3}>
          <Menu
         onClick={this.handleClick}
@@ -44,20 +51,29 @@ class Header extends Component {
             <Menu.Item key="setting:4">Option 4</Menu.Item>
           </MenuItemGroup>
         </SubMenu>
-       
-        <Button>Log in</Button>
-      <Button>Register</Button>
+        <SearchItem placeholder = "Search"></SearchItem>
+
+        <Button className = {"head_btn1"}>Log in</Button>
+      <Button className = {"head_btn2"}>Register</Button>
+
       </Menu>
       
       </Col>
-      </div>
+      </Bg>
     );
   }
 }
 
 export default Header;
 
-const Button = styled.button`
-  color: red;
-  background-color:blue;
-`;
+const SearchItem = styled.input`
+  background-color:rgb(49, 49, 49);
+  border: 1px solid rgb(49, 49, 49);
+  border-radius: 5px;
+  height:2rem;
+`
+
+const Bg = styled.div`
+background-color:#222;
+color: black;
+`
