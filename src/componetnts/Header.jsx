@@ -3,6 +3,7 @@ import { Menu, Icon } from 'antd';
 import { Row, Col } from 'antd';
 import { Button } from 'antd';
 import styled from 'styled-components';
+import {NavLink} from 'react-router-dom'
 import '../css/index.css';
 
 
@@ -38,19 +39,16 @@ class Header extends Component {
         <Menu.Item key="mail">
           <Icon type="mail" />Navigation One
         </Menu.Item>
-        <Menu.Item key="app" disabled>
-          <Icon type="appstore" />Navigation Two
+        <Menu.Item key="app">
+        <li><NavLink to="/syllabus"> <Icon type="appstore" />Navigation Two</NavLink></li>
         </Menu.Item>
         <SubMenu title={<span className="submenu-title-wrapper"><Icon type="setting" />Create</span>}>
           <MenuItemGroup title="Item 1">
             <Menu.Item key="setting:1">Option 1</Menu.Item>
             <Menu.Item key="setting:2">Option 2</Menu.Item>
           </MenuItemGroup>
-          <MenuItemGroup title="Item 2">
-            <Menu.Item key="setting:3">Option 3</Menu.Item>
-            <Menu.Item key="setting:4">Option 4</Menu.Item>
-          </MenuItemGroup>
         </SubMenu>
+
         <SearchItem placeholder = "Search"></SearchItem>
 
         <Button className = {"head_btn1"}>Log in</Button>
@@ -70,10 +68,12 @@ const SearchItem = styled.input`
   background-color:rgb(49, 49, 49);
   border: 1px solid rgb(49, 49, 49);
   border-radius: 5px;
+  color: #fff;
   height:2rem;
-`
-
+  &::-webkit-input-placeholder {
+    padding-left:20px;
+}
+;`
 const Bg = styled.div`
-background-color:#222;
-color: black;
-`
+background: papayawhip;`;
+

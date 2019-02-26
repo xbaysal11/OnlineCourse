@@ -11,12 +11,11 @@ class Head extends Component {
     render() {
         return (
             <BgImg>
-                <img src={bgImg} className="image"></img>
                 <Col span={18} offset={3}>
-                    <MyInput placeholder = "Search Catalog"></MyInput>
-
+                    <MyInput placeholder="Search Catalog"></MyInput>
+                    <Button type="primary" className="btn_head">Primary</Button>
                 </Col>
-                
+
             </BgImg>
         );
     }
@@ -26,10 +25,19 @@ export default Head;
 
 
 const BgImg = styled.div`
- 
-`
+    text-align:center;
+  height: 300px;
+ background-image:linear-gradient(rgb(254, 254, 254),rgb(244, 207, 189))
+
+`;
+
 const MyInput = styled.input`
-background-color:rgb(49, 49, 49);
-  border: 1px solid rgb(49, 49, 49);
+margin-top: 80px;
+width:300px;
+background-color:white;
+  border: 1px solid white;
   border-radius: 5px;
-  height:2rem;`
+  height:2rem;
+  &::-webkit-input-placeholder {
+    padding-left:20px;
+}`;
