@@ -4,3 +4,11 @@
 .head_btn2{
     margin-left: 10px;
 }
+
+/* head img*/
+
+.image{
+    margin-top: 10px;
+    width: 100%;
+    height: 40vh;
+}
