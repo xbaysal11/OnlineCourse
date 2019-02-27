@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "antd/dist/antd.css";
-import Header from './componetnts/Header';
-import Head from './componetnts/Head';
+import Header from './components/Header';
+import Head from './components/Head';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 

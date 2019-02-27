@@ -5,7 +5,7 @@ import { Button } from 'antd';
 import styled from 'styled-components';
 import bgImg from '../img/rawpixel-798163-unsplash.jpg'
 import '../css/index.css';
-import Intro from './Intro';
+import LeftTable from './LeftTable';
 
 
 
@@ -14,13 +14,15 @@ class Head extends Component {
         return (
             <>
             <BgImg>
+            
                 <Col span={18} offset={3}>
                     <MyInput placeholder="Search Catalog"></MyInput>
                     <Button type="primary" className="btn_head">Primary</Button>
                 </Col>
-
+                
             </BgImg>
-            <Intro/>
+            <LeftTable/>
+            
             </>
         );
     }

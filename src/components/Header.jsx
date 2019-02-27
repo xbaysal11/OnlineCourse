@@ -70,10 +70,10 @@ class Header extends Component {
 export default Header;
 
 const SearchItem = styled.input`
-  background-color:rgb(49, 49, 49);
-  border: 1px solid rgb(49, 49, 49);
+  background-color:#EEE;
+  border: 1px solid #EEE;
   border-radius: 5px;
-  color: #fff;
+  color: #222;
   height:2rem;
   &::-webkit-input-placeholder {
     padding-left:20px;
