@@ -1,7 +1,6 @@
 import { Tabs, Radio } from 'antd';
 import React from 'react';
 import Intro from './Intro';
-import '../css/index.css';
 
 const TabPane = Tabs.TabPane;
 
@@ -29,7 +28,7 @@ class LeftTable extends React.Component {
         <Tabs
           defaultActiveKey="1"
           tabPosition={mode}
-          style={{ height: 250 }}
+          style={{ height: 300 }}
         >
           <TabPane tab="Week 1" key="1"><Intro/></TabPane>
           <TabPane tab="Week 2" key="2">COnTENt Of awdlknjawdkjbawdlkwblkawabwlkdbalwkdhbawbhdlkhwb</TabPane>
