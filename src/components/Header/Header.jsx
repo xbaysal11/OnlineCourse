@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col, Icon, Menu, Button, Layout } from 'antd';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom';
+import Login from '../Registration/Login';
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -20,6 +20,8 @@ class Header extends Component {
       current: e.key,
     });
   }
+
+  
 
 
 
@@ -56,8 +58,8 @@ class Header extends Component {
                   </SubMenu>
 
                   <SearchItem placeholder="Search"></SearchItem>
-
-                  <Button className={"head_btn1"}>Log in</Button>
+{/* 
+                  <Login /> */}
                   <Button className={"head_btn2"}>Register</Button>
 
                 </Menu>

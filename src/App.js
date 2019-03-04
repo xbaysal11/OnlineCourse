@@ -14,10 +14,10 @@ class App extends Component {
      <div>
   
       <Route path='/' component={Header}/>
-      <Route path='/' component={Foot}/>
+     
       <Route path='/' component={Head2} exact/>
       <Route path='/syllabus' component={Head} />
-      
+      <Route path='/' component={Foot}/>
       </div>
       </Router>
     );
