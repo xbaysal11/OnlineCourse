@@ -22,9 +22,9 @@ class LeftTable extends React.Component {
         return (
             <div>
                 {/*  <Radio.Group onChange={this.handleModeChange} value={mode} style={{ marginBottom: 8 }}>
-          <Radio.Button value="top">Horizontal</Radio.Button>
-          <Radio.Button value="left">Vertical</Radio.Button>
-        </Radio.Group> */}
+                    <Radio.Button value="top">Horizontal</Radio.Button>
+                    <Radio.Button value="left">Vertical</Radio.Button>
+                    </Radio.Group> */}
                 <Tabs
                     defaultActiveKey="1"
                     tabPosition={mode}
