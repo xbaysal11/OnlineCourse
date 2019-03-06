@@ -13,11 +13,11 @@ class App extends Component {
         return (
             <Router>
                 <>
-                    <Route path="/" component={Header} />
-                    <Route path="/" component={Head2} exact />
+                    <Header/>
+                    <Route path="/" component={Head2}  />
                     <Route path="/syllabus" component={Head} />
-                    <Route path="/" component={Information} exact/>
-                    <Route path="/" component={Foot}/>
+                    <Route path="/information" component={Information} />
+                    <Foot/>
                 </>
             </Router>
         );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import styled from "styled-components";
 import { Row, Col } from "antd";
 
@@ -7,18 +7,24 @@ class Courses extends Component {
         return (
             <div>
                 <Col span={18} offset={3}>
-                    <Title>
-                        Наши курсы
-                     </Title>
-    
+                    <Title>Наши курсы</Title>
+
                     <Box>
                         <Row>
-                        <Col span={8}>  <Course>Java</Course></Col>
-                        <Col span={8}>  <Course>Java</Course></Col>
-                        <Col span={8}>  <Course>Java</Course></Col>
-                    </Row>
+                            <Col span={8}>
+                                {" "}
+                                <Course>Java</Course>
+                            </Col>
+                            <Col span={8}>
+                                {" "}
+                                <Course>Java</Course>
+                            </Col>
+                            <Col span={8}>
+                                {" "}
+                                <Course>Java</Course>
+                            </Col>
+                        </Row>
                     </Box>
-
                 </Col>
             </div>
         );
@@ -27,18 +33,16 @@ class Courses extends Component {
 
 export default Courses;
 
-
 const Title = styled.h3`
-margin-top:50px;
+    margin-top: 50px;
 `;
 const Box = styled.div`
-border: 1px solid #DDDDDD;
-width:70%;
+    border: 1px solid #dddddd;
+    width: 70%;
 `;
 
 const Course = styled.div`
-border: 1px solid #DDDDDD;
-text-align:center;
-height: 250px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    height: 250px;
 `;
-

@@ -7,12 +7,15 @@ class HeadMenu extends Component {
         return (
             <>
                 <BotMenu>
-                    <NavLink to="/info">
-                        <Mya>Information</Mya></NavLink>
+                    <NavLink to="/information">
+                        <Mya>Information</Mya>
+                    </NavLink>
                     <NavLink to="/">
-                        <Mya>Reviews</Mya></NavLink>
+                        <Mya>Reviews</Mya>
+                    </NavLink>
                     <NavLink to="/syllabus">
-                        <Mya>Syllabus</Mya></NavLink>
+                        <Mya>Syllabus</Mya>
+                    </NavLink>
                 </BotMenu>
             </>
         );
