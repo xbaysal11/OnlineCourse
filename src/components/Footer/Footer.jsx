@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row as RowAntd, Col } from "antd";
 import styled from "styled-components";
 
-import { logo } from "../../assets/img/tv.svg";
+import logo from "../../assets/img/tv.svg";
 
 class Footer extends Component {
     render() {
@@ -68,9 +68,19 @@ class Footer extends Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Logo>
-                        <img src={logo} alt="" />
-                    </Logo>
+                    <Col offset={4}>
+                        <Flex>
+                            <Logo>
+                                <img src={logo} alt="" />
+                            </Logo>
+                            <Copyright>
+                                <p>
+                                    © Все права защищены 2019. Разработан и
+                                    поддерживается IT-Lab
+                                </p>
+                            </Copyright>
+                        </Flex>
+                    </Col>
                 </Row>
             </FooterMain>
         );
@@ -80,10 +90,22 @@ class Footer extends Component {
 export default Footer;
 
 const Logo = styled.div`
+    display: block;
+
     img {
-        width: 100px;
-        height: 100px;
+        margin-bottom: 4vh;
+        width: 50px;
+        height: 50px;
     }
+`;
+
+const Copyright = styled.div`
+    color: #b2bec3;
+    padding-left: 2em;
+    align-self: center;
+`;
+const Flex = styled.div`
+    display: flex;
 `;
 const FooterMain = styled.div`
     background: linear-gradient(
@@ -96,7 +118,7 @@ const FooterMain = styled.div`
 const Row = styled(RowAntd)``;
 const Box = styled.div`
     color: #fff;
-    height: 40vh;
+    height: 35vh;
     padding: 0 5vw;
     text-transform: uppercase;
 
