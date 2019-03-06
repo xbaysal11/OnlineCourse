@@ -101,7 +101,7 @@ const Logo = styled.div`
 
 const Copyright = styled.div`
     color: #b2bec3;
-    padding-left: 2em;
+    padding: 0 2em;
     align-self: center;
 `;
 const Flex = styled.div`
