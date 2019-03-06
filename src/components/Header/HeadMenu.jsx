@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Icon, Menu, Button } from "antd";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 class HeadMenu extends Component {
@@ -7,9 +7,15 @@ class HeadMenu extends Component {
         return (
             <>
                 <BotMenu>
-                    <Mya>Information</Mya>
-                    <Mya>Reviews</Mya>
-                    <Mya>Syllabus</Mya>
+                    <NavLink to="/information">
+                        <Mya>Information</Mya>
+                    </NavLink>
+                    <NavLink to="/">
+                        <Mya>Reviews</Mya>
+                    </NavLink>
+                    <NavLink to="/syllabus">
+                        <Mya>Syllabus</Mya>
+                    </NavLink>
                 </BotMenu>
             </>
         );

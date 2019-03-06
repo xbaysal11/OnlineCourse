@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import { Row, Col, Icon, Menu, Button, Layout } from "antd";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import "font-awesome/css/font-awesome.min.css";
+
 import Login from "../Registration/Login";
+import HeaderUser from "./HeaderUser";
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -24,8 +27,8 @@ class Header extends Component {
             <Bg>
                 <Layout>
                     <Layout.Header>
-                        <Row>
-                            <Col span={18} offset={3}>
+                        <Row align="middle" type="flex">
+                            <Col span={6} offset={3}>
                                 <Menu
                                     onClick={this.handleClick}
                                     selectedKeys={[this.state.current]}
@@ -37,42 +40,31 @@ class Header extends Component {
                                         <NavLink to="/">
                                             {" "}
                                             <Icon type="mail" />
-                                            Navigation One{" "}
+                                            Teacher{" "}
                                         </NavLink>
                                     </Menu.Item>
 
                                     <Menu.Item key="app">
                                         <NavLink to="/syllabus">
                                             <Icon type="appstore" />
-                                            Navigation{" "}
+                                            Courses{" "}
                                         </NavLink>
                                     </Menu.Item>
-
-                                    <SubMenu
-                                        title={
-                                            <span className="submenu-title-wrapper">
-                                                <Icon type="setting" />
-                                                Create
-                                            </span>
-                                        }
-                                    >
-                                        <MenuItemGroup title="Item 1">
-                                            <Menu.Item key="setting:1">
-                                                Option 1
-                                            </Menu.Item>
-                                            <Menu.Item key="setting:2">
-                                                Option 2
-                                            </Menu.Item>
-                                        </MenuItemGroup>
-                                    </SubMenu>
-
-                                    <SearchItem placeholder="Search" />
-                                    {/* 
-                  <Login /> */}
-                                    <Button className={"head_btn2"}>
-                                        Register
-                                    </Button>
                                 </Menu>
+                            </Col>
+                            <Col span={6}>
+                                <SearchItem placeholder="Search" />
+                            </Col>
+
+                            <Col
+                                span={6}
+                                style={{
+                                    justifyContent: "flex-end",
+                                    display: "flex"
+                                }}
+                            >
+                            <HeaderUser/>
+                                
                             </Col>
                         </Row>
                     </Layout.Header>
@@ -90,16 +82,14 @@ const SearchItem = styled.input`
     width: 15rem;
     border-radius: 5px;
     color: #222;
+    width:100%;
     height: 2rem;
     &::-webkit-input-placeholder {
         padding-left: 20px;
     }
 `;
 const Bg = styled.div`
-    .head_btn1 {
-        margin-left: 6rem;
-    }
     .head_btn2 {
-        margin-left: 1rem;
+        margin-left: 6rem;
     }
 `;

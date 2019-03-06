@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Button, Col } from "antd";
 import styled from "styled-components";
-import LeftTable from "../LeftTable";
+import Courses from "../Body/Courses";
+
+
 
 class Head extends Component {
     render() {
@@ -13,7 +15,7 @@ class Head extends Component {
                         <MyBtn>Search</MyBtn>
                     </Col>
                 </BgImg>
-                <LeftTable />
+                <Courses/>
             </>
         );
     }
