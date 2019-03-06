@@ -1,6 +1,18 @@
 import React, { Component } from "react";
-import { Row, Col, Avatar, Badge, Button, Layout } from "antd";
+import { Dropdown, Icon, Avatar, Badge, Menu, Button } from "antd";
 import styled from "styled-components";
+
+const menu = (
+    <Menu style = {{width:"200px"}}>
+        <Menu.Item key="3">My Corses</Menu.Item>
+        <Menu.Item key="3">Profile</Menu.Item>
+        <Menu.Item key="3">My Purchases</Menu.Item>
+        <Menu.Item key="3">Settings</Menu.Item>
+        <Menu.Item key="3">Help Center</Menu.Item>
+        <Menu.Divider />
+        <Menu.Item key="3">Log Out</Menu.Item>
+    </Menu>
+);
 
 class HeaderUser extends Component {
     render() {
@@ -9,7 +21,12 @@ class HeaderUser extends Component {
                 <Badge count={1}>
                     <Avatar shape="square" icon="user" />
                 </Badge>
-                <UserName> Ragnar Lod Brock</UserName>
+                <Dropdown overlay={menu} trigger={["click"]}>
+                    <UserName>
+                        Ragnar Lod Brock <Icon type="down" />
+                    </UserName>
+                </Dropdown>
+
                 {/*  <Button type="primary" className={"head_btn2"}>
                     Log in
                 </Button> */}
@@ -20,7 +37,10 @@ class HeaderUser extends Component {
 
 const UserName = styled.span`
     color: #fff;
-    margin-left: .5em;
+    margin-left: 0.5em;
+    cursor: pointer;
 `;
+
+const CustomMenu = styled(Menu)``;
 
 export default HeaderUser;
