@@ -4,12 +4,17 @@ module.exports = {
         es6: true,
         node: true
     },
-    extends: ["eslint:recommended", "react:recommended", "prettier"],
+    extends: [
+        "eslint:recommended",
+        "eslint-config-react:recommended",
+        "react:recommended",
+        "prettier"
+    ],
     parserOptions: {
         ecmaFeatures: {
             jsx: true
         },
-        ecmaVersion: 6,
+        ecmaVersion: 2017,
         sourceType: "module"
     },
     plugins: ["react", "prettier"],
@@ -22,8 +27,8 @@ module.exports = {
         // prettier
         // "prettier/prettier": "error",
         // react
-        // "react/jsx-uses-vars": 1,
-        // "react/jsx-uses-react": 1,
+        "react/jsx-uses-vars": 1,
+        "react/jsx-uses-react": 1,
         // "react/prop-types": 2,
         // "react/display-name": 0,
         // debug
