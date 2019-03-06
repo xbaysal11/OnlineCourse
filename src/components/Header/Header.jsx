@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { Row, Col, Icon, Menu, Button, Layout } from "antd";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import Login from "../Registration/Login";
+import 'font-awesome/css/font-awesome.min.css';
+
+
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -65,8 +67,12 @@ class Header extends Component {
                                             </Menu.Item>
                                         </MenuItemGroup>
                                     </SubMenu>
-
-                                    <SearchItem placeholder="Search" />
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search"></i>
+                                    <SearchItem placeholder="Search">
+                                    </SearchItem>
+                                   
+                                    <i className="fa fa-spinner fa-spin"></i>
                                     {/* 
                   <Login /> */}
                                     <Button className={"head_btn2"}>
