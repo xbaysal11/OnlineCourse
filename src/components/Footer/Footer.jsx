@@ -14,16 +14,17 @@ class Footer extends Component {
                             <h5>Social Media</h5>
                             <ul>
                                 <li>
-                                    <a href="#">Address n1</a>
+                                    <a href="https://www.facebook.com/groups/677106115786158">
+                                        Facebook
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n2</a>
+                                    <a href="https://www.instagram.com/itacademy.kg/">
+                                        Instagram
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n3</a>
-                                </li>
-                                <li>
-                                    <a href="#">Address n4</a>
+                                    <a href="#">itacademy98@gmail.com</a>
                                 </li>
                             </ul>
                         </Social>
@@ -33,38 +34,41 @@ class Footer extends Component {
                             <h5>Courses</h5>
                             <ul>
                                 <li>
-                                    <a href="#">Address n1</a>
+                                    <a href="#">Java/Mobile App</a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n2</a>
+                                    <a href="#">PHP</a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n3</a>
+                                    <a href="#">Java</a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n4</a>
+                                    <a href="#">Front-End</a>
+                                </li>
+                                <li>
+                                    <a href="#">C#</a>
+                                </li>
+                                <li>
+                                    <a href="#">Python</a>
                                 </li>
                             </ul>
                         </Courses>
                     </Col>
                     <Col span={6}>
-                        <Address>
-                            <h5>Address</h5>
+                        <Links>
+                            <h5>Links</h5>
                             <ul>
                                 <li>
-                                    <a href="#">Address n1</a>
+                                    <a href="#">About Project</a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n2</a>
+                                    <a href="#">Courses</a>
                                 </li>
                                 <li>
-                                    <a href="#">Address n3</a>
-                                </li>
-                                <li>
-                                    <a href="#">Address n4</a>
+                                    <a href="#">Filials</a>
                                 </li>
                             </ul>
-                        </Address>
+                        </Links>
                     </Col>
                 </Row>
                 <Row>
@@ -75,8 +79,8 @@ class Footer extends Component {
                             </Logo>
                             <Copyright>
                                 <p>
-                                    © Все права защищены 2019. Разработан и
-                                    поддерживается IT-Lab
+                                    © Все права защищены 2019. Разработал и
+                                    поддерживает IT-Lab
                                 </p>
                             </Copyright>
                         </Flex>
@@ -144,7 +148,7 @@ const Box = styled.div`
         margin: 0;
         padding: 0;
         li {
-            margin: 1rem 0;
+            margin-top: 0.8em;
         }
     }
 
@@ -161,4 +165,4 @@ const Box = styled.div`
 
 const Social = styled(Box)``;
 const Courses = styled(Box)``;
-const Address = styled(Box)``;
+const Links = styled(Box)``;
