@@ -3,7 +3,7 @@ import { Dropdown, Icon, Avatar, Badge, Menu, Button } from "antd";
 import styled from "styled-components";
 
 const menu = (
-    <Menu style = {{width:"200px"}}>
+    <Menu style={{ width: "200px" }}>
         <Menu.Item key="3">My Corses</Menu.Item>
         <Menu.Item key="3">Profile</Menu.Item>
         <Menu.Item key="3">My Purchases</Menu.Item>
