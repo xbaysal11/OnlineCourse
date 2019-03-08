@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Icon, Menu, Button, Layout } from "antd";
+import { Row, Col, Icon, Menu, Button, Layout, Input } from "antd";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
@@ -7,6 +7,7 @@ import "font-awesome/css/font-awesome.min.css";
 import Login from "../Registration/Login";
 import HeaderUser from "./HeaderUser";
 
+const Search = Input.Search;
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
@@ -53,7 +54,11 @@ class Header extends Component {
                                 </Menu>
                             </Col>
                             <Col span={6}>
-                                <SearchItem placeholder="Search" />
+                                <Search
+                                    placeholder=" search"
+                                    onSearch={value => console.log(value)}
+                                    // style={{ width: 200 }}
+                                />
                             </Col>
 
                             <Col
@@ -63,8 +68,7 @@ class Header extends Component {
                                     display: "flex"
                                 }}
                             >
-                            <HeaderUser/>
-                                
+                                <HeaderUser />
                             </Col>
                         </Row>
                     </Layout.Header>
@@ -76,13 +80,13 @@ class Header extends Component {
 
 export default Header;
 
-const SearchItem = styled.input`
+const SearchItem = styled(Search)`
     background-color: #eee;
     border: 1px solid #eee;
     width: 15rem;
     border-radius: 5px;
     color: #222;
-    width:100%;
+    width: 100%;
     height: 2rem;
     &::-webkit-input-placeholder {
         padding-left: 20px;
