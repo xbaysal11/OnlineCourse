@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Input as InputAntd, Icon, Col } from "antd";
+import { Input as InputAntd, Col } from "antd";
+import { colors } from "../../config/var";
+
 import styled from "styled-components";
 
 class BasicInfo extends Component {
@@ -27,7 +29,7 @@ export default BasicInfo;
 const AccountInfo = styled.form`
     padding: 2vw;
     background: #fff;
-    border-left: 4px solid #000117;
+    border-left: 4px solid ${colors.main};
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     margin: 24px 12px 52px 12px;

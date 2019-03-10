@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row as RowAntd, Col } from "antd";
 import styled from "styled-components";
+import { colors } from "../../config/var";
 
 import logo from "../../assets/img/tv.svg";
 
@@ -112,11 +113,7 @@ const Flex = styled.div`
     display: flex;
 `;
 const FooterMain = styled.div`
-    background: linear-gradient(
-        0deg,
-        rgba(0, 2, 24, 1) 0%,
-        rgba(0, 0, 0, 1) 100%
-    );
+    background: linear-gradient(0deg, ${colors.main} 0%, rgba(0, 0, 0, 1) 100%);
 `;
 
 const Row = styled(RowAntd)``;
