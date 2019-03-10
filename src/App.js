@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from "styled-components";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import AccountSettings from "./components/Account/AccountSettings";
-import Profile from "./components/Account/Profile";
+import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
 
 import "antd/dist/antd.css";
 
@@ -20,11 +20,8 @@ class App extends Component {
                         {/* <Courses /> */}
                         {/* <Head2 /> */}
                         {/* <Route path="/Account" component={Account} /> */}
-                        <Route
-                            path="/Account/Settings"
-                            component={AccountSettings}
-                        />
                         <Route path="/Profile" component={Profile} />
+                        <Route path="/Settings" component={Settings} />
                         <Footer />
                     </div>
                 </Router>

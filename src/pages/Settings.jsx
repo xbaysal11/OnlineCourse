@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Input as InputAntd, Icon } from "antd";
 import styled from "styled-components";
-import AccountSidebar from "./AccountSidebar";
-import BasicInfo from "./BasicInfo";
+import AccountSidebar from "../components/ProfileSettings/SettingsSidebar";
+import BasicInfo from "../components/ProfileSettings/BasicInfo";
 
-class AccountSettings extends Component {
+class Settings extends Component {
     render() {
         return (
             <SettingsAccount>
@@ -14,7 +13,7 @@ class AccountSettings extends Component {
         );
     }
 }
-export default AccountSettings;
+export default Settings;
 
 const SettingsAccount = styled.div`
     display: flex;
