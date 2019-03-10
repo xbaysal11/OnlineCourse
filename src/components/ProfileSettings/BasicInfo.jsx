@@ -8,7 +8,7 @@ class BasicInfo extends Component {
     render() {
         return (
             <div>
-                <Col offset={8}>
+                <Col offset={0}>
                     <AccountInfo action="#" method="post">
                         <div>
                             <label htmlFor="">Name</label>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Row as RowAntd, Col } from "antd";
 import styled from "styled-components";
 import { colors } from "../../config/var";
+import Container from "../index";
 
 import logo from "../../assets/img/tv.svg";
 
@@ -9,6 +10,7 @@ class Footer extends Component {
     render() {
         return (
             <FooterMain>
+                {/* <Container> */}
                 <Row>
                     <Col offset={3} span={6}>
                         <Social>
@@ -87,6 +89,7 @@ class Footer extends Component {
                         </Flex>
                     </Col>
                 </Row>
+                {/* </Container> */}
             </FooterMain>
         );
     }
