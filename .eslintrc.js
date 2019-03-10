@@ -6,8 +6,9 @@ module.exports = {
     },
     extends: [
         "eslint:recommended",
-        "eslint-config-react:recommended",
-        "react:recommended",
+        // "eslint-config-react:recommended",
+        // "eslint-plugin-react:recommended",
+        "plugin:react/recommended",
         "prettier"
     ],
     parserOptions: {

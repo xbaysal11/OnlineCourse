@@ -1,34 +1,39 @@
 import React, { Component } from "react";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import styled from "styled-components";
 
 import Header from "./components/Header/Header";
-import Head2 from "./components/Header/Head2";
-import Account from "./components/Account/Account";
 import Footer from "./components/Footer/Footer";
-import Courses from "./components/Body/Courses";
+import AccountSettings from "./components/Account/AccountSettings";
+import Profile from "./components/Account/Profile";
 
 import "antd/dist/antd.css";
-import AccountSettings from "./components/Account/AccountSettings";
 
 class App extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <Header />
-                    {/* <Courses /> */}
-                    {/* <Head2 /> */}
-                    {/* <Route path="/Account" component={Account} /> */}
-                    <Route
-                        path="/Account/settings"
-                        component={AccountSettings}
-                    />
-                    <Footer />
-                </div>
-            </Router>
+            <Wrapper>
+                <Router>
+                    <div>
+                        <Header />
+                        {/* <Courses /> */}
+                        {/* <Head2 /> */}
+                        {/* <Route path="/Account" component={Account} /> */}
+                        <Route
+                            path="/Account/Settings"
+                            component={AccountSettings}
+                        />
+                        <Route path="/Profile" component={Profile} />
+                        <Footer />
+                    </div>
+                </Router>
+            </Wrapper>
         );
     }
 }
 
 export default App;
+const Wrapper = styled.div`
+    background: #f7f7f7;
+`;

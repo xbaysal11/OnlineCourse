@@ -33,6 +33,8 @@ export default AccountSidebar;
 
 const SettingsSidebar = styled.ul`
     padding: 1vh 0;
+    position: fixed;
+    z-index: 1;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
