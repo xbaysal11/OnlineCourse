@@ -5,7 +5,7 @@ import styled from "styled-components";
 class Intro extends Component {
     render() {
         return (
-            <Col span={18} offset={3}>
+            <div className = "container">
                 <Border>
                     <H3>Введение</H3>
                     <Text>
@@ -23,7 +23,7 @@ class Intro extends Component {
                         тестировании, чтобы выполнить его профессионально.
                     </Text>
                 </Border>
-            </Col>
+            </div>
         );
     }
 }

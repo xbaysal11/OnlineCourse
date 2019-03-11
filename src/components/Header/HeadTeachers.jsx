@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, Col } from "antd";
 import styled from "styled-components";
-import Courses from "../Body/Courses";
+
 
 
 
@@ -10,12 +10,12 @@ class Head extends Component {
         return (
             <>
                 <BgImg>
-                    <Col span={18} offset={3}>
+                    <div className = "container">
                         <MyInput placeholder="Search Catalog" />
                         <MyBtn>Search</MyBtn>
-                    </Col>
+                    </div>
                 </BgImg>
-                <Courses/>
+              
             </>
         );
     }
@@ -25,7 +25,7 @@ export default Head;
 
 const BgImg = styled.div`
     text-align: center;
-    height: 200px;
+    height: 45vh;
     background-image: linear-gradient(rgb(254, 254, 254), rgb(244, 207, 189));
     .btn_head {
         margin-left: 15px;
@@ -33,7 +33,7 @@ const BgImg = styled.div`
 `;
 
 const MyInput = styled.input`
-    margin-top: 50px;
+    margin-top: 7em;
     width: 15rem;
     background-color: white;
     border: 1px solid white;
