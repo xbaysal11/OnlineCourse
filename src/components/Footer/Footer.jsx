@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Row as RowAntd, Col } from "antd";
 import styled from "styled-components";
 import { colors } from "../../config/var";
-import Container from "../index";
+import { Container } from "../index";
 
 import logo from "../../assets/img/tv.svg";
 
@@ -10,86 +10,86 @@ class Footer extends Component {
     render() {
         return (
             <FooterMain>
-                {/* <Container> */}
-                <Row>
-                    <Col offset={3} span={6}>
-                        <Social>
-                            <h5>Social Media</h5>
-                            <ul>
-                                <li>
-                                    <a href="https://www.facebook.com/groups/677106115786158">
-                                        Facebook
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/itacademy.kg/">
-                                        Instagram
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">itacademy98@gmail.com</a>
-                                </li>
-                            </ul>
-                        </Social>
-                    </Col>
-                    <Col span={6}>
-                        <Courses>
-                            <h5>Courses</h5>
-                            <ul>
-                                <li>
-                                    <a href="#">Java/Mobile App</a>
-                                </li>
-                                <li>
-                                    <a href="#">PHP</a>
-                                </li>
-                                <li>
-                                    <a href="#">Java</a>
-                                </li>
-                                <li>
-                                    <a href="#">Front-End</a>
-                                </li>
-                                <li>
-                                    <a href="#">C#</a>
-                                </li>
-                                <li>
-                                    <a href="#">Python</a>
-                                </li>
-                            </ul>
-                        </Courses>
-                    </Col>
-                    <Col span={6}>
-                        <Links>
-                            <h5>Links</h5>
-                            <ul>
-                                <li>
-                                    <a href="#">About Project</a>
-                                </li>
-                                <li>
-                                    <a href="#">Courses</a>
-                                </li>
-                                <li>
-                                    <a href="#">Filials</a>
-                                </li>
-                            </ul>
-                        </Links>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col offset={4}>
-                        <Flex>
-                            <Logo>
-                                <img src={logo} alt="" />
-                            </Logo>
-                            <Copyright>
-                                <p>
-                                    © Все права защищены 2019. Разработал и
-                                    поддерживает IT-Lab
-                                </p>
-                            </Copyright>
-                        </Flex>
-                    </Col>
-                </Row>
-                {/* </Container> */}
+                <Container>
+                    <Row>
+                        <Col offset={3} span={6}>
+                            <Social>
+                                <h5>Social Media</h5>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/groups/677106115786158">
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/itacademy.kg/">
+                                            Instagram
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">itacademy98@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </Social>
+                        </Col>
+                        <Col span={6}>
+                            <Courses>
+                                <h5>Courses</h5>
+                                <ul>
+                                    <li>
+                                        <a href="#">Java/Mobile App</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">PHP</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Java</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Front-End</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">C#</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Python</a>
+                                    </li>
+                                </ul>
+                            </Courses>
+                        </Col>
+                        <Col span={6}>
+                            <Links>
+                                <h5>Links</h5>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Project</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Courses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Filials</a>
+                                    </li>
+                                </ul>
+                            </Links>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col offset={4}>
+                            <Flex>
+                                <Logo>
+                                    <img src={logo} alt="" />
+                                </Logo>
+                                <Copyright>
+                                    <p>
+                                        © Все права защищены 2019. Разработал и
+                                        поддерживает IT-Lab
+                                    </p>
+                                </Copyright>
+                            </Flex>
+                        </Col>
+                    </Row>
+                </Container>
             </FooterMain>
         );
     }
