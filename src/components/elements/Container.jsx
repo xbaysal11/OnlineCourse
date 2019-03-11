@@ -15,10 +15,10 @@ class Container extends PureComponent {
 }
 
 const { above } = createBreakpoints({
-    sm: "576px",
-    md: "768px",
-    lg: "992px",
-    xl: "1200px"
+    sm: "426px",
+    md: "618px",
+    lg: "842px",
+    xl: "1050px"
 });
 
 const ContainerBlock = styled.div`
@@ -28,16 +28,16 @@ const ContainerBlock = styled.div`
     margin-right: auto;
     margin-left: auto;
     ${above("sm")} {
-        max-width: 540px;
+        max-width: 390px;
     }
     ${above("md")} {
-        max-width: 720px;
+        max-width: 570px;
     }
     ${above("lg")} {
-        max-width: 960px;
+        max-width: 810px;
     }
     ${above("xl")} {
-        max-width: 1140px;
+        max-width: 990px;
     }
 `;
 

@@ -12,7 +12,7 @@ class Footer extends Component {
             <FooterMain>
                 <Container>
                     <Row>
-                        <Col offset={3} span={6}>
+                        <Col span={8}>
                             <Social>
                                 <h5>Social Media</h5>
                                 <ul>
@@ -32,7 +32,7 @@ class Footer extends Component {
                                 </ul>
                             </Social>
                         </Col>
-                        <Col span={6}>
+                        <Col span={8}>
                             <Courses>
                                 <h5>Courses</h5>
                                 <ul>
@@ -57,7 +57,7 @@ class Footer extends Component {
                                 </ul>
                             </Courses>
                         </Col>
-                        <Col span={6}>
+                        <Col span={8}>
                             <Links>
                                 <h5>Links</h5>
                                 <ul>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input as InputAntd, Col } from "antd";
+import { Input as InputAntd } from "antd";
 import { colors } from "../../config/var";
 
 import styled from "styled-components";
@@ -8,18 +8,16 @@ class BasicInfo extends Component {
     render() {
         return (
             <div>
-                <Col offset={0}>
-                    <AccountInfo action="#" method="post">
-                        <div>
-                            <label htmlFor="">Name</label>
-                            <Input placeholder="Basic usage" />
-                        </div>
-                        <div>
-                            <label htmlFor="">E-mail</label>
-                            <Input placeholder="Basic usage" />
-                        </div>
-                    </AccountInfo>
-                </Col>
+                <AccountInfo action="#" method="post">
+                    <div>
+                        <label htmlFor="">Name</label>
+                        <Input placeholder="Basic usage" />
+                    </div>
+                    <div>
+                        <label htmlFor="">E-mail</label>
+                        <Input placeholder="Basic usage" />
+                    </div>
+                </AccountInfo>
             </div>
         );
     }
@@ -33,7 +31,7 @@ const AccountInfo = styled.form`
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     margin: 24px 12px 52px 12px;
-    width: 70vw;
+    /* width: 40vw; */
     min-height: 40vh;
 `;
 
