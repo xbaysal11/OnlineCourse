@@ -54,11 +54,11 @@ class Header extends Component {
                                 </Menu>
                             </Col>
                             <Col span={6}>
-                                <Search
+                          {      <Search
                                     placeholder=" search"
                                     onSearch={value => console.log(value)}
                                     // style={{ width: 200 }}
-                                />
+                                />}
                             </Col>
 
                             <Col
