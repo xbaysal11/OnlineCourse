@@ -4,13 +4,11 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 
-import Login from "../Registration/Login";
 import HeaderUser from "./HeaderUser";
 import { Container } from "..";
+import { LoginModal } from "..";
 
 const Search = Input.Search;
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 
 class Header extends Component {
     state = {
@@ -74,6 +72,7 @@ class Header extends Component {
                                         display: "flex"
                                     }}
                                 >
+                                    <LoginModal name={"login"} />
                                     <HeaderUser />
                                 </Col>
                             </Row>

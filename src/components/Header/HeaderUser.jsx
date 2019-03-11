@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Dropdown, Icon, Avatar, Badge, Menu, Button } from "antd";
+import PT from "prop-types";
 import styled from "styled-components";
+import OpenModal from "../modal/OpenModal";
 
 const menu = (
     <Menu style={{ width: "200px" }}>
@@ -13,21 +15,31 @@ const menu = (
 );
 
 class HeaderUser extends Component {
+    static propTypes = {
+        user: PT.object
+    };
     render() {
+        const { user } = this.props;
         return (
             <div>
-                <Badge count={1}>
-                    <Avatar shape="square" icon="user" />
-                </Badge>
-                <Dropdown overlay={menu} trigger={["click"]}>
-                    <UserName>
-                        Ragnar Lod Brock <Icon type="down" />
-                    </UserName>
-                </Dropdown>
-
-                {/*  <Button type="primary" className={"head_btn2"}>
-                    Log in
-                </Button> */}
+                {user ? (
+                    <>
+                        <Badge count={1}>
+                            <Avatar shape="square" icon="user" />
+                        </Badge>
+                        <Dropdown overlay={menu} trigger={["click"]}>
+                            <UserName>
+                                Ragnar Lod Brock <Icon type="down" />
+                            </UserName>
+                        </Dropdown>
+                    </>
+                ) : (
+                    <OpenModal name={"login"}>
+                        <Button type="primary" className={"head_btn2"}>
+                            Log in
+                        </Button>
+                    </OpenModal>
+                )}
             </div>
         );
     }
