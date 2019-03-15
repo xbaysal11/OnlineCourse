@@ -2,7 +2,7 @@ import React from "react";
 
 import { Route } from "react-router-dom";
 
-import { Profile, Settings, Index, Java, Courses, Teachers } from "./pages";
+import { Profile, Settings, Java, Courses, Teachers } from "./pages";
 
 const routes = () => (
     <>
