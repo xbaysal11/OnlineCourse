@@ -34,19 +34,20 @@ class HeaderUser extends Component {
                         </Dropdown>
                     </>
                 ) : (
-                    <Button.Groupg>
+                    <Button.Group>
                         <OpenModal name={"login"}>
                             <Button type="primary">Log in</Button>
                         </OpenModal>
                         <OpenModal name={"register"}>
                             <Button type="primary">Register</Button>
                         </OpenModal>
-                    </Button.Groupg>
+                    </Button.Group>
                 )}
             </div>
         );
     }
 }
+export default HeaderUser;
 
 const UserName = styled.span`
     color: #fff;
@@ -60,5 +61,3 @@ const HeadBtn = styled.div`
 `;
 
 const CustomMenu = styled(Menu)``;
-
-export default HeaderUser;
