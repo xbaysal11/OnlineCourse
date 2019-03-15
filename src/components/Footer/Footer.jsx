@@ -17,17 +17,17 @@ class Footer extends Component {
                                 <h5>Social Media</h5>
                                 <ul>
                                     <li>
-                                        <a href="https://www.facebook.com/groups/677106115786158">
+                                        <a target = '_blank' href="https://www.facebook.com/groups/677106115786158">
                                             Facebook
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://www.instagram.com/itacademy.kg/">
+                                        <a target = '_blank' href="https://www.instagram.com/itacademy.kg/">
                                             Instagram
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">itacademy98@gmail.com</a>
+                                        <a target = '_blank' href="#">itacademy98@gmail.com</a>
                                     </li>
                                 </ul>
                             </Social>
@@ -37,22 +37,22 @@ class Footer extends Component {
                                 <h5>Courses</h5>
                                 <ul>
                                     <li>
-                                        <a href="#">Java/Mobile App</a>
+                                        <a target = '_blank' href="#">Java/Mobile App</a>
                                     </li>
                                     <li>
-                                        <a href="#">PHP</a>
+                                        <a target = '_blank' href="#">PHP</a>
                                     </li>
                                     <li>
-                                        <a href="#">Java</a>
+                                        <a target = '_blank' href="#">Java</a>
                                     </li>
                                     <li>
-                                        <a href="#">Front-End</a>
+                                        <a target = '_blank' href="#">Front-End</a>
                                     </li>
                                     <li>
-                                        <a href="#">C#</a>
+                                        <a target = '_blank' href="#">C#</a>
                                     </li>
                                     <li>
-                                        <a href="#">Python</a>
+                                        <a target = '_blank' href="#">Python</a>
                                     </li>
                                 </ul>
                             </Courses>
@@ -62,13 +62,13 @@ class Footer extends Component {
                                 <h5>Links</h5>
                                 <ul>
                                     <li>
-                                        <a href="#">About Project</a>
+                                        <a target = '_blank' href="#">About Project</a>
                                     </li>
                                     <li>
-                                        <a href="#">Courses</a>
+                                        <a target = '_blank' href="#">Courses</a>
                                     </li>
                                     <li>
-                                        <a href="#">Filials</a>
+                                        <a target = '_blank' href="#">Filials</a>
                                     </li>
                                 </ul>
                             </Links>
@@ -114,6 +114,7 @@ const Copyright = styled.div`
 `;
 const Flex = styled.div`
     display: flex;
+    
 `;
 const FooterMain = styled.div`
     background: linear-gradient(0deg, ${colors.main} 0%, rgba(0, 0, 0, 1) 100%);
