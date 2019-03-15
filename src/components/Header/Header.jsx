@@ -5,8 +5,7 @@ import { NavLink } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 
 import HeaderUser from "./HeaderUser";
-import { Container } from "..";
-import { LoginModal } from "..";
+import { Container, LoginModal, RegisterModal } from "..";
 
 const Search = Input.Search;
 
@@ -73,6 +72,7 @@ class Header extends Component {
                                     }}
                                 >
                                     <LoginModal name={"login"} />
+                                    <RegisterModal name={"register"} />
                                     <HeaderUser />
                                 </Col>
                             </Row>

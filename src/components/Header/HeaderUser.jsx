@@ -34,11 +34,14 @@ class HeaderUser extends Component {
                         </Dropdown>
                     </>
                 ) : (
-                    <OpenModal name={"login"}>
-                        <Button type="primary" className={"head_btn2"}>
-                            Log in
-                        </Button>
-                    </OpenModal>
+                    <HeadBtn>
+                        <OpenModal name={"login"}>
+                            <Button type="primary">Log in</Button>
+                        </OpenModal>
+                        <OpenModal name={"register"}>
+                            <Button type="primary">Register</Button>
+                        </OpenModal>
+                    </HeadBtn>
                 )}
             </div>
         );
@@ -49,6 +52,11 @@ const UserName = styled.span`
     color: #fff;
     margin-left: 0.5em;
     cursor: pointer;
+`;
+
+const HeadBtn = styled.div`
+    display: flex;
+    /* justify-content: flex-end; */
 `;
 
 const CustomMenu = styled(Menu)``;

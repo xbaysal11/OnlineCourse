@@ -21,7 +21,6 @@ class LoginForm extends Component {
     };
     render() {
         const { getFieldDecorator } = this.props.form;
-        const { name } = this.props;
 
         return (
             <Formik>
