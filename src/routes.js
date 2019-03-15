@@ -2,19 +2,15 @@ import React from "react";
 
 import { Route } from "react-router-dom";
 
-import Profile from "./pages/Profile";
-import Settings from "./pages/Settings";
-import Index from "./pages/Index";
-import Java from "./pages/Java";
-
+import { Profile, Settings, Index, Java, Courses, Teachers } from "./pages";
 
 const routes = () => (
     <>
-        <Route exact path="/" component={Index} />
+        <Route exact path="/" component={Teachers} />
         <Route path="/profile" component={Profile} />
         <Route path="/settings" component={Settings} />
         <Route path="/java" component={Java} />
-
+        <Route path="/syllabus" component={Courses} />
     </>
 );
 export default routes;
