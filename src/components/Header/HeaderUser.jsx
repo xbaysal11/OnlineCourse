@@ -34,14 +34,14 @@ class HeaderUser extends Component {
                         </Dropdown>
                     </>
                 ) : (
-                    <HeadBtn>
+                    <Button.Groupg>
                         <OpenModal name={"login"}>
                             <Button type="primary">Log in</Button>
                         </OpenModal>
                         <OpenModal name={"register"}>
                             <Button type="primary">Register</Button>
                         </OpenModal>
-                    </HeadBtn>
+                    </Button.Groupg>
                 )}
             </div>
         );

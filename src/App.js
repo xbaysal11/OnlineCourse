@@ -20,8 +20,6 @@ class App extends Component {
                     <Router>
                         <>
                             <Header />
-                            <Route path="/syllabus" component={HeadCourses} />
-                            <Route path="/" component={HeadTeachers} exact />
                             <Routes />
                             <Footer />
                         </>
