@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 import { Menu, Icon, Layout } from "antd";
 import { colors } from "../../config/var";
@@ -20,44 +21,72 @@ class SettingsSidebar extends React.Component {
     };
     render() {
         return (
-            <Layout.Sider
-                // collapsible
-                collapsed={this.state.collapsed}
-                onCollapse={this.onCollapse}
-            >
-                <Menu
-                    onClick={this.handleClick}
-                    // style={{ width: 256 }}
-                    defaultSelectedKeys={["1"]}
-                    defaultOpenKeys={["sub1"]}
-                    mode="inline"
+            <Wrapper>
+                <Layout.Sider
+                    // collapsible
+                    collapsed={this.state.collapsed}
+                    onCollapse={this.onCollapse}
                 >
-                    <Menu.Item key="1">Profile </Menu.Item>
-                    <Menu.Item key="2">My Courses </Menu.Item>
-                    <Menu.Item key="3">Success Reports </Menu.Item>
+                    <Menu
+                        onClick={this.handleClick}
+                        // style={{ width: 256 }}
+                        defaultSelectedKeys={["1"]}
+                        defaultOpenKeys={["sub1"]}
+                        mode="inline"
+                    >
+                        <Menu.Item key="1">
+                            <Icon type="user" />
+                            Profile{" "}
+                        </Menu.Item>
+                        <Menu.Item key="2">
+                            <Icon type="project" />
+                            My Courses{" "}
+                        </Menu.Item>
+                        <Menu.Item key="3">
+                            <Icon type="calculator" />
+                            Grades{" "}
+                        </Menu.Item>
 
-                    <SubMenu
-                        key="sub4"
-                        title={
-                            <span>
-                                <Icon type="setting" />
-                                <span>Settings</span>
-                            </span>
-                        }
-                    >
-                        <Menu.Item key="4">Profile</Menu.Item>
-                        <Menu.Item key="5">Accounts</Menu.Item>
-                        <Menu.Item key="6">Notifications</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item
-                        key="7"
-                        style={{ color: "red", background: colors.red_light }}
-                    >
-                        Log Out
-                    </Menu.Item>
-                </Menu>
-            </Layout.Sider>
+                        <SubMenu
+                            key="sub4"
+                            title={
+                                <span>
+                                    <Icon type="setting" />
+                                    <span>Settings</span>
+                                </span>
+                            }
+                        >
+                            <Menu.Item key="4">
+                                <Icon type="solution" />
+                                Profile
+                            </Menu.Item>
+                            <Menu.Item key="5">
+                                <Icon type="tool" />
+                                Accounts
+                            </Menu.Item>
+                            <Menu.Item key="6">
+                                <Icon type="bell" />
+                                Notifications
+                            </Menu.Item>
+                        </SubMenu>
+                        <Menu.Item
+                            key="7"
+                            style={{
+                                color: "red",
+                                background: colors.red_light
+                            }}
+                        >
+                            <Icon type="logout" />
+                            Log Out
+                        </Menu.Item>
+                    </Menu>
+                </Layout.Sider>
+            </Wrapper>
         );
     }
 }
 export default SettingsSidebar;
+
+const Wrapper = styled.div`
+    margin: 24px 12px 52px 12px;
+`;
