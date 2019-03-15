@@ -3,9 +3,10 @@ import styled from "styled-components";
 
 import { Menu, Icon, Layout } from "antd";
 import { colors } from "../../config/var";
+import BasicInfo from "./BasicInfo";
+import SiderMenu from "../SiderMenu";
 
 const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
 
 class SettingsSidebar extends React.Component {
     handleClick = e => {
@@ -19,32 +20,38 @@ class SettingsSidebar extends React.Component {
         console.log(collapsed);
         this.setState({ collapsed });
     };
+    onToggle = () => {
+        this.setState({ collapsed: !this.state.collapsed });
+    };
+
     render() {
         return (
             <Wrapper>
                 <Layout.Sider
-                    // collapsible
+                    collapsible
                     collapsed={this.state.collapsed}
-                    onCollapse={this.onCollapse}
+                    theme="light"
+                    trigger={null}
                 >
-                    <Menu
+                    <SiderMenu
                         onClick={this.handleClick}
-                        // style={{ width: 256 }}
                         defaultSelectedKeys={["1"]}
                         defaultOpenKeys={["sub1"]}
                         mode="inline"
+                        toggle={this.onToggle}
+                        collapsed={this.state.collapsed}
                     >
                         <Menu.Item key="1">
                             <Icon type="user" />
-                            Profile{" "}
+                            <span>Profile</span>
                         </Menu.Item>
                         <Menu.Item key="2">
                             <Icon type="project" />
-                            My Courses{" "}
+                            <span>My Courses</span>
                         </Menu.Item>
                         <Menu.Item key="3">
                             <Icon type="calculator" />
-                            Grades{" "}
+                            <span>Grades</span>
                         </Menu.Item>
 
                         <SubMenu
@@ -77,9 +84,9 @@ class SettingsSidebar extends React.Component {
                             }}
                         >
                             <Icon type="logout" />
-                            Log Out
+                            <span>Log Out</span>
                         </Menu.Item>
-                    </Menu>
+                    </SiderMenu>
                 </Layout.Sider>
             </Wrapper>
         );
@@ -88,5 +95,5 @@ class SettingsSidebar extends React.Component {
 export default SettingsSidebar;
 
 const Wrapper = styled.div`
-    margin: 24px 12px 52px 12px;
+    /* margin: 24px 12px 52px 12px; */
 `;

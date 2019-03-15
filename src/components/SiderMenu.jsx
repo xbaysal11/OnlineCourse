@@ -1,0 +1,27 @@
+import React, { Component } from "react";
+import { Menu, Icon } from "antd";
+import PT from "prop-types";
+import MenuItem from "antd/lib/menu/MenuItem";
+
+class SiderMenu extends Component {
+    static propTypes = {
+        collapsed: PT.bool.isRequired,
+        toggle: PT.func.isRequired
+    };
+    render() {
+        const { collapsed, toggle, ...rest } = this.props;
+        return (
+            <Menu {...rest}>
+                {this.props.children}
+                <Menu.Item onClick={toggle}>
+                    {collapsed ? (
+                        <Icon type={"right"} />
+                    ) : (
+                        <Icon type={"left"} />
+                    )}
+                </Menu.Item>
+            </Menu>
+        );
+    }
+}
+export default SiderMenu;
