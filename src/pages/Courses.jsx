@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Row, Col, Button } from "antd";
 import { Container } from "../components/index";
+import { NavLink } from "react-router-dom";
+
 
 class Courses extends Component {
     render() {
@@ -14,7 +16,9 @@ class Courses extends Component {
                         <Col span={6}>
                             <Course>
                                 <Top>Java</Top>
+                                <NavLink to="/java">
                                 <Button type="primary">Go to Course</Button>
+                                </NavLink>
                             </Course>
                         </Col>
                         <Col span={6}>
