@@ -1,13 +1,17 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-
+import Courses from "../../pages/Courses";
+import { Container } from "../index";
 class Head2 extends Component {
     render() {
         return (
             <>
                 <Bg>
-                    <div className="container" />
+                    <Container />
                 </Bg>
+                <Container>
+                    <Courses />
+                </Container>
             </>
         );
     }
