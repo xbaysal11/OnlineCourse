@@ -10,6 +10,9 @@ import RegisterModal from "./forms/RegisterModal";
 import LessonTab from "./Lesson/LessonTab";
 //
 import PageHeader from "./PageHeader";
+import Hours from "./Hours";
+import HoursContent from "./HoursContent";
+import WeekHead from "./WeekHead";
 
 export {
     LessonTab,
@@ -19,5 +22,8 @@ export {
     Modal,
     LoginModal,
     RegisterModal,
-    PageHeader
+    PageHeader,
+    Hours,
+    HoursContent,
+    WeekHead
 };
