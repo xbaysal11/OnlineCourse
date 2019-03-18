@@ -126,7 +126,7 @@ const Logo = styled.div`
 `;
 
 const Copyright = styled.div`
-    color: / b2bec3;
+    color: #b2bec3;
     padding: 0 2em;
     align-self: center;
 `;
@@ -139,7 +139,7 @@ const FooterMain = styled.div`
 
 const Row = styled(RowAntd)``;
 const Box = styled.div`
-    color: / fff;
+    color: #fff;
     height: 35vh;
     padding: 0 5vw;
     text-transform: uppercase;
@@ -148,14 +148,14 @@ const Box = styled.div`
         padding-top: 3vh;
         margin: 2vh 0 0 0;
         font-size: 1.1em;
-        color: / fff;
+        color: #fff;
         font-weight: bold;
         &::after {
             content: "";
             position: absolute;
             width: 30px;
             height: 2px;
-            background-color: / fff;
+            background-color: #fff;
             top: 3.8em;
             left: 4.4em;
         }
@@ -171,12 +171,12 @@ const Box = styled.div`
     }
 
     a {
-        color: / b2bec3;
+        color: #b2bec3;
         font-size: 0.8em;
         font-weight: 600;
 
         &:hover {
-            color: / fff;
+            color: #fff;
         }
     }
 `;
