@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Button, Card, Icon, Avatar as AvatarAntd } from "antd";
+import { Card, Icon, Avatar as AvatarAntd } from "antd";
 import bgImage from "../assets/img/tv.svg";
 
 const { Meta } = Card;
@@ -10,7 +10,7 @@ class Profile extends Component {
         size: 100
     };
     render() {
-        const size = this.state.size;
+        // const size = this.state.size;className="login-form"
         return (
             <div>
                 <BackgroundImage style={{ zIndex: -1 }}>
@@ -28,20 +28,20 @@ class Profile extends Component {
                     <Avatar size={164} icon="user" />
                     <Name>Baisalbek Daniiarov</Name>
                     <Line>
-                        <a href="">
+                        <a href="/">
                             <Icon
                                 style={{ fontSize: "36px", color: "#08c" }}
                                 type="schedule"
                             />
                         </a>
-                        <a href="">
+                        <a href="/">
                             <Icon
                                 style={{ fontSize: "36px", color: "#08c" }}
                                 type="edit"
                             />
                         </a>
 
-                        <a href="">
+                        <a href="/">
                             <Icon
                                 style={{ fontSize: "36px", color: "#08c" }}
                                 type="logout"

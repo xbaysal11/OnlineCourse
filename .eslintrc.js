@@ -22,6 +22,13 @@ module.exports = {
     },
     plugins: ["react", "prettier", "import"],
     rules: {
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+                components: ["Link"],
+                specialLink: ["to"]
+            }
+        ],
         indent: ["error", 4],
         "linebreak-style": ["error", "unix"],
         quotes: ["error", "double"],
