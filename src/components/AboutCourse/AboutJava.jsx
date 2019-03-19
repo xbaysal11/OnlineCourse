@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from "..";
 import styled from "styled-components";
 import { Rate } from "antd";
+import { Link } from "react-router-dom";
 import { Card, Col, Row, Button, Icon } from "antd";
 import Week from "./Week";
 
@@ -128,12 +129,14 @@ class AboutJava extends Component {
                                     30 day access
                                 </Card>
                                 <Card title="" bordered={false}>
-                                    <Button
-                                        type="primary"
-                                        style={{ width: "240px" }}
-                                    >
-                                        Try for free
-                                    </Button>
+                                    <Link to={"/lessons/12094/home"}>
+                                        <Button
+                                            type="primary"
+                                            style={{ width: "240px" }}
+                                        >
+                                            Try for free
+                                        </Button>
+                                    </Link>
                                 </Card>
                             </Col>
                             <Col span={8}>

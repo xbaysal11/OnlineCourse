@@ -58,7 +58,7 @@ class Footer extends Component {
                                     </li>
                                     <li>
                                         <a target="_blank" href="/">
-                                            C/
+                                            C/C++
                                         </a>
                                     </li>
                                     <li>

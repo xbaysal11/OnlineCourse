@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import { Menu } from "antd";
+import SiderMenu from "../SiderMenu";
 
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
@@ -12,9 +13,8 @@ class LessonSideBar extends Component {
 
     render() {
         return (
-            <Menu
+            <SiderMenu
                 onClick={this.handleClick}
-                style={{ width: 256 }}
                 defaultSelectedKeys={["1"]}
                 defaultOpenKeys={["sub1"]}
                 mode="inline"
@@ -34,7 +34,7 @@ class LessonSideBar extends Component {
                     <Menu.Item key="7">Lesson 7</Menu.Item>
                     <Menu.Item key="8">Lesson 8</Menu.Item>
                 </SubMenu>
-            </Menu>
+            </SiderMenu>
         );
     }
 }

@@ -1,22 +1,24 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
 import LessonSideBar from "../components/Lesson/LessonSideBar";
-import LessonContent from "../components/Lesson/LessonContent";
-import { Container } from "../components/index";
-import Sider from "antd/lib/layout/Sider";
+import LessonTabber from "../components/Lesson/LessonTabber";
+import { Container, LessonContent, LessonCode } from "../components/index";
+import { Route } from "react-router-dom";
 
-const { Content } = Layout;
+const { Content, Sider } = Layout;
 
 class Lessons extends Component {
     render() {
         return (
             <Container>
                 <Layout>
-                    <Sider>
+                    <Sider theme="light">
                         <LessonSideBar />
                     </Sider>
                     <Content>
-                        <LessonContent />
+                        <LessonTabber />
+                        <Route path={""} component={LessonContent} />
+                        <Route path={""} component={LessonCode} />
                     </Content>
                 </Layout>
             </Container>
