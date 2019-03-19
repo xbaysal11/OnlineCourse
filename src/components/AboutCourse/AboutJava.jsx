@@ -5,29 +5,41 @@ import { Rate } from "antd";
 import { Link } from "react-router-dom";
 import { Card, Col, Row, Button, Icon } from "antd";
 import Week from "./Week";
+import Instructor from "../Instructors/Instructor";
 
 class AboutJava extends Component {
     render() {
         return (
             <>
-                <Container>
+            <div style={{ background: "#fff" }}>
+                <Container >
                     <About>
-                        <h3>About this Specialization</h3>
-                        <Rate disabled allowHalf defaultValue={3.5} />
-                        <p>
-                            Take your first step towards a career in software
-                            development with this introduction to Java—one of
-                            the most in-demand programming languages and the
-                            foundation of the Android operating system. Designed
-                            for beginners, this Specialization will teach you
-                            core programming concepts and equip you to write
-                            programs to solve complex problems. In addition, you
-                            will gain the foundational skills a software
-                            engineer needs to solve real-world problems, from
-                            designing algorithms to testing and debugging your
-                            programs.
-                        </p>
+                        <Row>
+                            <Col span={15}>
+                                <h3>About this Specialization</h3>
+                                <Rate disabled allowHalf defaultValue={3.5} />
+                                <p>
+                                    Take your first step towards a career in
+                                    software development with this introduction
+                                    to Java—one of the most in-demand
+                                    programming languages and the foundation of
+                                    the Android operating system. Designed for
+                                    beginners, this Specialization will teach
+                                    you core programming concepts and equip you
+                                    to write programs to solve complex problems.
+                                    In addition, you will gain the foundational
+                                    skills a software engineer needs to solve
+                                    real-world problems, from designing
+                                    algorithms to testing and debugging your
+                                    programs.
+                                </p>
+                            </Col>
+                            <Col span={9}>
+                                   <Instructor/>
+                            </Col>
+                        </Row>
                     </About>
+
                     <div style={{ background: "#fff", padding: "30px" }}>
                         <Row gutter={16}>
                             <Col span={8}>
@@ -166,6 +178,7 @@ class AboutJava extends Component {
                     </div>
                 </Container>
                 <Week />
+                </div>
             </>
         );
     }
@@ -174,9 +187,8 @@ class AboutJava extends Component {
 export default AboutJava;
 
 const About = styled.div`
-    width: 70%;
+    padding-top: 60px;
     h3 {
-        margin-top: 60px;
         margin-bottom: 10px;
         padding: 0;
     }

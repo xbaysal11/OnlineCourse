@@ -90,6 +90,6 @@ export default Week;
 const MyRow = styled(Row)`
     margin-top: 100px;
     &:last-child {
-        margin-bottom: 100px;
+        padding-bottom: 100px;
     }
 `;
