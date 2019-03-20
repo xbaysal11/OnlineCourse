@@ -11,6 +11,17 @@ class LessonSideBar extends Component {
         console.log("click ", e);
     };
 
+    state = {
+        collapsed: false
+    };
+    onCollapse = collapsed => {
+        console.log(collapsed);
+        this.setState({ collapsed });
+    };
+    onToggle = () => {
+        this.setState({ collapsed: !this.state.collapsed });
+    };
+
     render() {
         return (
             <SiderMenu
@@ -18,6 +29,8 @@ class LessonSideBar extends Component {
                 defaultSelectedKeys={["1"]}
                 defaultOpenKeys={["sub1"]}
                 mode="inline"
+                toggle={this.onToggle}
+                collapsed={this.state.collapsed}
             >
                 <MenuItemGroup key="g1" title="Week 1">
                     <Menu.Item key="1">Lesson 1</Menu.Item>
