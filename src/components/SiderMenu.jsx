@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Menu, Icon } from "antd";
 import PT from "prop-types";
-import MenuItem from "antd/lib/menu/MenuItem";
 
 class SiderMenu extends Component {
     static propTypes = {

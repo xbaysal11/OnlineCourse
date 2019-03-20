@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Formik } from "formik";
+
 import styled from "styled-components";
 
 import {
@@ -26,7 +27,7 @@ class LoginForm extends Component {
             <Formik>
                 <Wrapper>
                     <h1>Log In</h1>
-                    <Form onSubmit={this.handleSubmit} className="login-form">
+                    <Form onSubmit={this.handleSubmit}>
                         <Form.Item>
                             {getFieldDecorator("userName", {
                                 rules: [
@@ -73,17 +74,11 @@ class LoginForm extends Component {
                                 valuePropName: "checked",
                                 initialValue: true
                             })(<Checkbox>Remember me</Checkbox>)}
-                            <a className="login-form-forgot" href="">
-                                Forgot password
-                            </a>
-                            <Button
-                                type="primary"
-                                htmlType="submit"
-                                className="login-form-button"
-                            >
+                            <a href="/">Forgot password</a>
+                            <Button type="primary" htmlType="submit">
                                 Log in
                             </Button>
-                            Or <a href="">register now!</a>
+                            Or <a href="/">register now!</a>
                         </Form.Item>
                     </Form>
                 </Wrapper>
@@ -106,8 +101,4 @@ const Wrapper = styled.div`
 const Input = styled(InputAntd)`
     max-width: 300px;
     padding: 0 auto;
-`;
-
-const a = styled.a`
-    float: right;
 `;

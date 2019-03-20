@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Formik } from "formik";
 import styled from "styled-components";
 
 import {
@@ -9,52 +8,14 @@ import {
     Button as ButtonAntd,
     Checkbox,
     Tooltip,
-    Cascader,
-    Select,
-    Row,
-    Col,
-    AutoComplete
+    Select
+    // AutoComplete
 } from "antd";
 
 const { Option } = Select;
-const AutoCompleteOption = AutoComplete.Option;
+// const AutoCompleteOption = AutoComplete.Option;
 
-const residences = [
-    {
-        value: "zhejiang",
-        label: "Zhejiang",
-        children: [
-            {
-                value: "hangzhou",
-                label: "Hangzhou",
-                children: [
-                    {
-                        value: "xihu",
-                        label: "West Lake"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        value: "jiangsu",
-        label: "Jiangsu",
-        children: [
-            {
-                value: "nanjing",
-                label: "Nanjing",
-                children: [
-                    {
-                        value: "zhonghuamen",
-                        label: "Zhong Hua Men"
-                    }
-                ]
-            }
-        ]
-    }
-];
-
-class RegisterForm extends React.Component {
+class RegisterForm extends Component {
     state = {
         confirmDirty: false,
         autoCompleteResult: []
@@ -105,7 +66,7 @@ class RegisterForm extends React.Component {
 
     render() {
         const { getFieldDecorator } = this.props.form;
-        const { autoCompleteResult } = this.state;
+        // const { autoCompleteResult } = this.state;
 
         const formItemLayout = {
             labelCol: {
@@ -137,10 +98,6 @@ class RegisterForm extends React.Component {
                 <Option value="7">+7</Option>
             </Select>
         );
-
-        const websiteOptions = autoCompleteResult.map(website => (
-            <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
-        ));
 
         return (
             <Wrapper>
@@ -233,7 +190,7 @@ class RegisterForm extends React.Component {
                             valuePropName: "checked"
                         })(
                             <Checkbox>
-                                I have read the <a href="">agreement</a>
+                                I have read the <a href="/">agreement</a>
                             </Checkbox>
                         )}
                     </Form.Item>

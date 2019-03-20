@@ -3,12 +3,11 @@ import styled from "styled-components";
 
 import { Menu, Icon, Layout } from "antd";
 import { colors } from "../../config/var";
-import BasicInfo from "./BasicInfo";
 import SiderMenu from "../SiderMenu";
 
 const SubMenu = Menu.SubMenu;
 
-class SettingsSidebar extends React.Component {
+class SettingsSidebar extends Component {
     handleClick = e => {
         console.log("click ", e);
     };

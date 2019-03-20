@@ -54,10 +54,3 @@ const UserName = styled.span`
     margin-left: 0.5em;
     cursor: pointer;
 `;
-
-const HeadBtn = styled.div`
-    display: flex;
-    /* justify-content: flex-end; */
-`;
-
-const CustomMenu = styled(Menu)``;

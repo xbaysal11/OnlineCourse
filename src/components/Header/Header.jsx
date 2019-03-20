@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Icon, Menu, Button, Layout, Input } from "antd";
+import { Row, Col, Icon, Menu, Layout, Input } from "antd";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
@@ -86,18 +86,18 @@ class Header extends Component {
 
 export default Header;
 
-const SearchItem = styled(Search)`
-    background-color: #eee;
-    border: 1px solid #eee;
-    width: 15rem;
-    border-radius: 5px;
-    color: #222;
-    width: 100%;
-    height: 2rem;
-    &::-webkit-input-placeholder {
-        padding-left: 20px;
-    }
-`;
+// const SearchItem = styled(Search)`
+//     background-color: #eee;
+//     border: 1px solid #eee;
+//     width: 15rem;
+//     border-radius: 5px;
+//     color: #222;
+//     width: 100%;
+//     height: 2rem;
+//     &::-webkit-input-placeholder {
+//         padding-left: 20px;
+//     }
+// `;
 const Bg = styled.div`
     .head_btn2 {
         margin-left: 6rem;
