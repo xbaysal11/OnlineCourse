@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from "..";
 import styled from "styled-components";
 import { Rate } from "antd";
+import { Link } from "react-router-dom";
 import { Card, Col, Row, Button, Icon } from "antd";
 import Week from "./Week";
 import Instructor from "../Instructors/Instructor";
@@ -86,13 +87,78 @@ class AboutJava extends Component {
                                         No access ti write a comments
                                     </Card>
 
+<<<<<<< HEAD
                                     <Card title="" bordered={false}>
+=======
+                                <Card title="" bordered={false}>
+                                    <Button
+                                        type="primary"
+                                        style={{ width: "240px" }}
+                                    >
+                                        Try for free
+                                    </Button>
+                                </Card>
+                            </Col>
+                            <Col span={8}>
+                                <Card title="Pro " bordered={false} />
+                                <Card title="" bordered={true}>
+                                    <Icon
+                                        type="check-circle"
+                                        style={{
+                                            fontSize: "25px",
+                                            marginRight: "8px"
+                                        }}
+                                        theme="twoTone"
+                                        twoToneColor="#52c41a"
+                                    />{" "}
+                                    Access for all lessons
+                                </Card>
+                                <Card title="" bordered={true}>
+                                    <Icon
+                                        type="check-circle"
+                                        style={{
+                                            fontSize: "25px",
+                                            marginRight: "8px"
+                                        }}
+                                        theme="twoTone"
+                                        twoToneColor="#52c41a"
+                                    />{" "}
+                                    Access for all links
+                                </Card>
+                                <Card title="" bordered={true}>
+                                    <Icon
+                                        type="check-circle"
+                                        style={{
+                                            fontSize: "25px",
+                                            marginRight: "8px"
+                                        }}
+                                        theme="twoTone"
+                                        twoToneColor="#52c41a"
+                                    />{" "}
+                                    Access to write a comments
+                                </Card>
+                                <Card title="" bordered={true}>
+                                    <Icon
+                                        type="smile"
+                                        style={{
+                                            fontSize: "25px",
+                                            marginRight: "8px"
+                                        }}
+                                        theme="twoTone"
+                                        twoToneColor="#eb2f96"
+                                    />{" "}
+                                    30 day access
+                                </Card>
+                                <Card title="" bordered={false}>
+                                    <Link to={"/lessons/12094/home"}>
+>>>>>>> 68c1eda93faa05008967e82a28827e20e4a4bc7f
                                         <Button
                                             type="primary"
                                             style={{ width: "240px" }}
                                         >
                                             Try for free
                                         </Button>
+<<<<<<< HEAD
                                     </Card>
                                 </Col>
                                 <Col span={8}>
@@ -184,6 +250,38 @@ class AboutJava extends Component {
                     <Container>
                         <Faq />
                     </Container>
+=======
+                                    </Link>
+                                </Card>
+                            </Col>
+                            <Col span={8}>
+                                <Card title="Premium" bordered={false} />
+                                <Card title="" bordered={true}>
+                                    <Icon
+                                        type="heart"
+                                        style={{
+                                            fontSize: "25px",
+                                            marginRight: "8px"
+                                        }}
+                                        theme="twoTone"
+                                        twoToneColor="red"
+                                    />{" "}
+                                    Full course lifetime access
+                                </Card>
+                                <Card title="" bordered={false}>
+                                    <Button
+                                        type="primary"
+                                        style={{ width: "240px" }}
+                                    >
+                                        Try for free
+                                    </Button>
+                                </Card>
+                            </Col>
+                        </Row>
+                    </div>
+                </Container>
+                <Week />
+>>>>>>> 68c1eda93faa05008967e82a28827e20e4a4bc7f
                 </div>
             </>
         );

@@ -7,7 +7,8 @@ import OpenModal from "./modal/OpenModal";
 import Modal from "./modal/Modal";
 import LoginModal from "./forms/LoginModal";
 import RegisterModal from "./forms/RegisterModal";
-import LessonTab from "./Lesson/LessonTab";
+import LessonContent from "./Lesson/LessonContent";
+import LessonCode from "./Lesson/LessonCode";
 //
 import PageHeader from "./PageHeader";
 import Hours from "./Hours";
@@ -15,7 +16,8 @@ import HoursContent from "./HoursContent";
 import WeekHead from "./WeekHead";
 
 export {
-    LessonTab,
+    LessonCode,
+    LessonContent,
     Container,
     ModalManager,
     OpenModal,
