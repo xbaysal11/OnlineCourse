@@ -8,9 +8,8 @@ class Instructor extends Component {
         return (
             <>
                 <MyImg>
-                    <h2>Instractor</h2>
                     <img src={photo} alt="" />
-                    <h4>Dr. Shane Dixon</h4>
+                    <h5>Dr. Shane Dixon</h5>
                     <h6>International Educator</h6>
                     <span>Georgia Tech Language Institute</span>
                 </MyImg>
@@ -28,12 +27,14 @@ const MyImg = styled.div`
         border-radius: 50%;
         width: 130px;
         height: 130px;
+        margin-bottom: 15px;
     }
-    h2 {
+    h5 {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
     }
-    h4 {
-        font-weight: 900;
-    }
+
     h6 {
         margin: 0;
         padding: 0;

@@ -7,13 +7,14 @@ class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
-                <List
+                <LessonComment/>
+               {/*  <List
                     className="comment-list"
                     header={`${4} replies`}
                     itemLayout="horizontal"
                     dataSource={[1, 2, 3, 4]}
                     renderItem={item => <LessonComment />}
-                />
+                /> */}
             </Wrapper>
         );
     }

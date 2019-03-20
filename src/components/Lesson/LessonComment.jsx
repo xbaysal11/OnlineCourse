@@ -1,11 +1,27 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 
 import { Comment, Avatar } from "antd";
 
 class LessonComment extends Component {
     render() {
         return (
-            <Comment
+            <div>
+                <Border>
+                    <Div>
+                        <Avatar
+                            size="large"
+                            /* style={{ backgroundColor: "#87d068" }} */
+                            icon="user"
+                        />
+                        <span> Daniiarov Baisalbek </span>  
+                        <Comment>
+                            
+                        </Comment>
+                    </Div>
+                </Border>
+
+                {/* <Comment
                 actions={[<span>Reply to</span>]}
                 author={<a href="/">Han Solo</a>}
                 avatar={
@@ -21,8 +37,20 @@ class LessonComment extends Component {
                         Axure).
                     </p>
                 }
-            />
+            /> */}
+            </div>
         );
     }
 }
 export default LessonComment;
+
+const Border = styled.div`
+    border: 1px solid #e0e0e0;
+    height: 300px;
+`;
+
+const Div = styled.div`
+    margin-left: 60px;
+`;
+
+const Comment = styled.div``;
