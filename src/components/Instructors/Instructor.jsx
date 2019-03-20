@@ -29,17 +29,16 @@ const MyImg = styled.div`
         width: 130px;
         height: 130px;
     }
-    h2{
-        
+    h2 {
     }
-    h4{
+    h4 {
         font-weight: 900;
     }
     h6 {
         margin: 0;
         padding: 0;
     }
-    span{
-        color: #A78855;
+    span {
+        color: #a78855;
     }
 `;
