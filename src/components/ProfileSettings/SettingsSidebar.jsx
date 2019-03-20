@@ -37,7 +37,7 @@ class SettingsSidebar extends Component {
                         defaultSelectedKeys={["1"]}
                         defaultOpenKeys={["sub1"]}
                         mode="inline"
-                        toggle={this.onToggle}
+                        toggle={this.props.onToggle}
                         collapsed={this.state.collapsed}
                     >
                         <Menu.Item key="1">

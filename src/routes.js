@@ -12,7 +12,10 @@ const routes = () => (
         <Route path="/java" component={Java} />
         <Route path="/syllabus" component={Courses} />
         {/* <Route path="/lessons" component={Lessons} /> */}
-        <Route path="/lessons/:lesson_id/:tab(home|code)" component={Lessons} />
+        <Route
+            path="/lessons/:lesson_id/:tab(home|code)?"
+            component={Lessons}
+        />
     </>
 );
 export default routes;
