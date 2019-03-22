@@ -14,10 +14,8 @@ class LessonComment extends Component {
                             /* style={{ backgroundColor: "#87d068" }} */
                             icon="user"
                         />
-                        <span> Daniiarov Baisalbek </span>  
-                        <Comment>
-                            
-                        </Comment>
+                        <span> Daniiarov Baisalbek </span>
+                        <Comment />
                     </Div>
                 </Border>
 
@@ -53,4 +51,4 @@ const Div = styled.div`
     margin-left: 60px;
 `;
 
-const Comment = styled.div``;
+//const Comment = styled.div``;

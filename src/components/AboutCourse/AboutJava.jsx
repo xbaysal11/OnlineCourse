@@ -93,69 +93,6 @@ class AboutJava extends Component {
                                         >
                                             Try for free
                                         </Button>
-<<<<<<< HEAD
-=======
-                                    </Card>
-                                </Col>
-                                <Col span={8}>
-                                    <Card title="Pro " bordered={false} />
-                                    <Card title="" bordered={true}>
-                                        <Icon
-                                            type="check-circle"
-                                            style={{
-                                                fontSize: "25px",
-                                                marginRight: "8px"
-                                            }}
-                                            theme="twoTone"
-                                            twoToneColor="#52c41a"
-                                        />{" "}
-                                        Access for all lessons
-                                    </Card>
-                                    <Card title="" bordered={true}>
-                                        <Icon
-                                            type="check-circle"
-                                            style={{
-                                                fontSize: "25px",
-                                                marginRight: "8px"
-                                            }}
-                                            theme="twoTone"
-                                            twoToneColor="#52c41a"
-                                        />{" "}
-                                        Access for all links
-                                    </Card>
-                                    <Card title="" bordered={true}>
-                                        <Icon
-                                            type="check-circle"
-                                            style={{
-                                                fontSize: "25px",
-                                                marginRight: "8px"
-                                            }}
-                                            theme="twoTone"
-                                            twoToneColor="#52c41a"
-                                        />{" "}
-                                        Access to write a comments
-                                    </Card>
-                                    <Card title="" bordered={true}>
-                                        <Icon
-                                            type="smile"
-                                            style={{
-                                                fontSize: "25px",
-                                                marginRight: "8px"
-                                            }}
-                                            theme="twoTone"
-                                            twoToneColor="#eb2f96"
-                                        />{" "}
-                                        30 day access
-                                    </Card>
-                                    <Card title="" bordered={false}>
-                                        <Link to={"/lessons/12094/home"} />
-                                        <Button
-                                            type="primary"
-                                            style={{ width: "240px" }}
-                                        >
-                                            Try for free
-                                        </Button>
->>>>>>> adb9f8131d45d38f6768f0e2e0b003afc649959f
                                     </Card>
                                 </Col>
                                 <Col span={8}>
