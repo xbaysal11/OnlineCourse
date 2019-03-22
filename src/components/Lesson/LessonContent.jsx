@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import LessonComment from "./LessonComment";
-import { List } from "antd";
+import { List, Button as BTN } from "antd";
 import styled from "styled-components";
 
 class LessonContent extends Component {
@@ -99,6 +99,10 @@ class LessonContent extends Component {
                         </div>
                     </div>
                 </div>
+                <Button data-ember-action="" data-ember-action-4743="4743">
+                    Следующий шаг&nbsp;&nbsp;
+                    <span id="ember4744" />
+                </Button>
                 <List
                     className="comment-list"
                     header={`${4} replies`}
@@ -114,5 +118,7 @@ export default LessonContent;
 const Wrapper = styled.div`
     padding: 1.5em;
     background: #fff;
-    height: 100vh;
+`;
+const Button = styled(BTN)`
+    text-align: right;
 `;

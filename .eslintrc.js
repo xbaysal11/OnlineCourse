@@ -13,6 +13,7 @@ module.exports = {
         "plugin:import/warnings",
         "prettier"
     ],
+    parser: "babel-eslint",
     parserOptions: {
         ecmaFeatures: {
             jsx: true
