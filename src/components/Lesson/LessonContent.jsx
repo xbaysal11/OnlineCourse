@@ -1,20 +1,37 @@
 import React, { Component } from "react";
-import LessonComment from "./LessonComment";
 import { List } from "antd";
 import styled from "styled-components";
+import CommentsList from "./LessonComment";
+
+const data = [
+    {
+        author: {
+            first_name: "Yrys"
+        },
+        text: "awdawdawdawd",
+        answers: [
+            {
+                author: {
+                    first_name: "A"
+                },
+                text: "",
+                answers: []
+            }
+        ]
+    },
+    {
+        author: {
+            first_name: "A"
+        },
+        text: ""
+    }
+];
 
 class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
-                <LessonComment/>
-               {/*  <List
-                    className="comment-list"
-                    header={`${4} replies`}
-                    itemLayout="horizontal"
-                    dataSource={[1, 2, 3, 4]}
-                    renderItem={item => <LessonComment />}
-                /> */}
+                <CommentsList comments={data} />
             </Wrapper>
         );
     }

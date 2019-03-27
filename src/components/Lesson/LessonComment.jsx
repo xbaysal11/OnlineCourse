@@ -1,46 +1,82 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import PT from "prop-types";
+import { Button, Avatar } from "antd";
+import CommentAnswer from "./CommentAnswer";
 
-import { Comment, Avatar } from "antd";
+const CommentsList = ({ comments }) => (
+    <div>
+        {comments.map(comment => (
+            <LessonComment comment={comment} />
+        ))}
+    </div>
+);
 
 class LessonComment extends Component {
+    static propTypes = {
+        comment: PT.array
+    };
+    constructor(props) {
+        super(props);
+        this.state = { isAnswer: true, isOpen: false };
+    }
+
+    handleClick = () => {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    };
     render() {
+        /* const {
+            comments: { answers = [] }
+        } = this */
+        const body = this.state.isOpen && (
+            <CommentAnswer>
+                <input />
+            </CommentAnswer>
+        );
         return (
             <div>
                 <Border>
                     <Div>
                         <Avatar
                             size="large"
-                            /* style={{ backgroundColor: "#87d068" }} */
+                            style={{ backgroundColor: "#87d068" }}
                             icon="user"
                         />
-                        <span> Daniiarov Baisalbek </span>
-                        <Comment />
+                        <span>{}</span>
+                        <Outside>
+                            <Inside>
+                                <p>
+                                    "Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip
+                                    ex ea commodo consequat."
+                                </p>
+                            </Inside>
+                            <Button onClick={this.handleClick} type="default">
+                                Answer
+                            </Button>
+                            <Button type="dashed">Edit</Button>
+                            <Button type="danger">Delete</Button>
+                         </Outside>
+                        {/*  {
+                            answers.length > 0 ?
+                            <CommentsList  comments={answers}  />
+                         : null
+                         } */}
+
+                        {body}
                     </Div>
                 </Border>
-
-                {/* <Comment
-                actions={[<span>Reply to</span>]}
-                author={<a href="/">Han Solo</a>}
-                avatar={
-                    <Avatar
-                        src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                        alt="Han Solo"
-                    />
-                }
-                content={
-                    <p>
-                        We supply a series of design principles, practical
-                        patterns and high quality design resources (Sketch and
-                        Axure).
-                    </p>
-                }
-            /> */}
             </div>
         );
     }
 }
-export default LessonComment;
+
+export default CommentsList;
 
 const Border = styled.div`
     border: 1px solid #e0e0e0;
@@ -51,4 +87,12 @@ const Div = styled.div`
     margin-left: 60px;
 `;
 
-//const Comment = styled.div``;
+const Inside = styled.div`
+    padding-left: 20px;
+    width: 80%;
+    border: 1px solid #e0e0e0;
+`;
+
+const Outside = styled.div`
+    margin-left: 30px;
+`;
