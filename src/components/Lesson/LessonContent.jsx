@@ -33,18 +33,11 @@ class LessonContent extends Component {
         return (
             <Wrapper>
                 <CommentsList comments={data} />
-                <div
-                    id="ember4766"
-                    class="step-view step-view_material ember-view"
-                >
-                    <div class="step-wrapper">
-                        <div class="step-inner page-fragment">
-                            <div
-                                id="ember4767"
-                                class="rich-text-viewer ember-view"
-                                data-ready=""
-                            >
-                                <div class="rich-text-viewer__content">
+                <div id="ember4766">
+                    <div>
+                        <div>
+                            <div id="ember4767" data-ready="">
+                                <div>
                                     <p>Добро пожаловать!</p>
                                     <div>
                                         Мы рады, что вы заинтересовались курсом
@@ -129,13 +122,13 @@ class LessonContent extends Component {
                     Следующий шаг&nbsp;&nbsp;
                     <span id="ember4744" />
                 </Button>
-                <List
+                {/* <List
                     className="comment-list"
                     header={`${4} replies`}
                     itemLayout="horizontal"
                     dataSource={[1, 2, 3, 4]}
                     renderItem={item => <LessonComment />}
-                />
+                /> */}
             </Wrapper>
         );
     }

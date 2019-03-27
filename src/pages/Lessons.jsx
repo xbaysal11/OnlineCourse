@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Layout, Menu, Icon } from "antd";
 import LessonSideBar from "../components/Lesson/LessonSideBar";
 import { Container, LessonContent, LessonCode } from "../components/index";
-import { Route, Redirect, NavLink } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import PT from "prop-types";
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Checkbox, Upload, Icon, message } from "antd";
+import { Checkbox } from "antd";
 
 import Ide from "../Ide";
 
@@ -9,7 +9,6 @@ class LessonCode extends Component {
         console.log(`checked = ${e.target.checked}`);
     };
     render() {
-        const {} = this.props;
         return (
             <Wrapper>
                 <h3>Exercise: Building Your First Real World Application</h3>

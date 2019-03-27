@@ -11,7 +11,6 @@ const routes = () => (
         <Route path="/settings" component={Settings} />
         <Route path="/java" component={Java} />
         <Route path="/syllabus" component={Courses} />
-        {/* <Route path="/lessons" component={Lessons} /> */}
         <Route
             path="/lessons/:lesson_id/:tab(home|code)?"
             component={Lessons}
