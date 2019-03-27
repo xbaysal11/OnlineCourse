@@ -9,7 +9,7 @@ class Ide extends Component {
     render() {
         return (
             <Wrapper>
-                <SplitPane split="vertical" minSize={50} defaultSize={"50%"}>
+                <SplitPane split="vertical" minSize={50} defaultSize={"70%"}>
                     <CodeEditor />
                     <CodeEditor />
                 </SplitPane>
