@@ -1,10 +1,6 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-import { List } from "antd";
-=======
 import LessonComment from "./LessonComment";
 import { List, Button as BTN } from "antd";
->>>>>>> ae242e435e6dcaa8e6c40709eaa4fb13405d0c11
 import styled from "styled-components";
 import CommentsList from "./LessonComment";
 
@@ -36,9 +32,7 @@ class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
-<<<<<<< HEAD
                 <CommentsList comments={data} />
-=======
                 <div
                     id="ember4766"
                     class="step-view step-view_material ember-view"
@@ -142,7 +136,6 @@ class LessonContent extends Component {
                     dataSource={[1, 2, 3, 4]}
                     renderItem={item => <LessonComment />}
                 />
->>>>>>> ae242e435e6dcaa8e6c40709eaa4fb13405d0c11
             </Wrapper>
         );
     }
