@@ -25,7 +25,8 @@ class CodeEditor extends React.Component {
                     fontFamily: "'Fira code', 'Fira Mono', monospace",
                     fontSize: 12,
                     background: "#EFEFEF",
-                    height: "100%"
+                    height: "100%",
+                    borderRadius: "5px"
                 }}
             />
         );
