@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PT from "prop-types";
 import { Button, Avatar } from "antd";
 import CommentAnswer from "./CommentAnswer";
+import CommentHeader from "./CommentHeader";
 
 const CommentsList = ({ comments }) => (
     <div>
@@ -14,11 +15,11 @@ const CommentsList = ({ comments }) => (
 
 class LessonComment extends Component {
     static propTypes = {
-        comment: PT.array
+        comment: PT.object.isRequired
     };
     constructor(props) {
         super(props);
-        this.state = { isAnswer: true, isOpen: false };
+        this.state = { sOpen: false };
     }
 
     handleClick = () => {
@@ -27,47 +28,38 @@ class LessonComment extends Component {
         });
     };
     render() {
-        /* const {
-            comments: { answers = [] }
-        } = this */
+        const {
+            comment: { text, first_name, last_name, children }
+        } = this.props;
+
         const body = this.state.isOpen && (
             <CommentAnswer>
-                <input />
+                <MyInput placeholder="Text here" />
             </CommentAnswer>
         );
         return (
             <div>
                 <Border>
                     <Div>
-                        <Avatar
-                            size="large"
-                            style={{ backgroundColor: "#87d068" }}
-                            icon="user"
-                        />
-                        <span>{}</span>
+                        {first_name}
+                        {last_name}
+                        <CommentHeader />
                         <Outside>
                             <Inside>
-                                <p>
-                                    "Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat."
-                                </p>
+                                <p>{text}</p>
                             </Inside>
                             <Button onClick={this.handleClick} type="default">
                                 Answer
                             </Button>
                             <Button type="dashed">Edit</Button>
+
                             <Button type="danger">Delete</Button>
-                         </Outside>
+                        </Outside>
                         {/*  {
-                            answers.length > 0 ?
-                            <CommentsList  comments={answers}  />
+                            children && children.length > 0 ?
+                            <CommentsList comments={children}  />
                          : null
                          } */}
-
                         {body}
                     </Div>
                 </Border>
@@ -95,4 +87,8 @@ const Inside = styled.div`
 
 const Outside = styled.div`
     margin-left: 30px;
+`;
+
+const MyInput = styled.input`
+    margin-top: 5px;
 `;

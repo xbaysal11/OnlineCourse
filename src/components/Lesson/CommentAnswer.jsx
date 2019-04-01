@@ -1,19 +1,38 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import PT from "prop-types";
 import styled from "styled-components";
+import CommentHeader  from "./CommentHeader"
 
-class CommentAnswer extends Component {
+
+export default class CommentAnswer extends Component {
+    static propTypes = {
+        cancel_onclick: PT.func,
+        first_name: PT.string,
+        last_name: PT.string,
+        answer: PT.object
+    };
+
     render() {
+        
         return (
-            <Border>
-                {this.props.children}
-            </Border>
+            <SCommentAnswer>
+                <STop>
+                    <CommentHeader
+                    />
+
+                    {this.props.children}
+                </STop>
+            </SCommentAnswer>
         );
     }
 }
 
-export default CommentAnswer;
-
-const Border = styled.div`
-    border: 1px red solid;
-    height: 50px;
-    `;
+const SCommentAnswer = styled.div`
+    margin-top: 1em;
+    border: 2px solid #f1f1f2;
+    padding: 1em;
+   
+`;
+const STop = styled.div`
+    margin-bottom: 1em;
+`;

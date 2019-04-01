@@ -1,38 +1,113 @@
 import React, { Component } from "react";
-import LessonComment from "./LessonComment";
 import { List, Button as BTN } from "antd";
 import styled from "styled-components";
-import CommentsList from "./LessonComment";
+import CommentsList from "./CommentsList";
 
 const data = [
     {
-        author: {
-            first_name: "Yrys"
-        },
-        text: "awdawdawdawd",
-        answers: [
+        id: 1,
+        pelpful: 8,
+        first_name: "Августина",
+        last_name: "Аврона",
+        date: "2018-10-09T23:30:38+00:00",
+        text:
+            "Не термометр, а настоящая станция - три в одном. Очень удобный, если у вас финка. Для влажных русских парных его ставить нельзя, наверное, из-за часов. А так, выдерживает небольшую влажность и очень высокую температуру. Отдельный плюс в том, что в нем есть часы - вечная проблема, что не знаешь, сколько просидел в сауне, и надо ли выходить, или еще можно посидеть.",
+        children: [
             {
-                author: {
-                    first_name: "A"
-                },
-                text: "",
-                answers: []
+                id: 2,
+                answer: { first_name: "Августина", last_name: "Аврона" },
+                pelpful: 0,
+                moderator: true,
+                first_name: "Артемия",
+                last_name: "Беатрисна",
+                date: "2018-10-09T23:30:38+00:00",
+                text:
+                    "Благодарим за оставленный отзыв, и будем рады видеть вас снова!",
+                children: [
+                    {
+                        id: 2,
+                        answer: {
+                            first_name: "Августина",
+                            last_name: "Аврона"
+                        },
+                        pelpful: 0,
+                        moderator: true,
+                        first_name: "Артемия",
+                        last_name: "Беатрисна",
+                        date: "2018-10-09T23:30:38+00:00",
+                        text:
+                            "Благодарим за оставленный отзыв, и будем рады видеть вас снова!"
+                    },
+                    {
+                        id: 5,
+                        answer: {
+                            first_name: "Августина",
+                            last_name: "Аврона"
+                        },
+                        pelpful: 0,
+                        moderator: true,
+                        first_name: "Артемия",
+                        last_name: "Беатрисна",
+                        date: "2018-10-09T23:30:38+00:00",
+                        text:
+                            "Благодарим за оставленный отзыв, и будем рады видеть вас снова!"
+                    }
+                ]
+            },
+            {
+                id: 5,
+                answer: { first_name: "Августина", last_name: "Аврона" },
+                pelpful: 0,
+                moderator: true,
+                first_name: "Артемия",
+                last_name: "Беатрисна",
+                date: "2018-10-09T23:30:38+00:00",
+                text:
+                    "Благодарим за оставленный отзыв, и будем рады видеть вас снова!"
             }
         ]
     },
     {
-        author: {
-            first_name: "A"
-        },
-        text: ""
+        id: 3,
+        pelpful: 0,
+        first_name: "Владлена",
+        last_name: "Власта",
+        date: "2018-10-09T23:30:38+00:00",
+        text:
+            "'Стекло' у часов поплавилось при первой протопке , учитывая что термогирометр лежал на полке",
+        children: [
+            {
+                id: 4,
+                answer: { first_name: "Владлена", last_name: "Власта" },
+                pelpful: 0,
+                moderator: true,
+                first_name: "Дарьяна",
+                last_name: "Декабрина",
+                date: "2018-10-09T23:30:38+00:00",
+                text:
+                    "Мы были очень расстроены тем, что вас случилось. Мы делаем все, чтобы исправить это недоразумение. Сообщите, пожалуйста, номер заказа и даты доставки (почта, любая другая связь), и с вами свяжется наш менеджер для уточнения деталей"
+            }
+        ]
+    },
+    {
+        id: 5,
+        pelpful: -4,
+        first_name: "Ипатия",
+        last_name: "Араидна",
+        date: "2018-10-09T23:30:38+00:00",
+        text:
+            "Подскажите куда крепятся жалюзи не поняла ? На пластиковое окно подходит ?"
     }
 ];
+
 
 class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
+
                 <CommentsList comments={data} />
+
                 <div id="ember4766">
                     <div>
                         <div>
