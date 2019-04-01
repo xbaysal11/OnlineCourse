@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import SplitPane from "react-split-pane";
 import styled from "styled-components";
-import {Menu, Dropdown, Button as BTN } from "antd";
+import { Menu, Dropdown, Button as BTN } from "antd";
 
 import CodeEditor from "./CodeEditor";
 import Console from "./Console";
@@ -11,16 +11,40 @@ const ButtonGroup = BTN.Group;
 const menu = (
     <Menu>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">JS</a>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="http://www.alipay.com/"
+            >
+                JS
+            </a>
         </Menu.Item>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">Python</a>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="http://www.taobao.com/"
+            >
+                Python
+            </a>
         </Menu.Item>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">HTML</a>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="http://www.tmall.com/"
+            >
+                HTML
+            </a>
         </Menu.Item>
         <Menu.Item>
-            <a target="_blank" rel="noopener noreferrer" href="http://www.tmall.com/">CSS</a>
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="http://www.tmall.com/"
+            >
+                CSS
+            </a>
         </Menu.Item>
     </Menu>
 );
@@ -49,7 +73,9 @@ class Ide extends Component {
                         <Console />
                     </SplitPane>
                 </IdeWrapper>
-                <Button className="right " type="primary">Submit!</Button>
+                <Button className="right " type="primary">
+                    Submit!
+                </Button>
             </Wrapper>
         );
     }
@@ -79,16 +105,15 @@ const IdeWrapper = styled.div`
     }
 `;
 const Wrapper = styled.div`
-    margin: 3em 0 ;
+    margin: 3em 0;
 
     & .right {
         float: right;
         margin-right: 10px;
     }
 `;
-const Button = styled(BTN)`
-`;
+const Button = styled(BTN)``;
 const NavBar = styled.div`
-display: flex;
-justify-content:space-between;
+    display: flex;
+    justify-content: space-between;
 `;
