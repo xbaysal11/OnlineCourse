@@ -6,29 +6,27 @@ import { Button } from "antd";
 
 export default class CommentAnswer extends Component {
     static propTypes = {
-        cancel_onclick: PT.func,
+        cancelOnclick: PT.func,
         first_name: PT.string,
         last_name: PT.string,
         answer: PT.object
     };
 
     render() {
-        const {
-            cancel_onclick,
-            first_name,
-            last_name,
-        } = this.props;
+        const { cancelOnclick, first_name, last_name } = this.props;
         return (
             <SCommentAnswer>
                 <STop>
-                    <CommentHeader first_name={first_name}
+                    <CommentHeader
+                        first_name={first_name}
                         last_name={last_name}
-                       />
-                    <MyInput placeholder="Text here" /><br></br>
+                    />
+                    <MyInput placeholder="Text here" />
+                    <br />
                     <Button type="primary">Answer</Button>
-                    <Button onClick={cancel_onclick} type="default">
-                                Cancle
-                            </Button>
+                    <Button onClick={cancelOnclick} type="default">
+                        Cancle
+                    </Button>
                 </STop>
             </SCommentAnswer>
         );
@@ -48,5 +46,4 @@ const MyInput = styled.input`
     margin-bottom: 10px;
     width: 100%;
     font-size: 15px;
-
 `;
