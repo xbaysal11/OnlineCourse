@@ -6,7 +6,7 @@ import { Redirect, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import PT from "prop-types";
 
-const { Content, Sider } = Layout;
+const { Content } = Layout;
 
 class Lessons extends Component {
     static propTypes = {

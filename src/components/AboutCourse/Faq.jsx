@@ -4,10 +4,6 @@ import styled from "styled-components";
 
 const Panel = Collapse.Panel;
 
-function callback(key) {
-    console.log(key);
-}
-
 class Faq extends Component {
     render() {
         return (

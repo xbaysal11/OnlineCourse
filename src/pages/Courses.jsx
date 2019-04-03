@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Row, Col as CCol, Button } from "antd";
 import { Container, PageHeader } from "../components/index";
 import { NavLink } from "react-router-dom";
-import JavaImg from "../assets/img/alexandru-acea-1160461-unsplash.jpg";
 
 class Courses extends Component {
     render() {
@@ -22,7 +21,10 @@ class Courses extends Component {
                         <Col span={5}>
                             <Course>
                                 <Image>
-                                    <img src="https://img.icons8.com/color/500/000000/java-coffee-cup-logo.png" />
+                                    <img
+                                        src="https://img.icons8.com/color/500/000000/java-coffee-cup-logo.png"
+                                        alt=""
+                                    />
                                 </Image>
                                 <Top>Java</Top>
                                 <NavLink to="/java">
@@ -33,7 +35,10 @@ class Courses extends Component {
                         <Col span={5}>
                             <Course>
                                 <Image>
-                                    <img src="https://img.icons8.com/color/480/000000/python.png" />
+                                    <img
+                                        src="https://img.icons8.com/color/480/000000/python.png"
+                                        alt=""
+                                    />
                                 </Image>
                                 <Top>Python</Top>
                                 <NavLink to="/java">
@@ -44,7 +49,10 @@ class Courses extends Component {
                         <Col span={5}>
                             <Course>
                                 <Image>
-                                    <img src="https://img.icons8.com/color/480/000000/javascript.png" />
+                                    <img
+                                        src="https://img.icons8.com/color/480/000000/javascript.png"
+                                        alt=""
+                                    />
                                 </Image>
                                 <Top>JavaScript</Top>
                                 <NavLink to="/java">
@@ -55,7 +63,10 @@ class Courses extends Component {
                         <Col span={5}>
                             <Course>
                                 <Image>
-                                    <img src="https://img.icons8.com/color/480/000000/ruby-programming-language.png" />
+                                    <img
+                                        src="https://img.icons8.com/color/480/000000/ruby-programming-language.png"
+                                        alt=""
+                                    />
                                 </Image>
                                 <Top>Ruby</Top>
                                 <NavLink to="/java">

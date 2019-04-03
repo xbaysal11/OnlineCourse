@@ -5,18 +5,6 @@ import remark2react from "remark-react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import duotoneLight from "../../node_modules/prism-react-renderer/themes/duotoneLight";
 
-const text = `
-## Installing
-\`\`\`jsx
-console.log(props);
-const code = props.children[0];
-const text = code.props.children[0];
-function add(a, b) {
-    return a + b;
-  }
-\`\`\`
-`;
-
 const pre = props => {
     const code = props.children[0];
     const text = code.props.children[0];
@@ -55,7 +43,7 @@ class MarkdownText extends Component {
                         .use(remark2react, {
                             remarkReactComponents: { pre }
                         })
-                        .processSync(this.props.text || text).contents
+                        .processSync(this.props.text).contents
                 }
             </div>
         );

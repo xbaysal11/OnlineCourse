@@ -5,6 +5,18 @@ import { Checkbox } from "antd";
 import Ide from "../Ide";
 import MarkdownText from "../MarkdownText";
 
+const text = `
+## Installing
+\`\`\`jsx
+console.log(props);
+const code = props.children[0];
+const text = code.props.children[0];
+function add(a, b) {
+    return a + b;
+  }
+\`\`\`
+`;
+
 class LessonCode extends Component {
     onChange = e => {
         console.log(`checked = ${e.target.checked}`);
@@ -12,7 +24,7 @@ class LessonCode extends Component {
     render() {
         return (
             <Wrapper>
-                <MarkdownText />
+                <MarkdownText text={text} />
                 <ul>
                     <li>
                         <Checkbox onChange={this.onChange}>Ex1</Checkbox>
