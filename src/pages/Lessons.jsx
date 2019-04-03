@@ -39,14 +39,8 @@ class Lessons extends Component {
         return (
             <Container>
                 <Layout>
-                    <Sider
-                        theme="light"
-                        collapsible
-                        collapsed={this.state.collapsed}
-                        trigger={null}
-                    >
-                        <LessonSideBar onToggle onCollapse />
-                    </Sider>
+                    <LessonSideBar />
+
                     <Content>
                         <Wrapper>
                             <Menu
