@@ -26,7 +26,7 @@ class LoginForm extends Component {
         return (
             <Formik>
                 <Wrapper>
-                    <h1>Log In</h1>
+                    <Title>Log In</Title>
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Item>
                             {getFieldDecorator("userName", {
@@ -101,4 +101,7 @@ const Wrapper = styled.div`
 const Input = styled(InputAntd)`
     max-width: 300px;
     padding: 0 auto;
+`;
+const Title = styled.h2`
+    color: #494949;
 `;

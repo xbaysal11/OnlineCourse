@@ -219,7 +219,7 @@ const Input = styled(InputAntd)`
 
 const Wrapper = styled.div``;
 
-const Title = styled.div`
+const Title = styled.h2`
+    color: #494949;
     text-align: center;
-    font-size: 35px;
 `;
