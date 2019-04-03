@@ -3,28 +3,33 @@ import PT from "prop-types";
 import remark from "remark";
 import remark2react from "remark-react";
 import Highlight, { defaultProps } from "prism-react-renderer";
-import Prism from "prismjs";
-import "prismjs/components/prism-clike";
-import "prismjs/components/prism-javascript";
-import "prismjs/themes/prism.css";
+import duotoneLight from "../../node_modules/prism-react-renderer/themes/duotoneLight";
 
 const text = `
 ## Installing
-\`\`\`javascript
+\`\`\`jsx
 console.log(props);
 const code = props.children[0];
 const text = code.props.children[0];
+function add(a, b) {
+    return a + b;
+  }
 \`\`\`
 `;
 
 const pre = props => {
     const code = props.children[0];
     const text = code.props.children[0];
-    debugger;
+    // debugger;
     return (
-        <Highlight Prism={Prism} {...defaultProps} code={text} language="js">
+        <Highlight
+            {...defaultProps}
+            code={text}
+            language="jsx"
+            theme={duotoneLight}
+        >
             {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre className={className}>
+                <pre style={style}>
                     {tokens.map((line, i) => (
                         <div key={i} {...getLineProps({ line })}>
                             {line.map((token, key) => (
@@ -48,9 +53,7 @@ class MarkdownText extends Component {
                 {
                     remark()
                         .use(remark2react, {
-                            remarkReactComponents: {
-                                pre
-                            }
+                            remarkReactComponents: { pre }
                         })
                         .processSync(text).contents
                 }

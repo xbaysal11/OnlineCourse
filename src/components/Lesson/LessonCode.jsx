@@ -12,8 +12,7 @@ class LessonCode extends Component {
     render() {
         return (
             <Wrapper>
-                <MarkdownText/>
-
+                <MarkdownText />
                 <ul>
                     <li>
                         <Checkbox onChange={this.onChange}>Ex1</Checkbox>

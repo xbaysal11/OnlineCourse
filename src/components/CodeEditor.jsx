@@ -8,6 +8,7 @@ import "prismjs/themes/prism.css";
 const code = `function add(a, b) {
   return a + b;
 }
+console.log(adsfasdf);
 `;
 class CodeEditor extends React.Component {
     state = { code };
@@ -17,7 +18,7 @@ class CodeEditor extends React.Component {
                 value={this.state.code}
                 onValueChange={code => this.setState({ code })}
                 highlight={code => {
-                    console.log(code);
+                    // console.log(code);
                     return highlight(code, languages.js, "javascript");
                 }}
                 padding={10}
