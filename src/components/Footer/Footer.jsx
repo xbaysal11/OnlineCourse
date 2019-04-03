@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { colors } from "../../config/var";
 import { Container } from "../index";
 
-import logo from "../../assets/img/tv.svg";
+import logo from "../../assets/img/logo.png";
 
 class Footer extends Component {
     render() {
@@ -38,32 +38,22 @@ class Footer extends Component {
                                 <ul>
                                     <li>
                                         <a target="_blank" href="/">
-                                            Java/Mobile App
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="/">
-                                            PHP
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="/">
                                             Java
                                         </a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="/">
-                                            Front-End
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="/">
-                                            C/C++
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="/">
                                             Python
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="/">
+                                            JavaScript
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="/">
+                                            Ruby
                                         </a>
                                     </li>
                                 </ul>
@@ -116,19 +106,12 @@ class Footer extends Component {
 export default Footer;
 
 const Logo = styled.div`
-    display: block;
-
-    img {
-        margin-bottom: 4vh;
-        width: 50px;
-        height: 50px;
-    }
+    margin: 1em;
 `;
 
 const Copyright = styled.div`
     color: #b2bec3;
-    padding: 0 2em;
-    align-self: center;
+    margin-top: 1.5em;
 `;
 const Flex = styled.div`
     display: flex;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Card, Icon, Avatar as AvatarAntd } from "antd";
-import bgImage from "../assets/img/tv.svg";
+import bgImage from "../assets/img/logo.png";
 
 const { Meta } = Card;
 
