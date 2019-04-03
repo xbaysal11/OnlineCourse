@@ -1,0 +1,27 @@
+.line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    left: 0;
+}
+
+.line-numbers-rows span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+    height: 20px;
+    padding-left: 1.2em;
+}
+
+.line {
+    position: relative;
+    padding-left: 3.8em;
+}

@@ -4,6 +4,7 @@ import remark from "remark";
 import remark2react from "remark-react";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import duotoneLight from "../../node_modules/prism-react-renderer/themes/duotoneLight";
+import "./LineNumbers.css";
 
 const pre = props => {
     const code = props.children[0];
@@ -17,7 +18,7 @@ const pre = props => {
             theme={duotoneLight}
         >
             {({ style, tokens, getLineProps, getTokenProps }) => (
-                <pre style={style}>
+                <pre style={style} className={"line"}>
                     {tokens.map((line, i) => (
                         <div key={i} {...getLineProps({ line })}>
                             {line.map((token, key) => (
@@ -25,6 +26,11 @@ const pre = props => {
                             ))}
                         </div>
                     ))}
+                    <div className="line-numbers-rows">
+                        {tokens.map((_, i) => (
+                            <span>{i}</span>
+                        ))}
+                    </div>
                 </pre>
             )}
         </Highlight>
