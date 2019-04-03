@@ -19,7 +19,6 @@ export default class CommentAnswer extends Component {
                 <STop>
                     <CommentHeader
                     />
-
                     {this.props.children}
                 </STop>
             </SCommentAnswer>

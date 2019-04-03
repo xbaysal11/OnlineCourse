@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { List, Button as BTN } from "antd";
+import { Button as BTN } from "antd";
 import styled from "styled-components";
 import CommentsList from "./CommentsList";
 
@@ -22,37 +22,7 @@ const data = [
                 last_name: "Беатрисна",
                 date: "2018-10-09T23:30:38+00:00",
                 text:
-                    "Благодарим за оставленный отзыв, и будем рады видеть вас снова!",
-                children: [
-                    {
-                        id: 2,
-                        answer: {
-                            first_name: "Августина",
-                            last_name: "Аврона"
-                        },
-                        pelpful: 0,
-                        moderator: true,
-                        first_name: "Артемия",
-                        last_name: "Беатрисна",
-                        date: "2018-10-09T23:30:38+00:00",
-                        text:
-                            "Благодарим за оставленный отзыв, и будем рады видеть вас снова!"
-                    },
-                    {
-                        id: 5,
-                        answer: {
-                            first_name: "Августина",
-                            last_name: "Аврона"
-                        },
-                        pelpful: 0,
-                        moderator: true,
-                        first_name: "Артемия",
-                        last_name: "Беатрисна",
-                        date: "2018-10-09T23:30:38+00:00",
-                        text:
-                            "Благодарим за оставленный отзыв, и будем рады видеть вас снова!"
-                    }
-                ]
+                    "Благодарим за оставленный отзыв, и будем рады видеть вас снова!"
             },
             {
                 id: 5,
@@ -108,7 +78,7 @@ class LessonContent extends Component {
 
                 <CommentsList comments={data} />
 
-                <div id="ember4766">
+               {/*  <div id="ember4766">
                     <div>
                         <div>
                             <div id="ember4767" data-ready="">
@@ -192,7 +162,7 @@ class LessonContent extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <Button data-ember-action="" data-ember-action-4743="4743">
                     Следующий шаг&nbsp;&nbsp;
                     <span id="ember4744" />

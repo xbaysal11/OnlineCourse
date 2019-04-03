@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PT from "prop-types";
-import { Button, Avatar } from "antd";
+import { Button } from "antd";
 import CommentAnswer from "./CommentAnswer";
 import CommentHeader from "./CommentHeader";
 
@@ -43,7 +43,7 @@ class LessonComment extends Component {
                     <Div>
                         {first_name}
                         {last_name}
-                        <CommentHeader />
+                        <CommentHeader comment = {first_name}/>
                         <Outside>
                             <Inside>
                                 <p>{text}</p>
@@ -55,11 +55,11 @@ class LessonComment extends Component {
 
                             <Button type="danger">Delete</Button>
                         </Outside>
-                        {/*  {
+                         {
                             children && children.length > 0 ?
                             <CommentsList comments={children}  />
                          : null
-                         } */}
+                         }
                         {body}
                     </Div>
                 </Border>
@@ -72,21 +72,22 @@ export default CommentsList;
 
 const Border = styled.div`
     border: 1px solid #e0e0e0;
-    height: 300px;
+
 `;
 
 const Div = styled.div`
-    margin-left: 60px;
+     margin-left: 40px; 
+    margin-bottom:50px;
 `;
 
 const Inside = styled.div`
-    padding-left: 20px;
-    width: 80%;
-    border: 1px solid #e0e0e0;
+    padding-left: 40px;
+   /*  width: 80%; */
+    /* border: 1px solid #e0e0e0; */
 `;
 
 const Outside = styled.div`
-    margin-left: 30px;
+    /* margin-left: 30px; */
 `;
 
 const MyInput = styled.input`
