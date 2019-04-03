@@ -43,9 +43,7 @@ class LessonSideBar extends Component {
                     }}
                 >
                     <MenuItemGroup key="g1" title="Week 1">
-                        <Menu.Item key="1">
-                            Lesson 1 qwwwwwwwwwwwwwwwwwwwwwwwww
-                        </Menu.Item>
+                        <Menu.Item key="1">Lesson 1</Menu.Item>
                         <Menu.Item key="2">Lesson 2</Menu.Item>
                     </MenuItemGroup>
                     <MenuItemGroup key="g2" title="Week 2">

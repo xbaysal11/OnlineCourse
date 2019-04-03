@@ -28,7 +28,7 @@ const pre = props => {
             language="jsx"
             theme={duotoneLight}
         >
-            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            {({ style, tokens, getLineProps, getTokenProps }) => (
                 <pre style={style}>
                     {tokens.map((line, i) => (
                         <div key={i} {...getLineProps({ line })}>
@@ -55,7 +55,7 @@ class MarkdownText extends Component {
                         .use(remark2react, {
                             remarkReactComponents: { pre }
                         })
-                        .processSync(text).contents
+                        .processSync(this.props.text || text).contents
                 }
             </div>
         );
