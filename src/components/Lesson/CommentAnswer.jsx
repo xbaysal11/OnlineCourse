@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PT from "prop-types";
 import styled from "styled-components";
-import CommentHeader  from "./CommentHeader"
-
+import CommentHeader from "./CommentHeader";
+import { Button } from "antd";
 
 export default class CommentAnswer extends Component {
     static propTypes = {
@@ -13,13 +13,22 @@ export default class CommentAnswer extends Component {
     };
 
     render() {
-        
+        const {
+            cancel_onclick,
+            first_name,
+            last_name,
+        } = this.props;
         return (
             <SCommentAnswer>
                 <STop>
-                    <CommentHeader
-                    />
-                    {this.props.children}
+                    <CommentHeader first_name={first_name}
+                        last_name={last_name}
+                       />
+                    <MyInput placeholder="Text here" /><br></br>
+                    <Button type="primary">Answer</Button>
+                    <Button onClick={cancel_onclick} type="default">
+                                Cancle
+                            </Button>
                 </STop>
             </SCommentAnswer>
         );
@@ -27,11 +36,17 @@ export default class CommentAnswer extends Component {
 }
 
 const SCommentAnswer = styled.div`
-    margin-top: 1em;
     border: 2px solid #f1f1f2;
+    border-left: solid 5px #e0e0e0;
     padding: 1em;
-   
 `;
 const STop = styled.div`
     margin-bottom: 1em;
+`;
+const MyInput = styled.input`
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 15px;
+
 `;

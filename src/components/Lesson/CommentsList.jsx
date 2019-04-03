@@ -19,7 +19,7 @@ class LessonComment extends Component {
     };
     constructor(props) {
         super(props);
-        this.state = { sOpen: false };
+        this.state = { isOpen: false };
     }
 
     handleClick = () => {
@@ -33,17 +33,18 @@ class LessonComment extends Component {
         } = this.props;
 
         const body = this.state.isOpen && (
-            <CommentAnswer>
-                <MyInput placeholder="Text here" />
-            </CommentAnswer>
+            <CommentAnswer first_name={first_name} last_name={last_name} 
+            /* cancel_onclick = {this.setState({isOpen:false})
+            } *//>
         );
         return (
-            <div>
+            <Margin>
                 <Border>
                     <Div>
-                        {first_name}
-                        {last_name}
-                        <CommentHeader comment = {first_name}/>
+                        <CommentHeader
+                            first_name={first_name}
+                            last_name={last_name}
+                        />
                         <Outside>
                             <Inside>
                                 <p>{text}</p>
@@ -52,18 +53,15 @@ class LessonComment extends Component {
                                 Answer
                             </Button>
                             <Button type="dashed">Edit</Button>
-
                             <Button type="danger">Delete</Button>
                         </Outside>
-                         {
-                            children && children.length > 0 ?
-                            <CommentsList comments={children}  />
-                         : null
-                         }
+                        {children && children.length > 0 ? (
+                            <CommentsList comments={children} />
+                        ) : null}
                         {body}
                     </Div>
                 </Border>
-            </div>
+            </Margin>
         );
     }
 }
@@ -72,24 +70,21 @@ export default CommentsList;
 
 const Border = styled.div`
     border: 1px solid #e0e0e0;
-
+    border-left: 5px solid #e0e0e0;
+`;
+const Margin = styled.div`
+    margin-bottom: 30px;
 `;
 
 const Div = styled.div`
-     margin-left: 40px; 
-    margin-bottom:50px;
+    margin-left: 40px;
+    margin-bottom: 50px;
 `;
 
 const Inside = styled.div`
     padding-left: 40px;
-   /*  width: 80%; */
-    /* border: 1px solid #e0e0e0; */
 `;
 
 const Outside = styled.div`
-    /* margin-left: 30px; */
-`;
-
-const MyInput = styled.input`
-    margin-top: 5px;
+    margin-bottom: 30px;
 `;

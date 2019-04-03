@@ -1,19 +1,31 @@
 import React, { Component } from "react";
 import { Avatar } from "antd";
-
+import PT from "prop-types";
+import styled from "styled-components";
 
 class CommentHeader extends Component {
+    static propTypes = {
+        first_name: PT.string,
+        last_name: PT.string
+    };
     render() {
+        const { first_name, last_name } = this.props;
         return (
-            <div>
+            <Name>
                 <Avatar
                     size="large"
-                    style={{ backgroundColor: "#87d068" }}
+                    style={{ backgroundColor: "lightblue" }}
                     icon="user"
                 />
-            </div>
+                {first_name}
+                {last_name}
+            </Name>
         );
     }
 }
 
 export default CommentHeader;
+
+const Name = styled.div`
+    margin-top: 1em;
+`;
