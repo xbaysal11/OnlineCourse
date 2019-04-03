@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button } from "antd";
+import { Row, Col as CCol, Button } from "antd";
 import { Container, PageHeader } from "../components/index";
 import { NavLink } from "react-router-dom";
 import JavaImg from "../assets/img/alexandru-acea-1160461-unsplash.jpg";
@@ -9,7 +9,7 @@ class Courses extends Component {
     render() {
         return (
             <Main>
-                <PageHeader background="linear-gradient(to right, #b3a369, #e9aa00)">
+                <PageHeader background="linear-gradient(to right, #56c9ff, #0063ba)">
                     <h2>
                         Improve Your English
                         <br /> Communication Skills Specialization
@@ -18,11 +18,11 @@ class Courses extends Component {
                 <Container>
                     <Title>Our Courses </Title>
 
-                    <Row>
-                        <Col span={6}>
+                    <Row type="flex" justify="space-between">
+                        <Col span={5}>
                             <Course>
                                 <Image>
-                                    <img src={JavaImg} alt="Java" />
+                                    <img src="https://img.icons8.com/color/500/000000/java-coffee-cup-logo.png" />
                                 </Image>
                                 <Top>Java</Top>
                                 <NavLink to="/java">
@@ -30,22 +30,37 @@ class Courses extends Component {
                                 </NavLink>
                             </Course>
                         </Col>
-                        <Col span={6}>
+                        <Col span={5}>
                             <Course>
+                                <Image>
+                                    <img src="https://img.icons8.com/color/480/000000/python.png" />
+                                </Image>
                                 <Top>Python</Top>
-                                <Button>Go to Course</Button>
+                                <NavLink to="/java">
+                                    <Button type="primary">Go to Course</Button>
+                                </NavLink>
                             </Course>
                         </Col>
-                        <Col span={6}>
+                        <Col span={5}>
                             <Course>
-                                <Top>C++</Top>
-                                <Button type="primary">Go to Course</Button>
+                                <Image>
+                                    <img src="https://img.icons8.com/color/480/000000/javascript.png" />
+                                </Image>
+                                <Top>JavaScript</Top>
+                                <NavLink to="/java">
+                                    <Button type="primary">Go to Course</Button>
+                                </NavLink>
                             </Course>
                         </Col>
-                        <Col span={6}>
+                        <Col span={5}>
                             <Course>
-                                <Top>Scala</Top>
-                                <Button>Go to Course</Button>
+                                <Image>
+                                    <img src="https://img.icons8.com/color/480/000000/ruby-programming-language.png" />
+                                </Image>
+                                <Top>Ruby</Top>
+                                <NavLink to="/java">
+                                    <Button type="primary">Go to Course</Button>
+                                </NavLink>
                             </Course>
                         </Col>
                     </Row>
@@ -66,20 +81,28 @@ const Main = styled.div`
 `;
 
 const Title = styled.h3`
-    margin-top: 50px;
+    margin: 50px 0;
+    text-align: center;
+    font-weight: 600;
 `;
 
 const Course = styled.div`
     border: 1px solid #dddddd;
     text-align: center;
-    vertical-align: bottom;
-    height: 250px;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #ccc;
 `;
-const Top = styled.div``;
+const Top = styled.div`
+    margin: 1em 0;
+`;
+const Col = styled(CCol)`
+    margin: 0 1em;
+`;
 
 const Image = styled.div`
     img {
-        width: 240px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
     }
 `;
