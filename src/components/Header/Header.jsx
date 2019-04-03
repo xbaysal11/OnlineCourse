@@ -11,7 +11,7 @@ const Search = Input.Search;
 
 class Header extends Component {
     state = {
-        current: "mail"
+        current: "home"
     };
 
     handleClick = e => {
@@ -36,18 +36,17 @@ class Header extends Component {
                                         theme="dark"
                                         style={{ lineHeight: "64px" }}
                                     >
-                                        <Menu.Item key="mail">
+                                        <Menu.Item key="home">
                                             <NavLink to="/">
-                                                {" "}
-                                                <Icon type="mail" />
-                                                Teacher{" "}
+                                                <Icon type="home" />
+                                                Home
                                             </NavLink>
                                         </Menu.Item>
 
                                         <Menu.Item key="app">
                                             <NavLink to="/syllabus">
                                                 <Icon type="appstore" />
-                                                Courses{" "}
+                                                Courses
                                             </NavLink>
                                         </Menu.Item>
                                     </Menu>
@@ -59,7 +58,6 @@ class Header extends Component {
                                             onSearch={value =>
                                                 console.log(value)
                                             }
-                                            // style={{ width: 200 }}
                                         />
                                     }
                                 </Col>
@@ -86,18 +84,6 @@ class Header extends Component {
 
 export default Header;
 
-// const SearchItem = styled(Search)`
-//     background-color: #eee;
-//     border: 1px solid #eee;
-//     width: 15rem;
-//     border-radius: 5px;
-//     color: #222;
-//     width: 100%;
-//     height: 2rem;
-//     &::-webkit-input-placeholder {
-//         padding-left: 20px;
-//     }
-// `;
 const Bg = styled.div`
     .head_btn2 {
         margin-left: 6rem;
