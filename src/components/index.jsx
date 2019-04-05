@@ -18,8 +18,9 @@ import SettingsSidebar from "./ProfileSettings/SettingsSidebar";
 import ProfileSettings from "./ProfileSettings/ProfileSettings";
 import AccountSettings from "./ProfileSettings/AccountSettings";
 import NotificationsSettigs from "./ProfileSettings/NotificationsSettigs";
-
+import MyCourses from "./ProfileSettings/MyCourses";
 export {
+    MyCourses,
     NotificationsSettigs,
     ProfileSettings,
     AccountSettings,

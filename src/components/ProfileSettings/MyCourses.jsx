@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { PageHeader, Container } from "../components";
 import styled from "styled-components";
 import { Row, Col, Button } from "antd";
 import { NavLink } from "react-router-dom";
@@ -32,10 +31,7 @@ class MyCourses extends Component {
                                 There’s thrill, intensity, insanity and
                                 horsepower in Jordan Belfort’s speech where he
                                 motivates his employees to take on the world
-                                with their work. There are only 2 possibilities
-                                if we ever listened to a speech like this in
-                                real life — either we’ll change ourselves, or
-                                we’ll change the world.
+                                with their work.
                             </Col>
                             <AboutCourse>
                                 <Col span={8}>
@@ -65,10 +61,7 @@ class MyCourses extends Component {
                                 There’s thrill, intensity, insanity and
                                 horsepower in Jordan Belfort’s speech where he
                                 motivates his employees to take on the world
-                                with their work. There are only 2 possibilities
-                                if we ever listened to a speech like this in
-                                real life — either we’ll change ourselves, or
-                                we’ll change the world.
+                                with their work.
                             </Col>
                             <AboutCourse>
                                 <Col span={8}>
@@ -204,8 +197,8 @@ const Image1 = styled.div`
 
 const Image = styled.div`
     img {
-        width: 160px;
-        height: 160px;
+        width: 110px;
+        height: 110px;
     }
 `;
 const Center = styled.div`
