@@ -19,30 +19,27 @@ class HeaderUser extends Component {
         user: PT.object
     };
     render() {
-        const { user } = this.props;
         return (
             <div>
-                {user ? (
-                    <>
-                        <Badge count={1}>
-                            <Avatar shape="square" icon="user" />
-                        </Badge>
-                        <Dropdown overlay={menu} trigger={["click"]}>
-                            <UserName>
-                                Ragnar Lod Brock <Icon type="down" />
-                            </UserName>
-                        </Dropdown>
-                    </>
-                ) : (
-                    <Button.Group>
+                <>
+                    {/* <Button.Group>
                         <OpenModal name={"login"}>
                             <Button type="primary">Log in</Button>
                         </OpenModal>
                         <OpenModal name={"register"}>
                             <Button type="primary">Register</Button>
                         </OpenModal>
-                    </Button.Group>
-                )}
+                    </Button.Group> */}
+
+                    <Badge count={1}>
+                        <Avatar shape="square" icon="user" />
+                    </Badge>
+                    <Dropdown overlay={menu} trigger={["click"]}>
+                        <UserName>
+                            Ragnar Lod Brock <Icon type="down" />
+                        </UserName>
+                    </Dropdown>
+                </>
             </div>
         );
     }

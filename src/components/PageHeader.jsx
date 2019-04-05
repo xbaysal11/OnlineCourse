@@ -12,7 +12,9 @@ class PageHeader extends Component {
             <>
                 <Bg background={this.props.background}>
                     <Container>
-                        <About>{this.props.children}</About>
+                        <About>
+                            {this.props.children}
+                        </About>
                     </Container>
                 </Bg>
             </>
