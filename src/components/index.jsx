@@ -19,7 +19,14 @@ import ProfileSettings from "./ProfileSettings/ProfileSettings";
 import AccountSettings from "./ProfileSettings/AccountSettings";
 import NotificationsSettigs from "./ProfileSettings/NotificationsSettigs";
 import MyCourses from "./ProfileSettings/MyCourses";
+import ProfileGrades from "./ProfileSettings/ProfileGrades";
+import Charts from "./Charts";
+import HeatMap from "./HeatMap";
+
 export {
+    HeatMap,
+    Charts,
+    ProfileGrades,
     MyCourses,
     NotificationsSettigs,
     ProfileSettings,
