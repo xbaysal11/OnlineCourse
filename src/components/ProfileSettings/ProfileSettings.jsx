@@ -1,33 +1,80 @@
 import React, { Component } from "react";
-import { Input } from "antd";
+import { Input, Select, Row as RRow, Col } from "antd";
 
 import styled from "styled-components";
+import UploadAvatar from "./UploadAvatar";
+
+const Option = Select.Option;
+
+function handleChange(value) {
+    console.log(`selected ${value}`);
+}
 
 class ProfileSettings extends Component {
     render() {
         return (
-            <div>
-                <AccountInfo action="#" method="post">
-                    <div>
+            <Form action="#" method="post">
+                <Row>
+                    <Col span={4}>
                         <label htmlFor="">Name</label>
-                        <Input placeholder="Basic usage" />
-                    </div>
-                    <div>
+                    </Col>
+                    <Col span={20}>
+                        <Input placeholder=" " />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={4}>
                         <label htmlFor="">E-mail</label>
-                        <Input placeholder="Basic usage" />
-                    </div>
-                </AccountInfo>
-            </div>
+                    </Col>
+                    <Col span={20}>
+                        <Input placeholder=" " />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={4}>
+                        <label htmlFor="">Обо мне</label>
+                    </Col>
+                    <Col span={20}>
+                        <Input placeholder=" " />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={4}>
+                        <label htmlFor="">Язык</label>
+                    </Col>
+                    <Col span={20}>
+                        <Select
+                            defaultValue="rus"
+                            style={{ width: 120 }}
+                            onChange={handleChange}
+                        >
+                            <Option value="rus">Russian</Option>
+                            <Option value="eng">English</Option>
+                        </Select>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col span={4}>
+                        <label htmlFor="">Avatar</label>
+                    </Col>
+                    <Col span={20}>
+                        <UploadAvatar />
+                    </Col>
+                </Row>
+            </Form>
         );
     }
 }
 export default ProfileSettings;
 
-const AccountInfo = styled.form`
+const Form = styled.form`
     background: #fff;
-    padding: 2vw;
+    padding: 2em;
     border-radius: 4px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
     margin: 24px 12px 52px 12px;
-    min-height: 45vh;
+    min-height: 50%;
+`;
+const Row = styled(RRow)`
+    margin: 1em 0;
 `;

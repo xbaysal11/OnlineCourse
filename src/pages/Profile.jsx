@@ -6,10 +6,13 @@ import {
     PageHeader,
     Container,
     SettingsSidebar,
-    ProfileSettings
+    ProfileSettings,
+    AccountSettings,
+    NotificationsSettigs
 } from "../components/index";
 
 import { Route } from "react-router-dom";
+
 class Profile extends Component {
     state = {
         visible: false,
@@ -178,6 +181,26 @@ class Profile extends Component {
                                     path="/profile/profile_info"
                                     component={ProfileSettings}
                                 />
+                                <Route
+                                    path="/profile/my_courses"
+                                    component={ProfileSettings}
+                                />
+                                <Route
+                                    path="/profile/grades"
+                                    component={ProfileSettings}
+                                />
+                                <Route
+                                    path="/profile/profile_settings"
+                                    component={ProfileSettings}
+                                />
+                                <Route
+                                    path="/profile/account_settings"
+                                    component={AccountSettings}
+                                />
+                                <Route
+                                    path="/profile/notifications_settings"
+                                    component={NotificationsSettigs}
+                                />
                             </Content>
                         </Layout>
                     </Container>
@@ -188,7 +211,9 @@ class Profile extends Component {
 }
 export default Profile;
 const Wrapper = styled.div``;
-const Content = styled.div``;
+const Content = styled.div`
+    width: 100%;
+`;
 
 const Info = styled.div`
     color: #fff;
