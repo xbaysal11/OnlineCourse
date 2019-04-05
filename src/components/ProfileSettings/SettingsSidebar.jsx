@@ -55,7 +55,7 @@ class SettingsSidebar extends Component {
                         </Menu.Item>
                         <Menu.Item key="3">
                             <Icon type="calculator" />
-                            <span>Groups</span>
+                            <span>Grades</span>
                         </Menu.Item>
 
                         <SubMenu
