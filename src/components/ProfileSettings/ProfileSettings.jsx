@@ -3,7 +3,7 @@ import { Input } from "antd";
 
 import styled from "styled-components";
 
-class BasicInfo extends Component {
+class ProfileSettings extends Component {
     render() {
         return (
             <div>
@@ -21,7 +21,7 @@ class BasicInfo extends Component {
         );
     }
 }
-export default BasicInfo;
+export default ProfileSettings;
 
 const AccountInfo = styled.form`
     background: #fff;

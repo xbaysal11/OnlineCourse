@@ -10,7 +10,7 @@ class PageHeader extends Component {
     render() {
         return (
             <>
-                <Bg background= {this.props.background}>
+                <Bg background={this.props.background}>
                     <Container>
                         <About>{this.props.children}</About>
                     </Container>
@@ -23,10 +23,8 @@ class PageHeader extends Component {
 export default PageHeader;
 
 const Bg = styled.div`
-    height: 45vh;
     background-image: ${props => props.background};
 `;
 const About = styled.div`
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 10% 0;
 `;

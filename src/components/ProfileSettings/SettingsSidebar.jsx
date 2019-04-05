@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Menu, Icon, Layout } from "antd";
 import { colors } from "../../config/var";
 import SiderMenu from "../SiderMenu";
+import { NavLink } from "react-router-dom";
 
 const SubMenu = Menu.SubMenu;
 
@@ -41,12 +42,16 @@ class SettingsSidebar extends Component {
                         collapsed={this.state.collapsed}
                     >
                         <Menu.Item key="1">
-                            <Icon type="user" />
-                            <span>Profile</span>
+                            <NavLink to="/profile/profile_info">
+                                <Icon type="user" />
+                                <span>Profile</span>
+                            </NavLink>
                         </Menu.Item>
                         <Menu.Item key="2">
-                            <Icon type="project" />
-                            <span>My Courses</span>
+                            <NavLink to="/profile/courses">
+                                <Icon type="project" />
+                                <span>My Courses</span>
+                            </NavLink>
                         </Menu.Item>
                         <Menu.Item key="3">
                             <Icon type="calculator" />
@@ -93,6 +98,4 @@ class SettingsSidebar extends Component {
 }
 export default SettingsSidebar;
 
-const Wrapper = styled.div`
-    /* margin: 24px 12px 52px 12px; */
-`;
+const Wrapper = styled.div``;

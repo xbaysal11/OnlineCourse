@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PT from "prop-types";
-import { Button, Comment, Icon, Tooltip } from "antd";
+import { Button } from "antd";
 import CommentEditor from "./CommentEditor";
 import CommentHeader from "./CommentHeader";
 
@@ -77,9 +77,7 @@ class LessonComment extends Component {
                             last_name={last_name}
                         />
                         <Outside>
-                            <Inside>
-                                {text}
-                            </Inside>
+                            <Inside>{text}</Inside>
                             <Button onClick={this.handleClick} type="default">
                                 Answer
                             </Button>

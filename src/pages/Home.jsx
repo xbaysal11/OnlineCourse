@@ -7,14 +7,12 @@ class Home extends Component {
         return (
             <Wrapper>
                 <PageHeader background="linear-gradient(rgb(254, 254, 254), rgb(244, 207, 189))">
-                    <div>
-                        <h2>Наши курсы - самый короткий путь в IT</h2>
-                        <p>
-                            Освойте одну из самых востребованных и
-                            высокооплачиваемых профессий всего за 9 месяцев по
-                            сертифицированной программе IT академии ПВТ Беларуси
-                        </p>
-                    </div>
+                    <H2>Наши курсы - самый короткий путь в IT</H2>
+                    <p>
+                        Освойте одну из самых востребованных и
+                        высокооплачиваемых профессий всего за 9 месяцев по
+                        сертифицированной программе IT академии ПВТ Беларуси
+                    </p>
                 </PageHeader>
                 <Container>
                     <Content />
@@ -27,6 +25,9 @@ class Home extends Component {
 export default Home;
 
 const Wrapper = styled.div``;
+const H2 = styled.div`
+    font-size: 26px;
+`;
 const Content = styled.div`
     height: 40em;
 `;

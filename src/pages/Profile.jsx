@@ -1,91 +1,182 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Card, Icon, Avatar as AvatarAntd } from "antd";
-import bgImage from "../assets/img/logo.png";
-
-const { Meta } = Card;
+import { Avatar, Row, Col, Icon, Rate, Popover } from "antd";
+import faker from "faker";
+import { PageHeader, Container, SettingsSidebar } from "../components/index";
 
 class Profile extends Component {
     state = {
-        size: 100
+        visible: false,
+        status: "Student"
     };
+
+    hide = () => {
+        this.setState({
+            visible: false
+        });
+    };
+
+    handleVisibleChange = visible => {
+        this.setState({ visible });
+    };
+
     render() {
-        // const size = this.state.size;className="login-form"
         return (
             <div>
-                <BackgroundImage style={{ zIndex: -1 }}>
-                    <img src={bgImage} alt="" />
-                </BackgroundImage>
-                <About
-                    style={{
-                        zIndex: 2,
-                        position: "relative",
-                        top: -50,
-                        margin: "auto",
-                        textAlign: "center"
-                    }}
-                >
-                    <Avatar size={164} icon="user" />
-                    <Name>Baisalbek Daniiarov</Name>
-                    <Line>
-                        <a href="/">
-                            <Icon
-                                style={{ fontSize: "36px", color: "#08c" }}
-                                type="schedule"
-                            />
-                        </a>
-                        <a href="/">
-                            <Icon
-                                style={{ fontSize: "36px", color: "#08c" }}
-                                type="edit"
-                            />
-                        </a>
+                <Wrapper>
+                    <PageHeader background="linear-gradient(to right, #27C1FF, #0D4156)">
+                        <Row>
+                            <Col span={6}>
+                                <Popover
+                                    content={
+                                        <a onClick={this.hide}>
+                                            Upload new image
+                                        </a>
+                                    }
+                                    title="Avatar"
+                                    trigger="click"
+                                    visible={this.state.visible}
+                                    onVisibleChange={this.handleVisibleChange}
+                                >
+                                    <Avatar
+                                        shape="square"
+                                        size={190}
+                                        icon="user"
+                                        src="https://randomuser.me/api/portraits/men/71.jpg"
+                                    />
+                                </Popover>
+                            </Col>
+                            <Col span={18}>
+                                <Info>
+                                    <Row>
+                                        <Col span={14}>
+                                            <Name>
+                                                {faker.name.firstName()}{" "}
+                                                {faker.name.lastName()}
+                                            </Name>
+                                        </Col>
+                                        <Col span={10}>
+                                            <Rate
+                                                disabled
+                                                allowHalf
+                                                defaultValue={4}
+                                                style={{
+                                                    margin: ".6em 0"
+                                                }}
+                                            />
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col span={12}>
+                                            <H5>
+                                                <Icon
+                                                    type="skin"
+                                                    style={{
+                                                        fontSize: "22px"
+                                                    }}
+                                                />
+                                                <span>{this.state.status}</span>
+                                            </H5>
+                                        </Col>
+                                        <Col span={12}>
+                                            <p>
+                                                <Icon
+                                                    type="phone"
+                                                    style={{
+                                                        fontSize: "22px"
+                                                    }}
+                                                />
+                                                +9967000000000
+                                            </p>
+                                        </Col>
+                                    </Row>
 
-                        <a href="/">
-                            <Icon
-                                style={{ fontSize: "36px", color: "#08c" }}
-                                type="logout"
-                            />
-                        </a>
-                    </Line>
-                </About>
-                <TakenCourses>
-                    <Card
-                        hoverable
-                        style={{ width: 240 }}
-                        cover={
-                            <img
-                                alt="example"
-                                src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                            />
-                        }
-                    >
-                        <Meta
-                            title="Europe Street beat"
-                            description="www.instagram.com"
-                        />
-                    </Card>
-                </TakenCourses>
+                                    <Row>
+                                        <Col span={12}>
+                                            <p>
+                                                <strong>Group : </strong>
+                                                Front-End 19
+                                            </p>
+                                        </Col>
+                                        <Col span={12}>
+                                            <p>
+                                                <strong>Birth day : </strong>
+                                                444 - 3232 - 1999999
+                                            </p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col span={24}>
+                                            <p>
+                                                {" "}
+                                                Lorem, ipsum dolor sit amet
+                                                consectetur adipisicing elit.
+                                                Autem fugiat neque, sit maiores
+                                                recusandae nam voluptatibus
+                                                aspernatur, incidunt sapiente
+                                                eveniet in illum debitis
+                                                obcaecati non consectetur
+                                                asperiores quasi officia! Animi!{" "}
+                                            </p>
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col span={24}>
+                                            <Icon
+                                                type="github"
+                                                style={{
+                                                    fontSize: "22px",
+                                                    margin: "0 .2em"
+                                                }}
+                                            />
+                                            <Icon
+                                                type="google"
+                                                style={{
+                                                    fontSize: "22px",
+                                                    margin: "0 .2em"
+                                                }}
+                                            />
+                                            <Icon
+                                                type="gitlab"
+                                                style={{
+                                                    fontSize: "22px",
+                                                    margin: "0 .2em"
+                                                }}
+                                            />
+                                            <Icon
+                                                type="facebook"
+                                                style={{
+                                                    fontSize: "22px",
+                                                    margin: "0 .2em"
+                                                }}
+                                            />
+                                        </Col>
+                                    </Row>
+                                </Info>
+                            </Col>
+                        </Row>
+                    </PageHeader>
+                    <Container>
+                        <SettingsSidebar />
+                        <Content />
+                    </Container>
+                </Wrapper>
             </div>
         );
     }
 }
 export default Profile;
-const About = styled.div`
-    display: inline-block;
+const Wrapper = styled.div``;
+const Content = styled.div``;
+
+const Info = styled.div`
+    color: #fff;
 `;
-const BackgroundImage = styled.div`
-    img {
-        height: 20vh;
-    }
+const Name = styled.div`
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
 `;
-// const Icon = styled.div``;
-const Line = styled.div`
-    border: 2px solid red;
+const H5 = styled.h5`
+    color: #fff;
 `;
-const Avatar = styled(AvatarAntd)`
-    border-radius: 50%;
-    border: 3px solid green;
-`;
-const TakenCourses = styled.div``;
-const Name = styled.div``;

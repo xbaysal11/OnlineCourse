@@ -14,6 +14,7 @@ import PageHeader from "./PageHeader";
 import Hours from "./Hours";
 import HoursContent from "./HoursContent";
 import WeekHead from "./WeekHead";
+import SettingsSidebar from "./ProfileSettings/SettingsSidebar";
 
 export {
     LessonCode,
@@ -27,5 +28,6 @@ export {
     PageHeader,
     Hours,
     HoursContent,
-    WeekHead
+    WeekHead,
+    SettingsSidebar
 };
