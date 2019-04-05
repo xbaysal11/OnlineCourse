@@ -35,31 +35,33 @@ class SettingsSidebar extends Component {
                 >
                     <SiderMenu
                         onClick={this.handleClick}
-                        defaultSelectedKeys={["1"]}
+                        defaultSelectedKeys={["profile_info"]}
                         defaultOpenKeys={["sub1"]}
                         mode="inline"
                         toggle={this.onToggle}
                         collapsed={this.state.collapsed}
                     >
-                        <Menu.Item key="1">
+                        <Menu.Item key="profile_info">
                             <NavLink to="/profile/profile_info">
                                 <Icon type="user" />
                                 <span>Profile</span>
                             </NavLink>
                         </Menu.Item>
-                        <Menu.Item key="2">
-                            <NavLink to="/profile/courses">
+                        <Menu.Item key="my_courses">
+                            <NavLink to="/profile/my_courses">
                                 <Icon type="project" />
                                 <span>My Courses</span>
                             </NavLink>
                         </Menu.Item>
-                        <Menu.Item key="3">
-                            <Icon type="calculator" />
-                            <span>Grades</span>
+                        <Menu.Item key="grades">
+                            <NavLink to="/profile/grades">
+                                <Icon type="calculator" />
+                                <span>Grades</span>
+                            </NavLink>
                         </Menu.Item>
 
                         <SubMenu
-                            key="sub4"
+                            key="sub1"
                             title={
                                 <span>
                                     <Icon type="setting" />
@@ -67,21 +69,27 @@ class SettingsSidebar extends Component {
                                 </span>
                             }
                         >
-                            <Menu.Item key="4">
-                                <Icon type="solution" />
-                                Profile
+                            <Menu.Item key="profile_settings">
+                                <NavLink to="/profile/profile_settings">
+                                    <Icon type="solution" />
+                                    Profile
+                                </NavLink>
                             </Menu.Item>
-                            <Menu.Item key="5">
-                                <Icon type="tool" />
-                                Accounts
+                            <Menu.Item key="accounts_settings">
+                                <NavLink to="/profile/accounts_settings">
+                                    <Icon type="tool" />
+                                    Accounts
+                                </NavLink>
                             </Menu.Item>
-                            <Menu.Item key="6">
-                                <Icon type="bell" />
-                                Notifications
+                            <Menu.Item key="notifications_settings">
+                                <NavLink to="/profile/notifications_settings">
+                                    <Icon type="bell" />
+                                    Notifications
+                                </NavLink>
                             </Menu.Item>
                         </SubMenu>
                         <Menu.Item
-                            key="7"
+                            key="logout"
                             style={{
                                 color: "red",
                                 background: colors.red_light

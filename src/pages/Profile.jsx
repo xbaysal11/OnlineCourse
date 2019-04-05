@@ -1,9 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Avatar, Row, Col, Icon, Rate, Popover } from "antd";
+import { Avatar, Row, Col, Icon, Rate, Popover, Layout } from "antd";
 import faker from "faker";
-import { PageHeader, Container, SettingsSidebar } from "../components/index";
+import {
+    PageHeader,
+    Container,
+    SettingsSidebar,
+    ProfileSettings
+} from "../components/index";
 
+import { Route } from "react-router-dom";
 class Profile extends Component {
     state = {
         visible: false,
@@ -24,7 +30,7 @@ class Profile extends Component {
         return (
             <div>
                 <Wrapper>
-                    <PageHeader background="linear-gradient(to right, #27C1FF, #0D4156)">
+                    <PageHeader background="linear-gradient(to right, #465584, #262643)">
                         <Row>
                             <Col span={6}>
                                 <Popover
@@ -61,7 +67,8 @@ class Profile extends Component {
                                                 allowHalf
                                                 defaultValue={4}
                                                 style={{
-                                                    margin: ".6em 0"
+                                                    margin: ".6em 0",
+                                                    color: "#40A9FF"
                                                 }}
                                             />
                                         </Col>
@@ -72,7 +79,8 @@ class Profile extends Component {
                                                 <Icon
                                                     type="skin"
                                                     style={{
-                                                        fontSize: "22px"
+                                                        fontSize: "22px",
+                                                        color: "#40A9FF"
                                                     }}
                                                 />
                                                 <span>{this.state.status}</span>
@@ -83,7 +91,8 @@ class Profile extends Component {
                                                 <Icon
                                                     type="phone"
                                                     style={{
-                                                        fontSize: "22px"
+                                                        fontSize: "22px",
+                                                        color: "#40A9FF"
                                                     }}
                                                 />
                                                 +9967000000000
@@ -126,28 +135,32 @@ class Profile extends Component {
                                                 type="github"
                                                 style={{
                                                     fontSize: "22px",
-                                                    margin: "0 .2em"
+                                                    margin: "0 .2em",
+                                                    color: "#40A9FF"
                                                 }}
                                             />
                                             <Icon
                                                 type="google"
                                                 style={{
                                                     fontSize: "22px",
-                                                    margin: "0 .2em"
+                                                    margin: "0 .2em",
+                                                    color: "#40A9FF"
                                                 }}
                                             />
                                             <Icon
                                                 type="gitlab"
                                                 style={{
                                                     fontSize: "22px",
-                                                    margin: "0 .2em"
+                                                    margin: "0 .2em",
+                                                    color: "#40A9FF"
                                                 }}
                                             />
                                             <Icon
                                                 type="facebook"
                                                 style={{
                                                     fontSize: "22px",
-                                                    margin: "0 .2em"
+                                                    margin: "0 .2em",
+                                                    color: "#40A9FF"
                                                 }}
                                             />
                                         </Col>
@@ -157,8 +170,16 @@ class Profile extends Component {
                         </Row>
                     </PageHeader>
                     <Container>
-                        <SettingsSidebar />
-                        <Content />
+                        <Layout>
+                            <SettingsSidebar />
+
+                            <Content>
+                                <Route
+                                    path="/profile/profile_info"
+                                    component={ProfileSettings}
+                                />
+                            </Content>
+                        </Layout>
                     </Container>
                 </Wrapper>
             </div>
