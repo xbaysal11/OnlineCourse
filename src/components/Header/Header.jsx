@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Row, Col, Icon, Menu, Layout, Input } from "antd";
+import { Row, Col, Icon, Menu, Layout, Input, Button} from "antd";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
+import OpenModal from "../modal/OpenModal";
 
 import HeaderUser from "./HeaderUser";
 import { Container, LoginModal, RegisterModal } from "..";
