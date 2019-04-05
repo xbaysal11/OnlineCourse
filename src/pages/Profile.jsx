@@ -10,7 +10,8 @@ import {
     AccountSettings,
     NotificationsSettigs,
     MyCourses,
-    ProfileGrades
+    ProfileGrades,
+    ProfileInfo
 } from "../components/index";
 
 import { Route } from "react-router-dom";
@@ -181,7 +182,7 @@ class Profile extends Component {
                             <Content>
                                 <Route
                                     path="/profile/profile_info"
-                                    component={ProfileSettings}
+                                    component={ProfileInfo}
                                 />
                                 <Route
                                     path="/profile/my_courses"

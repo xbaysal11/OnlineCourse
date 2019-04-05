@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input, Select, Row as RRow, Col } from "antd";
+import { Input, Select, Row as RRow, Col, Button } from "antd";
 
 import styled from "styled-components";
 import UploadAvatar from "./UploadAvatar";
@@ -59,6 +59,11 @@ class ProfileSettings extends Component {
                     </Col>
                     <Col span={20}>
                         <UploadAvatar />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col offset={20}>
+                        <Button type="submit">Change!</Button>
                     </Col>
                 </Row>
             </Form>
