@@ -75,8 +75,8 @@ class SettingsSidebar extends Component {
                                     Profile
                                 </NavLink>
                             </Menu.Item>
-                            <Menu.Item key="accounts_settings">
-                                <NavLink to="/profile/accounts_settings">
+                            <Menu.Item key="account_settings">
+                                <NavLink to="/profile/account_settings">
                                     <Icon type="tool" />
                                     Accounts
                                 </NavLink>

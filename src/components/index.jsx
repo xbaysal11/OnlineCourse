@@ -16,9 +16,13 @@ import HoursContent from "./HoursContent";
 import WeekHead from "./WeekHead";
 import SettingsSidebar from "./ProfileSettings/SettingsSidebar";
 import ProfileSettings from "./ProfileSettings/ProfileSettings";
+import AccountSettings from "./ProfileSettings/AccountSettings";
+import NotificationsSettigs from "./ProfileSettings/NotificationsSettigs";
 
 export {
+    NotificationsSettigs,
     ProfileSettings,
+    AccountSettings,
     LessonCode,
     LessonContent,
     Container,
