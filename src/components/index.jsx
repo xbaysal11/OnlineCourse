@@ -11,9 +11,7 @@ import LessonContent from "./Lesson/LessonContent";
 import LessonCode from "./Lesson/LessonCode";
 //
 import PageHeader from "./PageHeader";
-import Hours from "./Hours";
-import HoursContent from "./HoursContent";
-import WeekHead from "./WeekHead";
+
 import SettingsSidebar from "./ProfileSettings/SettingsSidebar";
 import ProfileSettings from "./ProfileSettings/ProfileSettings";
 import AccountSettings from "./ProfileSettings/AccountSettings";
@@ -42,8 +40,5 @@ export {
     LoginModal,
     RegisterModal,
     PageHeader,
-    Hours,
-    HoursContent,
-    WeekHead,
     SettingsSidebar
 };

@@ -36,7 +36,10 @@ class Profile extends Component {
         return (
             <div>
                 <Wrapper>
-                    <PageHeader background="linear-gradient(to right, #465584, #262643)">
+                    <PageHeader
+                        user
+                        background="linear-gradient(to right, #465584, #262643)"
+                    >
                         <Row>
                             <Col span={6}>
                                 <Popover

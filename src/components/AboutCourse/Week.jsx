@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Container from "../elements/Container";
-import WeekCounter from ".././WeekCounter";
+import WeekCounter from "./WeekCounter";
 import styled from "styled-components";
 import { Col, Row } from "antd";
-import { Hours, HoursContent, WeekHead } from "..";
+import Hours from "./Hours";
+import WeekHead from "./WeekHead";
+import HoursContent from "./HoursContent";
 
 class Week extends Component {
     render() {
