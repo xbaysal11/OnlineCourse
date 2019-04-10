@@ -12,13 +12,16 @@ class CommentHeader extends Component {
         const { first_name, last_name } = this.props;
         return (
             <Name>
-                <Avatar
-                    size="large"
-                    style={{ backgroundColor: "lightblue" }}
-                    icon="user"
-                />
-                {first_name}
-                {last_name}
+                <div>
+                    <Avatar
+                        size="large"
+                        style={{ backgroundColor: "lightblue" }}
+                        icon="user"
+                    />
+                </div>
+                <FullName>
+                    {first_name} {last_name}
+                </FullName>
             </Name>
         );
     }
@@ -28,4 +31,10 @@ export default CommentHeader;
 
 const Name = styled.div`
     margin-top: 1em;
+    display: flex;
+    align-items: center;
+`;
+
+const FullName = styled.div`
+    margin-left: 0.5em;
 `;
