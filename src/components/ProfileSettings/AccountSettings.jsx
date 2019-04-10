@@ -33,6 +33,14 @@ class ProfileInfo extends Component {
                     </Col>
                 </Row>
                 <Row>
+                    <Col span={20}>
+                        <label htmlFor="">Delete Account</label>
+                    </Col>
+                    <Col span={4}>
+                        <Button type="danger">Delete!</Button>
+                    </Col>
+                </Row>
+                <Row>
                     <Col offset={20}>
                         <Button type="submit">Change!</Button>
                     </Col>
