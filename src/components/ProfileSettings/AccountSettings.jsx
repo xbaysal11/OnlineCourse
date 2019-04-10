@@ -33,6 +33,28 @@ class ProfileInfo extends Component {
                     </Col>
                 </Row>
                 <Row>
+                    <Col span={4}>
+                        <label htmlFor="">GitHub</label>
+                    </Col>
+                    <Col span={20}>
+                        <Input placeholder="URL" />
+                    </Col>
+                </Row><Row>
+                    <Col span={4}>
+                        <label htmlFor="">Email</label>
+                    </Col>
+                    <Col span={20}>
+                        <Input placeholder="Email" />
+                    </Col>
+                </Row><Row>
+                    <Col span={4}>
+                        <label htmlFor="">Facebook</label>
+                    </Col>
+                    <Col span={20}>
+                        <Input placeholder="URL" />
+                    </Col>
+                </Row>
+                <Row>
                     <Col span={20}>
                         <label htmlFor="">Delete Account</label>
                     </Col>
