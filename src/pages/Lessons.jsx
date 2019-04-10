@@ -6,7 +6,9 @@ import { Redirect, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import PT from "prop-types";
 
+
 const { Content } = Layout;
+
 
 class Lessons extends Component {
     static propTypes = {
@@ -14,7 +16,7 @@ class Lessons extends Component {
     };
     state = {
         collapsed: false,
-        current: "home"
+        current: "home1"
     };
     handleClick = e => {
         console.log("click ", e);
@@ -48,26 +50,42 @@ class Lessons extends Component {
                                 selectedKeys={[this.state.current]}
                                 mode="horizontal"
                             >
-                                <Menu.Item key="home">
-                                    <NavLink to={`/lessons/${lesson_id}/home`}>
-                                        <Icon type="home" />
-                                        Lesson Title
+                                <Menu.Item key="home1">
+                                    <NavLink to={`/lessons/${lesson_id}/home1`}>
+                                        <Icon type="file-text" />
+                                        Introduction
                                     </NavLink>
                                 </Menu.Item>
-                                <Menu.Item key="code">
-                                    <NavLink to={`/lessons/${lesson_id}/code`}>
+                                <Menu.Item key="home2">
+                                    <NavLink to={`/lessons/${lesson_id}/home2`}>
+                                        <Icon type="file-text" />
+                                        Variables
+                                    </NavLink>
+                                </Menu.Item>
+                                <Menu.Item key="code1">
+                                    <NavLink to={`/lessons/${lesson_id}/code1`}>
                                         <Icon type="code" />
-                                        Code
+                                        Practice Variables
+                                    </NavLink>
+                                </Menu.Item>
+                                <Menu.Item key="code2">
+                                    <NavLink to={`/lessons/${lesson_id}/code2`}>
+                                        <Icon type="code" />
+                                        Practice Variables 2
                                     </NavLink>
                                 </Menu.Item>
                             </Menu>
                         </Wrapper>
-                        {tab === "home" ? (
+                        {tab === "home1" ? (
                             <LessonContent />
-                        ) : tab === "code" ? (
+                        ) : tab === "home2" ? (
+                            <LessonContent />
+                        ) : tab === "code1" ? (
+                            <LessonCode />
+                        ) : tab === "code2" ? (
                             <LessonCode />
                         ) : (
-                            <Redirect to={match_url + "/home"} />
+                            <Redirect to={match_url + "/home1"} />
                         )}
                     </Content>
                 </Layout>

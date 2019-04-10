@@ -85,6 +85,7 @@ class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
+                <p>Creator: Vladimir Zhdanov</p>
                 <MarkdownText text={text} />
 
                 <Button className="next_btn">Следующий шаг</Button>
