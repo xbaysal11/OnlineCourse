@@ -76,8 +76,8 @@ class LessonComment extends Component {
                             first_name={first_name}
                             last_name={last_name}
                         />
+                        <Inside>{text}</Inside>
                         <Outside>
-                            <Inside>{text}</Inside>
                             <Button onClick={this.handleClick} type="default">
                                 Answer
                             </Button>
@@ -111,9 +111,9 @@ const Div = styled.div`
 `;
 
 const Inside = styled.div`
-    padding-left: 40px;
+    margin: 1em 0 0 2em;
 `;
 
 const Outside = styled.div`
-    margin-bottom: 30px;
+    margin: 1em 0 1em 2em;
 `;
