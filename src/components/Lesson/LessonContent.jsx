@@ -80,6 +80,10 @@ const text = `
 материалы, рекомендуем вести конспект или хотя бы делать заметки. Так материал будет лучше
 запоминаться. И желаем удачи!
 `;
+const tldr = `
+**Сертификаты получают студенты набравшие 50 баллов, студенты набравшие 75 баллов и выше 
+получают сертификат с отличием.** 
+`;
 
 class LessonContent extends Component {
     render() {
@@ -87,7 +91,8 @@ class LessonContent extends Component {
             <Wrapper>
                 <p>Creator: Vladimir Zhdanov</p>
                 <MarkdownText text={text} />
-
+                <h4>TLDR</h4>
+                <MarkdownText text={tldr} />
                 <Button className="next_btn">Следующий шаг</Button>
                 <CommentsList comments={data} />
             </Wrapper>
