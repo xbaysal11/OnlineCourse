@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-import { Input, Select, Row as RRow, Col } from "antd";
+import {  Row as RRow, Col } from "antd";
 
 import styled from "styled-components";
-import UploadAvatar from "./UploadAvatar";
 
-const Option = Select.Option;
-
-function handleChange(value) {
-    console.log(`selected ${value}`);
-}
 
 class ProfileInfo extends Component {
     render() {

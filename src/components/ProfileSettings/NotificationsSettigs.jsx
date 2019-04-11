@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Input, Row as RRow, Col, Button, Switch, Checkbox } from "antd";
+import {  Row as RRow, Col, Button, Switch, Checkbox } from "antd";
 
 import styled from "styled-components";
 

@@ -44,10 +44,10 @@ class LessonSideBar extends Component {
                 >
                     <MenuItemGroup key="g1" title="Week 1">
                         <Menu.Item key="1">Lesson 1</Menu.Item>
-                        <Menu.Item key="2">Lesson 2</Menu.Item>
+                        <Menu.Item key="2" disabled>Lesson 2</Menu.Item>
                     </MenuItemGroup>
                     <MenuItemGroup key="g2" title="Week 2">
-                        <Menu.Item key="3">Lesson 3</Menu.Item>
+                        <Menu.Item key="3" disabled>Lesson 3</Menu.Item>
                         <Menu.Item key="4">Lesson 4</Menu.Item>
                     </MenuItemGroup>
 

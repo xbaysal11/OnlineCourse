@@ -42,7 +42,7 @@ class Courses extends Component {
                                 </Image>
                                 <Top>Python</Top>
                                 <NavLink to="/java">
-                                    <Button type="primary">Go to Course</Button>
+                                    <Button type="primary" disabled>Go to Course</Button>
                                 </NavLink>
                             </Course>
                         </Col>
@@ -56,12 +56,12 @@ class Courses extends Component {
                                 </Image>
                                 <Top>JavaScript</Top>
                                 <NavLink to="/java">
-                                    <Button type="primary">Go to Course</Button>
+                                    <Button type="primary" disabled>Go to Course</Button>
                                 </NavLink>
                             </Course>
                         </Col>
                         <Col span={5}>
-                            <Course>
+                            <Course >
                                 <Image>
                                     <img
                                         src="https://img.icons8.com/color/480/000000/ruby-programming-language.png"
@@ -70,7 +70,7 @@ class Courses extends Component {
                                 </Image>
                                 <Top>Ruby</Top>
                                 <NavLink to="/java">
-                                    <Button type="primary">Go to Course</Button>
+                                    <Button type="primary" disabled>Go to Course</Button>
                                 </NavLink>
                             </Course>
                         </Col>
