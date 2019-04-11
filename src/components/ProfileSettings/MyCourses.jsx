@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Progress } from "antd";
 import { NavLink } from "react-router-dom";
+import InstructorSmall from "../Instructors/InstructorSmall";
+import Photo from "../../assets/img/39149d04cdb46c1a490cfccae64f1bc8.svg";
+import Card from "../../pages/Card";
 
 class MyCourses extends Component {
     render() {
@@ -12,35 +15,23 @@ class MyCourses extends Component {
                     <p>Courses are sorted by your last activity.</p>
                 </Intro>
 
-                <Courses>
+                <Margin>
+                    <h4>Instructor</h4>
+                    <InstructorSmall />
+                </Margin>
+                {/* <Courses>
                     <MyCourse>
                         <Row>
                             <Col span={8}>
-                                <Center>
-                                    <Image1>
-                                        <img
-                                            src="https://img.icons8.com/color/500/000000/java-coffee-cup-logo.png"
-                                            alt=""
-                                        />
-                                        <h5>JAVA COURSE</h5>
-                                    </Image1>
-                                </Center>
+                                <ImagePl>
+                                    <img src={Photo} alt="" />
+                                </ImagePl>
                             </Col>
-                            <Col span={8}>
-                                <h5>About Course</h5>
-                                There’s thrill, intensity, insanity and
-                                horsepower in Jordan Belfort’s speech where he
-                                motivates his employees to take on the world
-                                with their work.
-                            </Col>
-                            <AboutCourse>
-                                <Col span={8}>
-                                    <Button type="primary">Go to course</Button>
-                                </Col>
-                            </AboutCourse>
+                            <Col span={16} />
                         </Row>
                     </MyCourse>
-                </Courses>
+                </Courses> */}
+                <Card />
 
                 <Courses>
                     <MyCourse>
@@ -62,6 +53,11 @@ class MyCourses extends Component {
                                 horsepower in Jordan Belfort’s speech where he
                                 motivates his employees to take on the world
                                 with their work.
+                                {/*  <Progress
+                                    type="circle"
+                                    percent={75}
+                                    format={percent => `${percent} %`}
+                                /> */}
                             </Col>
                             <AboutCourse>
                                 <Col span={8}>
@@ -69,8 +65,11 @@ class MyCourses extends Component {
                                 </Col>
                             </AboutCourse>
                         </Row>
+                        <h4>Instructor</h4>
+                        <InstructorSmall />
                     </MyCourse>
                 </Courses>
+
                 <Intro>
                     <h3>Active Courses You Can Take</h3>
                     <p>This courses are avaliable now.</p>
@@ -155,9 +154,15 @@ const Courses = styled.div`
     margin-bottom: 30px;
 `;
 
+const ImagePl = styled.div`
+    img {
+        width: 200px;
+        height: 300px;
+    }
+`;
+
 const MyCourse = styled.div`
     border: #d8d8d8 solid 1px;
-    padding: 40px;
 `;
 
 const Intro = styled.div`
@@ -203,4 +208,11 @@ const Image = styled.div`
 `;
 const Center = styled.div`
     text-align: center;
+`;
+
+const Margin = styled.div`
+    h4 {
+        color: #949494;
+        margin-top: 2em;
+    }
 `;

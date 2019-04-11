@@ -33,6 +33,7 @@ const TerminalWrapper = styled.div`
     & [name="react-console-emulator"] {
         height: 450px;
     }
-    & [name="react-console-emulator__input"]{
+    & [name="react-console-emulator__input"] {
         font-size: 10px !important;
+    }
 `;

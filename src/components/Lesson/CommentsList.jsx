@@ -4,6 +4,7 @@ import PT from "prop-types";
 import { Button } from "antd";
 import CommentEditor from "./CommentEditor";
 import CommentHeader from "./CommentHeader";
+import MarkdownText from "../MarkdownText";
 
 const CommentsList = ({ comments }) => (
     <div>
@@ -77,7 +78,9 @@ class LessonComment extends Component {
                             last_name={last_name}
                             date={date}
                         />
-                        <Inside>{text}</Inside>
+                        <Inside>
+                            <MarkdownText text={text} />
+                        </Inside>
                         {/* <Outside>
                             <Button onClick={this.handleClick} type="default">
                                 Answer

@@ -10,8 +10,11 @@ class Instructor extends Component {
                 <MyImg>
                     <img src={photo} alt="" />
                     <h5>Dr. Shane Dixon</h5>
-                    <h6>International Educator</h6>
-                    <span>Georgia Tech Language Institute</span>
+
+                    <span>
+                        Full-Stack developer. OSS Contributor @ GatsbyJS.
+                        Thru-hiker. 11 min read · April 6th 2019
+                    </span>
                 </MyImg>
             </>
         );
@@ -33,13 +36,11 @@ const MyImg = styled.div`
         margin: 0;
         padding: 0;
         padding-bottom: 5px;
+        color: #663399;
     }
 
-    h6 {
-        margin: 0;
-        padding: 0;
-    }
     span {
-        color: #a78855;
+        font-size: 0.9em;   
+        color: #7a7a7a;
     }
 `;

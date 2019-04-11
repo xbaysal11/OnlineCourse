@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { PageHeader, Container } from "../components/index";
 import styled from "styled-components";
+import Card from "./Card";
 
 class Home extends Component {
     render() {
@@ -15,7 +16,9 @@ class Home extends Component {
                     </p>
                 </PageHeader>
                 <Container>
-                    <Content />
+                    <Content>
+                        <Card />
+                    </Content>
                 </Container>
             </Wrapper>
         );
