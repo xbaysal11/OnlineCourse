@@ -56,14 +56,14 @@ class Profile extends Component {
                             <Col span={18}>
                                 <Info>
                                     <Row>
-                                        <Col span={18}>
+                                        <Col span={13}>
                                             <Name>
                                                 {faker.name.firstName()}{" "}
                                                 {faker.name.lastName()} 
                                             </Name>
                                         </Col>
                                         
-                                        <Col span={6}>
+                                        <Col span={10}>
                                             <Rate
                                                 disabled
                                                 allowHalf
@@ -213,9 +213,7 @@ const Name = styled.div`
     font-size: 36px;
     font-weight: 600;
 `;
-const H5 = styled.h5`
-    color: #fff;
-`;
+
 const Row = styled(RRow)`
     align-content:center;
 `;
