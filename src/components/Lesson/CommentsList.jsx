@@ -65,7 +65,7 @@ class LessonComment extends Component {
 
     render() {
         const {
-            comment: { text, first_name, last_name, children }
+            comment: { text, first_name, last_name, children, date }
         } = this.props;
 
         return (
@@ -75,15 +75,16 @@ class LessonComment extends Component {
                         <CommentHeader
                             first_name={first_name}
                             last_name={last_name}
+                            date={date}
                         />
                         <Inside>{text}</Inside>
-                        <Outside>
+                        {/* <Outside>
                             <Button onClick={this.handleClick} type="default">
                                 Answer
                             </Button>
                             <Button type="dashed">Edit</Button>
                             <Button type="danger">Delete</Button>
-                        </Outside>
+                        </Outside> */}
                         {children && children.length > 0 ? (
                             <CommentsList comments={children} />
                         ) : null}
@@ -106,12 +107,14 @@ const Margin = styled.div`
 `;
 
 const Div = styled.div`
-    margin-left: 40px;
-    margin-bottom: 50px;
+    margin-left: 1em;
+    margin-bottom: 2em;
 `;
 
 const Inside = styled.div`
-    margin: 1em 0 0 2em;
+    margin: 1em 0 1em 5px;
+    color: #222;
+    font-weight: 500;
 `;
 
 const Outside = styled.div`
