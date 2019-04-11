@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Avatar, Row, Col, Icon, Rate, Popover, Layout } from "antd";
+import { Avatar, Row as RRow, Col, Icon, Rate, Layout } from "antd";
 import faker from "faker";
 import {
     PageHeader,
@@ -13,6 +13,7 @@ import {
     ProfileGrades,
     ProfileInfo
 } from "../components/index";
+import  UserStatus  from "../components/ProfileSettings/UserStatus";
 
 import { Route } from "react-router-dom";
 
@@ -33,6 +34,7 @@ class Profile extends Component {
     };
 
     render() {
+       
         return (
             <div>
                 <Wrapper>
@@ -42,35 +44,26 @@ class Profile extends Component {
                     >
                         <Row>
                             <Col span={6}>
-                                <Popover
-                                    content={
-                                        <a onClick={this.hide}>
-                                            Upload new image
-                                        </a>
-                                    }
-                                    title="Avatar"
-                                    trigger="click"
-                                    visible={this.state.visible}
-                                    onVisibleChange={this.handleVisibleChange}
-                                >
-                                    <Avatar
-                                        shape="square"
-                                        size={190}
-                                        icon="user"
-                                        src="https://randomuser.me/api/portraits/men/71.jpg"
-                                    />
-                                </Popover>
+                                
+                                <Avatar
+                                    shape="square"
+                                    size={190}
+                                    icon="user"
+                                    src="https://randomuser.me/api/portraits/men/71.jpg"
+                                />
+                                
                             </Col>
                             <Col span={18}>
                                 <Info>
                                     <Row>
-                                        <Col span={14}>
+                                        <Col span={18}>
                                             <Name>
                                                 {faker.name.firstName()}{" "}
-                                                {faker.name.lastName()}
+                                                {faker.name.lastName()} 
                                             </Name>
                                         </Col>
-                                        <Col span={10}>
+                                        
+                                        <Col span={6}>
                                             <Rate
                                                 disabled
                                                 allowHalf
@@ -84,16 +77,7 @@ class Profile extends Component {
                                     </Row>
                                     <Row>
                                         <Col span={12}>
-                                            <H5>
-                                                <Icon
-                                                    type="skin"
-                                                    style={{
-                                                        fontSize: "22px",
-                                                        color: "#40A9FF"
-                                                    }}
-                                                />
-                                                <span>{this.state.status}</span>
-                                            </H5>
+                                            <UserStatus  userStatus={this.state.status}/>
                                         </Col>
                                         <Col span={12}>
                                             <p>
@@ -231,4 +215,7 @@ const Name = styled.div`
 `;
 const H5 = styled.h5`
     color: #fff;
+`;
+const Row = styled(RRow)`
+    align-content:center;
 `;
