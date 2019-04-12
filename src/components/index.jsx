@@ -6,6 +6,7 @@ import ModalManager from "./modal/ModalManager";
 import OpenModal from "./modal/OpenModal";
 import Modal from "./modal/Modal";
 import LoginModal from "./forms/LoginModal";
+import RestoreModal from "./forms/RestoreModal";
 import RegisterModal from "./forms/RegisterModal";
 import LessonContent from "./Lesson/LessonContent";
 import LessonCode from "./Lesson/LessonCode";
@@ -23,6 +24,7 @@ import Charts from "./Charts";
 import HeatMap from "./HeatMap";
 
 export {
+    RestoreModal,
     ProfileInfo,
     HeatMap,
     Charts,

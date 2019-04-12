@@ -3,6 +3,8 @@ import { Formik } from "formik";
 
 import styled from "styled-components";
 
+import OpenModal from "../modal/OpenModal";
+
 import {
     Form,
     Icon,
@@ -74,7 +76,10 @@ class LoginForm extends Component {
                                 valuePropName: "checked",
                                 initialValue: true
                             })(<Checkbox>Remember me</Checkbox>)}
-                            <a href="/">Forgot password</a>
+
+                            <OpenModal name={"restore"}>
+                                <Button type="primary">Forgot password</Button>
+                            </OpenModal>
                             <Button type="primary" htmlType="submit">
                                 Log in
                             </Button>

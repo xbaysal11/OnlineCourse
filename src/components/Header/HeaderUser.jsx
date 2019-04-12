@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {  Button } from "antd";
-import PT from "prop-types";
+// import PT from "prop-types";
 // import styled from "styled-components";
 import OpenModal from "../modal/OpenModal";
 
@@ -15,9 +15,9 @@ import OpenModal from "../modal/OpenModal";
 // );
 
 class HeaderUser extends Component {
-    static propTypes = {
-        user: PT.object
-    };
+    // static propTypes = {
+    //     user: PT.object
+    // };
     render() {
         return (
             <div>
@@ -29,9 +29,10 @@ class HeaderUser extends Component {
                         <OpenModal name={"register"}>
                             <Button type="primary">Register</Button>
                         </OpenModal>
+                        
                     </Button.Group>
 
-                    {/* <Badge count={1}>
+                    {/* <Badge count={3}>
                         <Avatar shape="square" icon="user" />
                     </Badge>
                     <Dropdown overlay={menu} trigger={["click"]}>
