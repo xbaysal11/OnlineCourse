@@ -16,9 +16,7 @@ class Home extends Component {
                     </p>
                 </PageHeader>
                 <Container>
-                    <Content>
-                        <Card />
-                    </Content>
+                    <Content />
                 </Container>
             </Wrapper>
         );
