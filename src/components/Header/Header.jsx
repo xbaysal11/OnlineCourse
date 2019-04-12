@@ -6,7 +6,7 @@ import "font-awesome/css/font-awesome.min.css";
 // import OpenModal from "../modal/OpenModal";
 
 import HeaderUser from "./HeaderUser";
-import { Container, LoginModal, RegisterModal } from "..";
+import { Container, LoginModal, RegisterModal,RestoreModal } from "..";
 
 const Search = Input.Search;
 
@@ -72,6 +72,7 @@ class Header extends Component {
                                 >
                                     <LoginModal name={"login"} />
                                     <RegisterModal name={"register"} />
+                                    <RestoreModal name={"restore"} />
                                     <HeaderUser />
                                 </Col>
                             </Row>

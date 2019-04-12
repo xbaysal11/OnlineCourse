@@ -5,7 +5,8 @@ import { ModalContext } from "./ModalManager.jsx";
 class OpenModal extends Component {
     static propTypes = {
         name: PT.string.isRequired,
-        openModal: PT.func.isRequired
+        openModal: PT.func.isRequired,
+        children: PT.any.isRequired
     };
     constructor() {
         super();

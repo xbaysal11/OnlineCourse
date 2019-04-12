@@ -34,7 +34,6 @@ class Profile extends Component {
     };
 
     render() {
-       
         return (
             <div>
                 <Wrapper>
@@ -53,7 +52,7 @@ class Profile extends Component {
                                 />
                                 
                             </Col>
-                            <Col span={18}>
+                            <Col span={18}> 
                                 <Info>
                                     <Row>
                                         <Col span={13}>

@@ -10,7 +10,7 @@ const routes = () => (
         <Route exact path="/" component={Home} />
         <Route path="/profile" component={Profile} />
         <Route path="/java" component={Java} />
-        <Route path="/syllabus" component={Courses} />
+        <Route path="/courses" component={Courses} />
         <Route
             path="/lessons/:lesson_id/:tab(home1|home2|code1|code2)?"
             component={Lessons}
