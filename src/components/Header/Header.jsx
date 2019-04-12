@@ -45,7 +45,7 @@ class Header extends Component {
                                         </Menu.Item>
 
                                         <Menu.Item key="app">
-                                            <NavLink to="/syllabus">
+                                            <NavLink to="/courses">
                                                 <Icon type="appstore" />
                                                 Courses
                                             </NavLink>
