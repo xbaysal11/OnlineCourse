@@ -10,7 +10,11 @@ class Card extends Component {
                 <WrapperFor>
                     <Row>
                         <Col span={8}>
-                            <img src={Photo} alt="" />
+                            {/* <img src={Photo} alt="" /> */}
+                            <img
+                                src="https://img.icons8.com/color/480/000000/python.png"
+                                alt=""
+                            />
                         </Col>
                         <Col span={16}>
                             <Right>
@@ -42,7 +46,8 @@ const WrapperFor = styled.div`
     margin-bottom: 2em;
     box-shadow: 1px 1px 5px 1px;
     img {
-        width: 200px;
+        width: 120px;
+        height: 120px;
     }
 `;
 const Right = styled.div`
