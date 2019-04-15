@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PT from "prop-types";
 import styled from "styled-components";
+import { Progress } from "antd";
+
 import { colors } from "../../config/var";
 
 class LessonItem extends Component {
@@ -12,7 +14,21 @@ class LessonItem extends Component {
             <LessonList>
                 <LessonTitle href="/">
                     <Dote />
-                    {this.props.lesson.title}
+                    {this.props.lesson.available === true ? (
+                        <>
+                            {this.props.lesson.title}
+                            <br />
+                            <div style={{ width: 130 }}>
+                                <Progress
+                                    percent={this.props.lesson.progress}
+                                    size="small"
+                                    showInfo={false}
+                                />
+                            </div>
+                        </>
+                    ) : (
+                        <Disabled>{this.props.lesson.title}</Disabled>
+                    )}
                 </LessonTitle>
             </LessonList>
         );
@@ -20,6 +36,10 @@ class LessonItem extends Component {
 }
 export default LessonItem;
 
+const Disabled = styled.div`
+    color: gray;
+    cursor: not-allowed;
+`;
 const Dote = styled.span`
     left: 1.5rem;
     display: block;

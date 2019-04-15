@@ -12,13 +12,13 @@ const data = [
             {
                 id: 1,
                 title: "1.1 Первые запросы",
-                progress: 1,
+                progress: 77,
                 available: true
             },
             {
                 id: 2,
                 title: "1.2 Составные условия",
-                progress: 1,
+                progress: 54,
                 available: true
             }
         ]
@@ -31,7 +31,7 @@ const data = [
             {
                 id: 3,
                 title: "2.1 Принципы работы баз данных",
-                progress: 1,
+                progress: 99,
                 available: false
             },
             {
