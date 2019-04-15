@@ -1,58 +1,58 @@
 import React, { Component } from "react";
-import { Row, Col, Button, Progress } from "antd";
-import Photo from "../assets/img/39149d04cdb46c1a490cfccae64f1bc8.svg";
 import styled from "styled-components";
+import JavaPic from "../assets/img/1280x720-DSC100382016.jpg";
+import { NavLink } from "react-router-dom";
+import { shadows } from "../config/var";
 
 class Card extends Component {
     render() {
         return (
-            <>
-                <WrapperFor>
-                    <Row>
-                        <Col span={8}>
-                            {/* <img src={Photo} alt="" /> */}
-                            <img
-                                src="https://img.icons8.com/color/480/000000/python.png"
-                                alt=""
-                            />
-                        </Col>
-                        <Col span={16}>
-                            <Right>
-                                <h5>Code Foundation</h5>
-                                <p>
-                                    Interested in learning how to code, but
-                                    unsure where to start? This is the path for
-                                    you!
-                                </p>
-                                <Progress
-                                    percent={43}
-                                    size="small"
-                                    status="active"
-                                />
-                            </Right>
-                        </Col>
-                    </Row>
-                </WrapperFor>
-            </>
+            <Shadow>
+                <NavLink to="/java">
+                    <Wrapper>
+                        <img src={JavaPic} alt="" />
+
+                        <Text>
+                            <h5>Kelvin Weather</h5>
+                            <p>
+                                It's time to build fluency in CSS Fundamentals.
+                                <br />
+                                In this next Pro Project, we're going to
+                                <br />
+                                Visual Rules in CSS
+                            </p>
+                        </Text>
+                    </Wrapper>
+                </NavLink>
+            </Shadow>
         );
     }
 }
 
 export default Card;
 
-const WrapperFor = styled.div`
-    background-color: #fdfdfc;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    box-shadow: 1px 1px 5px 1px;
-    img {
-        width: 120px;
-        height: 120px;
+const Shadow = styled.div`
+    box-shadow: ${shadows.shadow};
+    transition:${shadows.transition};
+    &:hover {
+        transform: translateY(-0.25rem);
+        box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 8px,
+            rgba(71, 63, 79, 0.16) 0px 8px 16px;
     }
 `;
-const Right = styled.div`
-    color: #6d6d6d;
+
+const Wrapper = styled.div`
+    img {
+        width: 100%;
+    }
+`;
+const Text = styled.div`
     h5 {
-        margin-top: 1em;
+        margin: 1em 0 10px 1em;
+    }
+    p {
+        margin-left: 1.4em;
+        color: #5a5b5e;
+        padding-bottom: 70px;
     }
 `;

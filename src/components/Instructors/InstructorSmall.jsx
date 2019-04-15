@@ -10,10 +10,10 @@ class InstructorSmall extends Component {
             <>
                 <MyImg>
                     <Row>
-                        <Col span={3}>
+                        <Col span={4}>
                             <img src={photo} alt="" />
                         </Col>
-                        <Col span={21}>
+                        <Col span={20}>
                             <span>
                                 <h6>Dr. Shane Dixon</h6>
                                 Full-Stack developer. OSS Contributor @
