@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import styled from "styled-components";
+import { Reset } from "styled-reset";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Header from "./components/Header/Header";
@@ -14,6 +15,7 @@ class App extends Component {
     render() {
         return (
             <Wrapper>
+                <Reset />
                 <ModalManager>
                     <Router>
                         <>

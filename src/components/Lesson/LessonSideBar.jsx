@@ -1,10 +1,48 @@
 import React, { Component } from "react";
+import WeekItem from "./WeekItem";
 
-import { Menu, Layout } from "antd";
-import SiderMenu from "../SiderMenu";
+import { Layout } from "antd";
 
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
+const data = [
+    {
+        id: 1,
+        title: "SQL introduction",
+        progress: 1,
+        lessons: [
+            {
+                id: 1,
+                title: "1.1 Первые запросы",
+                progress: 1,
+                available: true
+            },
+            {
+                id: 2,
+                title: "1.2 Составные условия",
+                progress: 1,
+                available: true
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: "SQL advanced",
+        progress: 1,
+        lessons: [
+            {
+                id: 3,
+                title: "2.1 Принципы работы баз данных",
+                progress: 1,
+                available: false
+            },
+            {
+                id: 4,
+                title: "2.2 Установка MySQL в Windows",
+                progress: 1,
+                available: false
+            }
+        ]
+    }
+];
 
 class LessonSideBar extends Component {
     handleClick = e => {
@@ -31,34 +69,11 @@ class LessonSideBar extends Component {
                 trigger={null}
                 collapsedWidth="120px"
             >
-                <SiderMenu
-                    onClick={this.handleClick}
-                    defaultSelectedKeys={["1"]}
-                    defaultOpenKeys={["sub1"]}
-                    mode="inline"
-                    toggle={this.onToggle}
-                    collapsed={this.state.collapsed}
-                    style={{
-                        minWidth: "100%"
-                        
-                    }}
-                >
-                    <MenuItemGroup key="g1" title="Week 1">
-                        <Menu.Item  key="1" style={{backgroundColor:"#C7FFBF"}}>Lesson 1</Menu.Item>
-                        <Menu.Item key="2" style={{backgroundColor:"#C7FFBF"}}>Lesson 2</Menu.Item>
-                    </MenuItemGroup>
-                    <MenuItemGroup key="g2" title="Week 2">
-                        <Menu.Item key="3" style={{backgroundColor:"#C7FFBF"}}>Lesson 3</Menu.Item>
-                        <Menu.Item key="4">Lesson 4</Menu.Item>
-                    </MenuItemGroup>
-
-                    <Menu.Item  key="5" disabled>Lesson 5</Menu.Item>
-                    <Menu.Item key="6" disabled>Lesson 6</Menu.Item>
-                    <SubMenu key="sub3" title="Submenu">
-                        <Menu.Item key="7" disabled>Lesson 7</Menu.Item>
-                        <Menu.Item key="8" disabled>Lesson 8</Menu.Item>
-                    </SubMenu>
-                </SiderMenu>
+                <ul>
+                    {data.map(w => {
+                        return <WeekItem key={w.id} week={w} />;
+                    })}
+                </ul>
             </Layout.Sider>
         );
     }
