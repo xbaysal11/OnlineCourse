@@ -9,27 +9,18 @@ class Card extends Component {
             <>
                 <WrapperFor>
                     <Row>
+                        <Col span={16}>
+                            <Right>
+                                <h5>Code Foundation</h5>
+                                <Progress percent={30} size="small" />
+                            </Right>
+                        </Col>
                         <Col span={8}>
                             {/* <img src={Photo} alt="" /> */}
                             <img
                                 src="https://img.icons8.com/color/480/000000/python.png"
                                 alt=""
                             />
-                        </Col>
-                        <Col span={16}>
-                            <Right>
-                                <h5>Code Foundation</h5>
-                                <p>
-                                    Interested in learning how to code, but
-                                    unsure where to start? This is the path for
-                                    you!
-                                </p>
-                                <Progress
-                                    percent={43}
-                                    size="small"
-                                    status="active"
-                                />
-                            </Right>
                         </Col>
                     </Row>
                 </WrapperFor>
@@ -41,10 +32,11 @@ class Card extends Component {
 export default Card;
 
 const WrapperFor = styled.div`
-    background-color: #fdfdfc;
+    background-color: #6df0c2;
     margin-top: 1em;
     margin-bottom: 2em;
-    box-shadow: 1px 1px 5px 1px;
+    box-shadow: 10px 1px 5px 1px;
+
     img {
         width: 120px;
         height: 120px;
@@ -54,5 +46,6 @@ const Right = styled.div`
     color: #6d6d6d;
     h5 {
         margin-top: 1em;
+        margin-left: 1em;
     }
 `;

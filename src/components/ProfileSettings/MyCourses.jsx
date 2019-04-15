@@ -10,28 +10,30 @@ class MyCourses extends Component {
     render() {
         return (
             <Wrapper>
-                <Intro>
-                    <h3>Last Active</h3>
-                    <p>Courses are sorted by your last activity.</p>
-                </Intro>
-
-                <Margin>
-                    <h4>Instructor</h4>
-                    <InstructorSmall />
-                </Margin>
-                {/* <Courses>
+                <Courses>
                     <MyCourse>
                         <Row>
                             <Col span={8}>
-                                <ImagePl>
-                                    <img src={Photo} alt="" />
-                                </ImagePl>
+                                <Center>
+                                    <Image1>
+                                        <img
+                                            src="https://img.icons8.com/color/480/000000/java.png"
+                                            alt=""
+                                        />
+                                        <h5>JAVA COURSE</h5>
+                                    </Image1>
+                                </Center>
                             </Col>
-                            <Col span={16} />
+                            <Col span={16}>
+                                <h5>Code Foundation</h5>
+                                <p>Keep making progress on Learn Python</p>
+                                {/*  <h4>Instructor</h4>
+                                <InstructorSmall /> */}
+                                <Button> RESUME 23%</Button>
+                            </Col>
                         </Row>
                     </MyCourse>
-                </Courses> */}
-                <Card />
+                </Courses>
 
                 <Courses>
                     <MyCourse>
@@ -47,26 +49,14 @@ class MyCourses extends Component {
                                     </Image1>
                                 </Center>
                             </Col>
-                            <Col span={8}>
-                                <h5>About Course</h5>
-                                There’s thrill, intensity, insanity and
-                                horsepower in Jordan Belfort’s speech where he
-                                motivates his employees to take on the world
-                                with their work.
-                                {/*  <Progress
-                                    type="circle"
-                                    percent={75}
-                                    format={percent => `${percent} %`}
-                                /> */}
+                            <Col span={16}>
+                                <h5>Code Foundation</h5>
+                                <p>Keep making progress on Learn Python</p>
+                                {/*  <h4>Instructor</h4>
+                                <InstructorSmall /> */}
+                                <Button> RESUME 23%</Button>
                             </Col>
-                            <AboutCourse>
-                                <Col span={8}>
-                                    <Button type="primary">Go to course</Button>
-                                </Col>
-                            </AboutCourse>
                         </Row>
-                        <h4>Instructor</h4>
-                        <InstructorSmall />
                     </MyCourse>
                 </Courses>
 
@@ -150,7 +140,6 @@ const Wrapper = styled.form`
 `;
 
 const Courses = styled.div`
-    border: #d8d8d8 solid 1px;
     margin-bottom: 30px;
 `;
 
@@ -163,6 +152,18 @@ const ImagePl = styled.div`
 
 const MyCourse = styled.div`
     border: #d8d8d8 solid 1px;
+    padding: 2em;
+    button {
+        font-size: 20px;
+        background-color: #ffc107;
+        font-weight: 300;
+    }
+    h5 {
+        margin-top: 20px;
+    }
+    h4 {
+        color: #949494;
+    }
 `;
 
 const Intro = styled.div`
