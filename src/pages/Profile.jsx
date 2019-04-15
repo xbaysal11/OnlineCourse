@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Avatar, Row as RRow, Col, Icon, Rate, Layout } from "antd";
+import { Upload, message, Button, Avatar, Row as RRow, Col, Icon, Rate, Layout } from "antd";
 import faker from "faker";
 import {
     PageHeader,
@@ -17,10 +17,29 @@ import  UserStatus  from "../components/ProfileSettings/UserStatus";
 
 import { Route } from "react-router-dom";
 
+const props = {
+    name: "file",
+    action: "//jsonplaceholder.typicode.com/posts/",
+    headers: {
+        authorization: "authorization-text",
+    },
+    onChange(info) {
+        if (info.file.status !== "uploading") {
+            console.log(info.file, info.fileList);
+        }
+        if (info.file.status === "done") {
+            message.success(`${info.file.name} file uploaded successfully`);
+        } else if (info.file.status === "error") {
+            message.error(`${info.file.name} file upload failed.`);
+        }
+    },
+};
+
 class Profile extends Component {
     state = {
         visible: false,
-        status: "Student"
+        status: "Student",
+        ImgSrc: "https://www.wwhf.org/wp-content/uploads/2014/04/bokeh-cover-bg.jpg"
     };
 
     hide = () => {
@@ -34,13 +53,24 @@ class Profile extends Component {
     };
 
     render() {
+        const divImage = 
+           "url(" + this.state.ImgSrc + ");"; 
+        
         return (
             <div>
                 <Wrapper>
                     <PageHeader
                         user
-                        background="linear-gradient(to right, #465584, #262643)"
+                        background={divImage} 
                     >
+                        <div className="upload" > 
+
+                            <Upload {...props}>
+                                <Button>
+                                    <Icon type="upload" /> Click to Upload
+                                </Button>
+                            </Upload>
+                        </div>
                         <Row>
                             <Col span={6}>
                                 
@@ -199,7 +229,13 @@ class Profile extends Component {
     }
 }
 export default Profile;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+& .upload{
+    display:grid;
+    justify-content: end;
+    align-content:start;
+}
+`;
 const Content = styled.div`
     width: 100%;
 `;
