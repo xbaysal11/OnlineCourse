@@ -61,7 +61,13 @@ class WeekItem extends Component {
                 {collapse === false ? (
                     <LessonsList>
                         {week.lessons.map(l => {
-                            return <LessonItem key={l.id} lesson={l} />;
+                            return (
+                                <LessonItem
+                                    key={l.id}
+                                    lesson={l}
+                                    background={l.background}
+                                />
+                            );
                         })}
                     </LessonsList>
                 ) : null}

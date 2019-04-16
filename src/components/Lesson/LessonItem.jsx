@@ -7,27 +7,33 @@ import { colors } from "../../config/var";
 
 class LessonItem extends Component {
     static propTypes = {
-        lesson: PT.object.isRequired
+        lesson: PT.object.isRequired,
+        background: PT.string
     };
+
     render() {
+        const { progress, available, title } = this.props.lesson;
         return (
             <LessonList>
-                <LessonTitle href="/">
-                    <Dote />
-                    {this.props.lesson.available === true ? (
+                <LessonTitle background={this.props.background} href="/">
+                    {available === true ? (
                         <>
-                            {this.props.lesson.title}
-                            <br />
-                            <div style={{ width: 130 }}>
-                                <Progress
-                                    percent={this.props.lesson.progress}
-                                    size="small"
-                                    showInfo={false}
-                                />
-                            </div>
+                            <Dote />
+
+                            <>
+                                {title}
+                                <br />
+                                <div style={{ width: 140 }}>
+                                    <Progress
+                                        percent={progress * 100}
+                                        size="small"
+                                        showInfo={false}
+                                    />
+                                </div>
+                            </>
                         </>
                     ) : (
-                        <Disabled>{this.props.lesson.title}</Disabled>
+                        <Disabled>{title}</Disabled>
                     )}
                 </LessonTitle>
             </LessonList>
@@ -40,6 +46,7 @@ const Disabled = styled.div`
     color: gray;
     cursor: not-allowed;
 `;
+
 const Dote = styled.span`
     left: 1.5rem;
     display: block;
@@ -75,7 +82,7 @@ const LessonList = styled.li`
 `;
 const LessonTitle = styled.a`
     font-size: 0.9em;
-
+    background: ${props => props.background};
     color: rgba(0, 0, 0, 0.84);
     font-weight: normal;
     border-width: 0px;

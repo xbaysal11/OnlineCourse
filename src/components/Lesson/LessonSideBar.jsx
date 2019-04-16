@@ -12,14 +12,15 @@ const data = [
             {
                 id: 1,
                 title: "1.1 Первые запросы",
-                progress: 77,
+                progress: 0.5,
                 available: true
             },
             {
                 id: 2,
                 title: "1.2 Составные условия",
-                progress: 54,
-                available: true
+                progress: 1,
+                available: true,
+                background: "#00FF0640"
             }
         ]
     },
@@ -31,13 +32,13 @@ const data = [
             {
                 id: 3,
                 title: "2.1 Принципы работы баз данных",
-                progress: 99,
+                progress: 0,
                 available: false
             },
             {
                 id: 4,
                 title: "2.2 Установка MySQL в Windows",
-                progress: 1,
+                progress: 0,
                 available: false
             }
         ]
