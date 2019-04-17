@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { Row, Col, Button } from "antd";
 import { NavLink } from "react-router-dom";
-import Card from "../../pages/Card";
+import Card from "../Card";
 import { shadows } from "../../config/var";
 class MyCourses extends Component {
     render() {

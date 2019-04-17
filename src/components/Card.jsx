@@ -35,11 +35,11 @@ const Shadow = styled.div`
     box-shadow: ${shadows.shadow};
     transition:${shadows.transition};
     &:hover {
-        transform: translateY(-0.25rem);
-        box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 8px,
-            rgba(71, 63, 79, 0.16) 0px 8px 16px;
+        ${shadows.hover}
     }
 `;
+ 
+
 
 const Wrapper = styled.div`
     img {
