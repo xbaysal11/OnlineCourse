@@ -1,3 +1,3 @@
 import * as colors from "./colors";
-const shadows = colors.shadows;
+import shadows from "./shadows";
 export { colors, shadows };
