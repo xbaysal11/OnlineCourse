@@ -3,7 +3,7 @@ import PT from "prop-types";
 import styled from "styled-components";
 
 import LessonItem from "./LessonItem";
-import { colors } from "../../config/var";
+import { colors } from "../../config";
 
 const ShevronIcon = () => {
     return (

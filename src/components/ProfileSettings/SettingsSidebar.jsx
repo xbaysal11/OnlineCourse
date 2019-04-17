@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { Menu, Icon, Layout } from "antd";
-import { colors } from "../../config/var";
+import { colors } from "../../config";
 import SiderMenu from "../SiderMenu";
 import { NavLink } from "react-router-dom";
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Row as RowAntd, Col } from "antd";
 import styled from "styled-components";
-import { colors } from "../../config/var";
+import { colors } from "../../config";
 import { Container } from "../index";
 
 import logo from "../../assets/img/logo.png";

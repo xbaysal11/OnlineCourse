@@ -10430,6 +10430,11 @@ sha.js@^2.4.0, sha.js@^2.4.8:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+shader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/shader/-/shader-1.0.0.tgz#4b34ec7de8eb40f511eea34542c304428006032a"
+  integrity sha512-pLEmWev8RJE3aoUSjiIMhut8+2Tf34TTR8ukquZAPLiW3HfqE+94huu728144dbrDQVtP1RtHFHNkYT7azEovg==
+
 shallow-clone@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/shallow-clone/-/shallow-clone-0.1.2.tgz#5909e874ba77106d73ac414cfec1ffca87d97060"

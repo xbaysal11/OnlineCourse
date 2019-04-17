@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import JavaPic from "../assets/img/1280x720-DSC100382016.jpg";
 import { NavLink } from "react-router-dom";
-import { shadows } from "../config/var";
+import { shadows } from "../config";
 
 class Card extends Component {
     render() {
@@ -33,7 +33,7 @@ export default Card;
 
 const Shadow = styled.div`
     box-shadow: ${shadows.shadow};
-    transition:${shadows.transition};
+    transition: ${shadows.transition};
     &:hover {
         transform: translateY(-0.25rem);
         box-shadow: rgba(46, 41, 51, 0.08) 0px 4px 8px,

@@ -3,7 +3,7 @@ import PT from "prop-types";
 import styled from "styled-components";
 import { Progress } from "antd";
 
-import { colors } from "../../config/var";
+import { colors } from "../../config";
 
 class LessonItem extends Component {
     static propTypes = {

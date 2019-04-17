@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Row, Col, Button } from "antd";
 import { NavLink } from "react-router-dom";
 import Card from "../../pages/Card";
-import { shadows } from "../../config/var";
+import { shadows } from "../../config";
 class MyCourses extends Component {
     render() {
         return (
