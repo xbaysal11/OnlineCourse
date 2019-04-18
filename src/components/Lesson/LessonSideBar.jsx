@@ -3,8 +3,6 @@ import WeekItem from "./WeekItem";
 
 import { Layout } from "antd";
 
-import { colors } from "../../config";
-
 const data = [
     {
         id: 1,
@@ -21,8 +19,7 @@ const data = [
                 id: 2,
                 title: "1.2 Составные условия",
                 progress: 1,
-                available: true,
-                background: `${colors.green_light}`
+                available: true
             }
         ]
     },

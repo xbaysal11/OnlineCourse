@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import PT from "prop-types";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Progress } from "antd";
+import { darken } from "polished";
 
 import { colors } from "../../config";
 
 class LessonItem extends Component {
     static propTypes = {
-        lesson: PT.object.isRequired,
-        background: PT.string
+        lesson: PT.object.isRequired
     };
 
     render() {
         const { progress, available, title } = this.props.lesson;
         return (
-            <LessonList>
-                <LessonTitle background={this.props.background} href="/">
+            <LessonList completed={progress >= 1} disabled={!available}>
+                <LessonTitle href="/">
                     {available === true ? (
                         <>
                             <Dote />
@@ -79,16 +79,42 @@ const LessonList = styled.li`
         left: 3rem;
         background: transparent;
     }
+    ${props =>
+        props.completed
+            ? css`
+                  ${LessonTitle} {
+                      background: ${colors.green_light};
+                      &:hover {
+                          background: ${darken(0.1, colors.green_light)};
+                      }
+                      &::before {
+                          transform: scale(1) !important;
+                          background: ${colors.green} !important;
+                      }
+                  }
+              `
+            : props.disabled
+                ? css`
+                  ${LessonTitle} {
+                      background: ${colors.red_light};
+                      color: gray;
+                      cursor: not-allowed;
+                      &:hover {
+                          background: ${darken(0.1, colors.red_light)};
+                      }
+                      &::before {
+                          transform: scale(1) !important;
+                          background: ${colors.red} !important;
+                      }
+                  }
+              `
+                : null}
 `;
 const LessonTitle = styled.a`
     font-size: 0.9em;
-    background: ${props => props.background};
     color: rgba(0, 0, 0, 0.84);
     font-weight: normal;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
+    border: none;
     padding-right: 1rem;
     min-height: 2.5rem;
     padding-top: 0.75rem;
@@ -98,7 +124,7 @@ const LessonTitle = styled.a`
     width: 100%;
     padding-left: 3rem;
     &:hover {
-        color: ${colors.blue};
+        color: rgba(0, 0, 0, 0.84);
         background: rgba(241, 222, 250, 0.275);
     }
     &:hover::before {
