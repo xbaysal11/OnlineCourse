@@ -12,7 +12,7 @@ import {
 const { Option } = Select;
 // const AutoCompleteOption = AutoComplete.Option;
 
-class RestorForm extends Component { 
+class RestorForm extends Component {
     state = {
         confirmDirty: false,
         autoCompleteResult: []
@@ -116,7 +116,7 @@ class RestorForm extends Component {
                             ]
                         })(<Input />)}
                     </Form.Item>
-                    
+
                     <Form.Item {...tailFormItemLayout}>
                         <Button type="primary" htmlType="submit">
                             Send!
