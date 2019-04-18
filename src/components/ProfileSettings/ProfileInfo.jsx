@@ -1,67 +1,25 @@
 import React, { Component } from "react";
-import {  Row as RRow, Col } from "antd";
+import { Row as RRow } from "antd";
 
 import styled from "styled-components";
-
+import { HeatMap, Charts } from "../index";
 
 class ProfileInfo extends Component {
     render() {
         return (
-            <Wrapper action="#" method="post">
+            <Wrapper>
                 <Row>
-                    <Col span={6}>
-                        <label htmlFor="">NickName</label>
-                    </Col>
-                    <Col span={18}>
-                        <Text>Reshidahunalibek</Text>
-                    </Col>
+                    <HeatMap />
                 </Row>
                 <Row>
-                    <Col span={6}>
-                        <label htmlFor="">Name</label>
-                    </Col>
-                    <Col span={18}>
-                        <Text>Reshidahunalibek</Text>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={6}>
-                        <label htmlFor="">Surname</label>
-                    </Col>
-                    <Col span={18}>
-                        <Text>Nurzehrihahunugumugumatarev</Text>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={6}>
-                        <label htmlFor="">E-Mail</label>
-                    </Col>
-                    <Col span={18}>
-                        <Text>123@gmail.com</Text>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={6}>
-                        <label htmlFor="">Group</label>
-                    </Col>
-                    <Col span={18}>
-                        <Text>Front-end</Text>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col span={6}>
-                        <label htmlFor="">Birth day</label>
-                    </Col>
-                    <Col span={18}>
-                        <Text>234.4534.3.345.345.</Text>
-                    </Col>
+                    <Charts />
                 </Row>
             </Wrapper>
         );
     }
 }
-export default ProfileInfo;
 
+export default ProfileInfo;
 const Wrapper = styled.form`
     background: #fff;
     padding: 2em;
@@ -71,8 +29,5 @@ const Wrapper = styled.form`
     min-height: 50%;
 `;
 const Row = styled(RRow)`
-    margin: 1em 0;
-`;
-const Text = styled.div`
-    font-size: 16px;
+    margin: 2em 0;
 `;

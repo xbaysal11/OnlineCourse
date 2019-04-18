@@ -106,4 +106,6 @@ class SettingsSidebar extends Component {
 }
 export default SettingsSidebar;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    margin-top: 24px;
+`;
