@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Upload, message, Button, Avatar, Row as RRow, Col, Icon, Rate, Layout } from "antd";
+import {
+    Upload,
+    message,
+    Button,
+    Avatar,
+    Row as RRow,
+    Col,
+    Icon,
+    Rate,
+    Layout
+} from "antd";
 import faker from "faker";
 import {
     PageHeader,
@@ -13,15 +23,16 @@ import {
     ProfileGrades,
     ProfileInfo
 } from "../components/index";
-import  UserStatus  from "../components/ProfileSettings/UserStatus";
+import UserStatus from "../components/ProfileSettings/UserStatus";
 
 import { Route } from "react-router-dom";
+import { NONAME } from "dns";
 
 const props = {
     name: "file",
     action: "//jsonplaceholder.typicode.com/posts/",
     headers: {
-        authorization: "authorization-text",
+        authorization: "authorization-text"
     },
     onChange(info) {
         if (info.file.status !== "uploading") {
@@ -32,14 +43,15 @@ const props = {
         } else if (info.file.status === "error") {
             message.error(`${info.file.name} file upload failed.`);
         }
-    },
+    }
 };
 
 class Profile extends Component {
     state = {
         visible: false,
         status: "Student",
-        ImgSrc: "https://www.wwhf.org/wp-content/uploads/2014/04/bokeh-cover-bg.jpg"
+        ImgSrc:
+            "https://www.wwhf.org/wp-content/uploads/2014/04/bokeh-cover-bg.jpg"
     };
 
     hide = () => {
@@ -53,45 +65,51 @@ class Profile extends Component {
     };
 
     render() {
-        const divImage = 
-           "url(" + this.state.ImgSrc + ");"; 
-        
+        const divImage = "url(" + this.state.ImgSrc + ");";
+
         return (
             <div>
                 <Wrapper>
-                    <PageHeader
-                        user
-                        background={divImage} 
-                    >
-                        <div className="upload" > 
-
-                            <Upload {...props}>
-                                <Button>
-                                    <Icon type="upload" /> Click to Upload
-                                </Button>
-                            </Upload>
-                        </div>
+                    <div className="upload">
+                        <Upload {...props}>
+                            <Button
+                                style={{
+                                    background: "none",
+                                    border: "none",
+                                    padding: 0,
+                                    margin: 0
+                                }}
+                            >
+                                <Icon
+                                    type="camera"
+                                    style={{
+                                        fontSize: "2em",
+                                        color: "#ddd"
+                                    }}
+                                />
+                            </Button>
+                        </Upload>
+                    </div>
+                    <PageHeader user background={divImage}>
                         <Row>
                             <Col span={6}>
-                                
                                 <Avatar
                                     shape="square"
                                     size={190}
                                     icon="user"
                                     src="https://randomuser.me/api/portraits/men/71.jpg"
                                 />
-                                
                             </Col>
-                            <Col span={18}> 
+                            <Col span={18}>
                                 <Info>
                                     <Row>
                                         <Col span={13}>
                                             <Name>
                                                 {faker.name.firstName()}{" "}
-                                                {faker.name.lastName()} 
+                                                {faker.name.lastName()}
                                             </Name>
                                         </Col>
-                                        
+
                                         <Col span={10}>
                                             <Rate
                                                 disabled
@@ -106,7 +124,9 @@ class Profile extends Component {
                                     </Row>
                                     <Row>
                                         <Col span={12}>
-                                            <UserStatus  userStatus={this.state.status}/>
+                                            <UserStatus
+                                                userStatus={this.state.status}
+                                            />
                                         </Col>
                                         <Col span={12}>
                                             <p>
@@ -230,11 +250,14 @@ class Profile extends Component {
 }
 export default Profile;
 const Wrapper = styled.div`
-& .upload{
-    display:grid;
-    justify-content: end;
-    align-content:start;
-}
+    & .upload {
+        position: absolute;
+        right: 5%;
+        top: 15%;
+        display: grid;
+        justify-content: end;
+        align-content: start;
+    }
 `;
 const Content = styled.div`
     width: 100%;
@@ -250,5 +273,5 @@ const Name = styled.div`
 `;
 
 const Row = styled(RRow)`
-    align-content:center;
+    align-content: center;
 `;
