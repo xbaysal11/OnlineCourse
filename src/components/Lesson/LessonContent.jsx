@@ -4,7 +4,7 @@ import styled from "styled-components";
 import CommentsList from "./CommentsList";
 import MarkdownText from "../MarkdownText";
 import Tldr from "./Tldr";
-
+import LessonAutor from "./LessonAutor";
 const data = [
     {
         id: 1,
@@ -86,7 +86,7 @@ class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
-                <p>Creator: Vladimir Zhdanov</p>
+                <LessonAutor />
                 <MarkdownText text={text} />
                 <Tldr />
                 <Button className="next_btn">Следующий шаг</Button>
