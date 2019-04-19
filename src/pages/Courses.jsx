@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col as Col, Button } from "antd";
+import { Row, Col, Button } from "antd";
 import { Container, PageHeader } from "../components/index";
 import { NavLink } from "react-router-dom";
 import Card from "../components/CourseCard";
 import Python from "../assets/img/python.jpg";
 import Js from "../assets/img/Js.jpg";
 import Java from "../assets/img/java.jpg";
-
 
 class Courses extends Component {
     render() {
@@ -22,28 +21,26 @@ class Courses extends Component {
                 <Container>
                     <Title>Our Courses </Title>
 
-                    <Row type="flex" justify="space-around" >
+                    <Row type="flex" justify="space-around">
+
                         <Col span={7}>
                             <NavLink to="/java">
                                 <Card img={Python} />
                             </NavLink>
                         </Col>
-                        
+
                         <Col span={7}>
-                        
-                        <NavLink to="/java">
+                            <NavLink to="/java">
                                 <Card img={Java} />
                             </NavLink>
-                           
                         </Col>
+
                         <Col span={7}>
-                        
-                        <NavLink to="/java">
+                            <NavLink to="/java">
                                 <Card img={Js} />
                             </NavLink>
-                           
                         </Col>
-                    
+                            
                     </Row>
                 </Container>
             </Main>
@@ -66,4 +63,3 @@ const Title = styled.h3`
     text-align: center;
     font-weight: 600;
 `;
-

@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { shadows } from "../config";
 import PT from "prop-types";
-import LessonAutor from "./Lesson/LessonAutor";
-import InstructorSmall from "./Instructors/InstructorSmall";
 
 class Card extends Component {
     static propTypes = {

@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Progress } from "antd";
 import Card from "../CourseCard";
 import { shadows } from "../../config";
 import Python from "../../assets/img/python.jpg";
 import Java from "../../assets/img/java.jpg";
+import Js from "../../assets/img/Js.jpg";
 
 import LessonAutor from "../Lesson/LessonAutor";
 class MyCourses extends Component {
@@ -16,43 +17,40 @@ class MyCourses extends Component {
                         <Row>
                             <Col span={10}>
                                 <Center>
-                                    <Image1>
-                                        <img
-                                            src="https://img.icons8.com/color/480/000000/java.png"
-                                            alt=""
-                                        />
-                                        <h5>JAVA COURSE</h5>
-                                    </Image1>
+                                    <img src={Java} />
                                 </Center>
                             </Col>
 
                             <Col span={14}>
-                            <LessonAutor />
-                                <p>Keep making progress on Learn Java</p>
-                                <Button> RESUME 58%</Button>
+                                <Author>
+                                    <LessonAutor />
+                                    <p>Keep making progress on Learn Java</p>
+                                    <Button> RESUME 58%</Button>
+                                </Author>
                             </Col>
                         </Row>
                     </MyCourse>
                 </Courses>
-
                 <Courses>
                     <MyCourse>
                         <Row>
                             <Col span={10}>
                                 <Center>
-                                    <Image1>
-                                        <img
-                                            src="https://img.icons8.com/color/480/000000/python.png"
-                                            alt=""
-                                        />
-                                        <h5>PYTHON COURSE</h5>
-                                    </Image1>
+                                    <img src={Java} />
                                 </Center>
                             </Col>
+
                             <Col span={14}>
-                                <LessonAutor />
-                                <p>Keep making progress on Learn Python</p>
-                                <Button> RESUME 23%</Button>
+                                <Author>
+                                    <LessonAutor />
+                                    <p>Keep making progress on Learn Java</p>
+                                    <Progress
+                                        percent={50}
+                                        size="small"
+                                        status="active"
+                                    />
+                                    {/* <Button> RESUME 58%</Button> */}
+                                </Author>
                             </Col>
                         </Row>
                     </MyCourse>
@@ -66,12 +64,12 @@ class MyCourses extends Component {
                 <Row type="flex" justify="space-between">
                     <Col span={12}>
                         <Right>
-                            <Card img={Python}/>
+                            <Card img={Python} />
                         </Right>
                     </Col>
                     <Col span={12}>
                         <Left>
-                            <Card img={Java}/>
+                            <Card img={Js} />
                         </Left>
                     </Col>
                 </Row>
@@ -104,6 +102,11 @@ const MyCourse = styled.div`
     border: #d8d8d8 solid 1px;
     padding: 2em;
     box-shadow: ${shadows.shadow};
+    transition: ${shadows.transition};
+    &:hover {
+        ${shadows.hover};
+        cursor: pointer;
+    }
 
     button {
         font-size: 20px;
@@ -125,15 +128,12 @@ const Intro = styled.div`
     }
 `;
 
-const Image1 = styled.div`
+const Center = styled.div`
     img {
-        width: 120px;
-        height: 120px;
-    }
-    button {
-        margin-top: 70px;
+        height: 100%;
+        width: 100%;
     }
 `;
-const Center = styled.div`
-    text-align: center;
+const Author = styled.div`
+    margin-left: 2em;
 `;
