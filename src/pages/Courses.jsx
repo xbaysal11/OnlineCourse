@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col as CCol, Button } from "antd";
+import { Row, Col as Col, Button } from "antd";
 import { Container, PageHeader } from "../components/index";
 import { NavLink } from "react-router-dom";
+import Card from "../components/CourseCard";
+import Python from "../assets/img/python.jpg";
+import Js from "../assets/img/Js.jpg";
+import Java from "../assets/img/java.jpg";
+
 
 class Courses extends Component {
     render() {
@@ -17,63 +22,28 @@ class Courses extends Component {
                 <Container>
                     <Title>Our Courses </Title>
 
-                    <Row type="flex" justify="space-between">
-                        <Col span={5}>
-                            <Course>
-                                <Image>
-                                    <img
-                                        src="https://img.icons8.com/color/500/000000/java-coffee-cup-logo.png"
-                                        alt=""
-                                    />
-                                </Image>
-                                <Top>Java</Top>
-                                <NavLink to="/java">
-                                    <Button type="primary">Go to Course</Button>
-                                </NavLink>
-                            </Course>
+                    <Row type="flex" justify="space-around" >
+                        <Col span={7}>
+                            <NavLink to="/java">
+                                <Card img={Python} />
+                            </NavLink>
                         </Col>
-                        <Col span={5}>
-                            <Course>
-                                <Image>
-                                    <img
-                                        src="https://img.icons8.com/color/480/000000/python.png"
-                                        alt=""
-                                    />
-                                </Image>
-                                <Top>Python</Top>
-                                <NavLink to="/java">
-                                    <Button type="primary" disabled>Go to Course</Button>
-                                </NavLink>
-                            </Course>
+                        
+                        <Col span={7}>
+                        
+                        <NavLink to="/java">
+                                <Card img={Java} />
+                            </NavLink>
+                           
                         </Col>
-                        <Col span={5}>
-                            <Course>
-                                <Image>
-                                    <img
-                                        src="https://img.icons8.com/color/480/000000/javascript.png"
-                                        alt=""
-                                    />
-                                </Image>
-                                <Top>JavaScript</Top>
-                                <NavLink to="/java">
-                                    <Button type="primary" disabled>Go to Course</Button>
-                                </NavLink>
-                            </Course>
+                        <Col span={7}>
+                        
+                        <NavLink to="/java">
+                                <Card img={Js} />
+                            </NavLink>
+                           
                         </Col>
-                        <Col span={5}>
-                            <Course >
-                                <Image>
-                                    <img
-                                        src="https://img.icons8.com/color/480/000000/ruby-programming-language.png"
-                                        alt=""
-                                    />
-                                </Image>
-                                <Top>Ruby</Top>
-                                <NavLink to="/java">
-                                    <Button type="primary" disabled>Go to Course</Button>
-                                </NavLink>
-                            </Course>
-                        </Col>
+                    
                     </Row>
                 </Container>
             </Main>
@@ -97,23 +67,3 @@ const Title = styled.h3`
     font-weight: 600;
 `;
 
-const Course = styled.div`
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px #ccc;
-`;
-const Top = styled.div`
-    margin: 1em 0;
-`;
-const Col = styled(CCol)`
-    margin: 0 1em;
-`;
-
-const Image = styled.div`
-    img {
-        width: 160px;
-        height: 160px;
-    }
-`;

@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { Row, Col, Button } from "antd";
 import Card from "../CourseCard";
 import { shadows } from "../../config";
+import Python from "../../assets/img/python.jpg";
+import Java from "../../assets/img/java.jpg";
+
+import LessonAutor from "../Lesson/LessonAutor";
 class MyCourses extends Component {
     render() {
         return (
@@ -10,7 +14,7 @@ class MyCourses extends Component {
                 <Courses>
                     <MyCourse>
                         <Row>
-                            <Col span={8}>
+                            <Col span={10}>
                                 <Center>
                                     <Image1>
                                         <img
@@ -21,13 +25,12 @@ class MyCourses extends Component {
                                     </Image1>
                                 </Center>
                             </Col>
-                            <Center>
-                                <Col span={16}>
-                                    <h5>Python Foundation</h5>
-                                    <p>Keep making progress on Learn Python</p>
-                                    <Button> RESUME 23%</Button>
-                                </Col>
-                            </Center>
+
+                            <Col span={14}>
+                            <LessonAutor />
+                                <p>Keep making progress on Learn Java</p>
+                                <Button> RESUME 58%</Button>
+                            </Col>
                         </Row>
                     </MyCourse>
                 </Courses>
@@ -35,7 +38,7 @@ class MyCourses extends Component {
                 <Courses>
                     <MyCourse>
                         <Row>
-                            <Col span={8}>
+                            <Col span={10}>
                                 <Center>
                                     <Image1>
                                         <img
@@ -46,14 +49,11 @@ class MyCourses extends Component {
                                     </Image1>
                                 </Center>
                             </Col>
-                            <Center>
-                                <Col span={16}>
-                               
-                                    <h6>Java Foundation</h6>
-                                    <p>Keep making progress on Learn Python</p>
-                                    <Button> RESUME 23%</Button>
-                                </Col>
-                            </Center>
+                            <Col span={14}>
+                                <LessonAutor />
+                                <p>Keep making progress on Learn Python</p>
+                                <Button> RESUME 23%</Button>
+                            </Col>
                         </Row>
                     </MyCourse>
                 </Courses>
@@ -66,12 +66,12 @@ class MyCourses extends Component {
                 <Row type="flex" justify="space-between">
                     <Col span={12}>
                         <Right>
-                            <Card />
+                            <Card img={Python}/>
                         </Right>
                     </Col>
                     <Col span={12}>
                         <Left>
-                            <Card />
+                            <Card img={Java}/>
                         </Left>
                     </Col>
                 </Row>

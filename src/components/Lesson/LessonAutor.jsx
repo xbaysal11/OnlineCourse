@@ -10,7 +10,7 @@ class LessonAutor extends Component {
         return (
             <Autor>
                 <Row>
-                    <Col span={3}>
+                    <Col span={5}>
                         <Avatar
                             shape="circle"
                             size={60}
@@ -18,7 +18,7 @@ class LessonAutor extends Component {
                             src="https://randomuser.me/api/portraits/men/71.jpg"
                         />
                     </Col>
-                    <Col span={21}>
+                    <Col span={19}>
                         <Name>
                             <p>John Snow</p>
                             <UserStatus userStatus="Teacher" />

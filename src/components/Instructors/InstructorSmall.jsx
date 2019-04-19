@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button, Progress } from "antd";
+import { Row, Col} from "antd";
 
 import photo from "../../assets/img/client-1.jpg";
 

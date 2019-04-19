@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import JavaPic from "../assets/img/1280x720-DSC100382016.jpg";
 import { NavLink } from "react-router-dom";
 import { shadows } from "../config";
+import PT from "prop-types";
+import LessonAutor from "./Lesson/LessonAutor";
+import InstructorSmall from "./Instructors/InstructorSmall";
 
 class Card extends Component {
+    static propTypes = {
+        img:PT.string
+    };
     render() {
         return (
             <Shadow>
                 <NavLink to="/java">
                     <Wrapper>
-                        <img src={JavaPic} alt="" />
+                        <img src={this.props.img} alt="" />
 
                         <Text>
                             <h5>Kelvin Weather</h5>
@@ -45,6 +50,7 @@ const Shadow = styled.div`
 const Wrapper = styled.div`
     img {
         width: 100%;
+        height: 200px;
     }
 `;
 const Text = styled.div`
