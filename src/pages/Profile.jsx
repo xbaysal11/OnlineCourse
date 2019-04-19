@@ -159,7 +159,6 @@ class Profile extends Component {
                                     <Row>
                                         <Col span={24}>
                                             <p>
-                                                
                                                 Lorem, ipsum dolor sit amet
                                                 consectetur adipisicing elit.
                                                 Autem fugiat neque, sit maiores
@@ -256,7 +255,7 @@ export default Profile;
 const Wrapper = styled.div`
     & .upload {
         position: absolute;
-        right: 5%;
+        right: 3%;
         top: 15%;
         display: grid;
         justify-content: end;

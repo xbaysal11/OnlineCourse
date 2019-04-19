@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Avatar, Row, Col } from "antd";
+import { Avatar } from "antd";
 
 import { colors } from "../../config";
 import UserStatus from "../ProfileSettings/UserStatus";
@@ -9,22 +9,19 @@ class LessonAutor extends Component {
     render() {
         return (
             <Autor>
-                <Row>
-                    <Col span={5}>
-                        <Avatar
-                            shape="circle"
-                            size={60}
-                            icon="user"
-                            src="https://randomuser.me/api/portraits/men/71.jpg"
-                        />
-                    </Col>
-                    <Col span={19}>
-                        <Name>
-                            <p>John Snow</p>
-                            <UserStatus userStatus="Teacher" />
-                        </Name>
-                    </Col>
-                </Row>
+                <Margin>
+                    <Avatar
+                        shape="circle"
+                        size={60}
+                        icon="user"
+                        src="https://randomuser.me/api/portraits/men/71.jpg"
+                    />
+                </Margin>
+
+                <Name>
+                    <p>John Snow</p>
+                    <UserStatus userStatus="Teacher" />
+                </Name>
             </Autor>
         );
     }
@@ -32,7 +29,13 @@ class LessonAutor extends Component {
 export default LessonAutor;
 const Autor = styled.div`
     margin: 1em 0;
+    display: flex;
 `;
+
+const Margin = styled.div`
+    padding: 0 1em;
+`;
+
 const Name = styled.div`
     color: ${colors.blue};
     font-size: 1.2em;
