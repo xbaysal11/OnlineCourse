@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Progress } from "antd";
 import { NavLink } from "react-router-dom";
-import Card from "../Card";
+import Card from "../CourseCard";
 import { shadows } from "../../config/var";
 class MyCourses extends Component {
     render() {
@@ -49,9 +49,16 @@ class MyCourses extends Component {
                             </Col>
                             <Center>
                                 <Col span={16}>
-                                    <h5>Java Foundation</h5>
+                               
+                                    <h6>Java Foundation</h6>
                                     <p>Keep making progress on Learn Python</p>
                                     <Button> RESUME 23%</Button>
+                                    <Progress
+                                        percent={50}
+                                        size="small"
+                                        status="active"
+                                    />
+                                   
                                 </Col>
                             </Center>
                         </Row>
