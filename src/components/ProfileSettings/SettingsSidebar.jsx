@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import { Menu, Icon, Layout } from "antd";
-import { colors } from "../../config/var";
+import { colors } from "../../config";
 import SiderMenu from "../SiderMenu";
 import { NavLink } from "react-router-dom";
 
@@ -106,4 +106,6 @@ class SettingsSidebar extends Component {
 }
 export default SettingsSidebar;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    margin-top: 24px;
+`;

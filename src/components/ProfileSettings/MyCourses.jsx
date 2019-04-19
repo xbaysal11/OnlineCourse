@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button, Progress } from "antd";
-import { NavLink } from "react-router-dom";
+import { Row, Col, Button } from "antd";
 import Card from "../CourseCard";
-import { shadows } from "../../config/var";
+import { shadows } from "../../config";
 class MyCourses extends Component {
     render() {
         return (
@@ -53,12 +52,6 @@ class MyCourses extends Component {
                                     <h6>Java Foundation</h6>
                                     <p>Keep making progress on Learn Python</p>
                                     <Button> RESUME 23%</Button>
-                                    <Progress
-                                        percent={50}
-                                        size="small"
-                                        status="active"
-                                    />
-                                   
                                 </Col>
                             </Center>
                         </Row>

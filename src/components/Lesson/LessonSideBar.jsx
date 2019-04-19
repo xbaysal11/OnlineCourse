@@ -19,8 +19,7 @@ const data = [
                 id: 2,
                 title: "1.2 Составные условия",
                 progress: 1,
-                available: true,
-                background: "#00FF0640"
+                available: true
             }
         ]
     },

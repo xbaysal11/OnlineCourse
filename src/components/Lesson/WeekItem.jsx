@@ -3,7 +3,7 @@ import PT from "prop-types";
 import styled from "styled-components";
 
 import LessonItem from "./LessonItem";
-import { colors } from "../../config/var";
+import { colors } from "../../config";
 
 const ShevronIcon = () => {
     return (
@@ -61,13 +61,7 @@ class WeekItem extends Component {
                 {collapse === false ? (
                     <LessonsList>
                         {week.lessons.map(l => {
-                            return (
-                                <LessonItem
-                                    key={l.id}
-                                    lesson={l}
-                                    background={l.background}
-                                />
-                            );
+                            return <LessonItem key={l.id} lesson={l} />;
                         })}
                     </LessonsList>
                 ) : null}

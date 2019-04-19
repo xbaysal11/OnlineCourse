@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Input, Row as RRow, Col, Button } from "antd";
 
 import styled from "styled-components";
+import ConfirmForm from "../forms/ConfirmForm";
 class ProfileInfo extends Component {
     render() {
         return (
@@ -39,14 +40,16 @@ class ProfileInfo extends Component {
                     <Col span={20}>
                         <Input placeholder="URL" />
                     </Col>
-                </Row><Row>
+                </Row>
+                <Row>
                     <Col span={4}>
                         <label htmlFor="">Email</label>
                     </Col>
                     <Col span={20}>
                         <Input placeholder="Email" />
                     </Col>
-                </Row><Row>
+                </Row>
+                <Row>
                     <Col span={4}>
                         <label htmlFor="">Facebook</label>
                     </Col>
@@ -59,7 +62,7 @@ class ProfileInfo extends Component {
                         <label htmlFor="">Delete Account</label>
                     </Col>
                     <Col span={4}>
-                        <Button type="danger">Delete!</Button>
+                        <ConfirmForm buttonName="Delete!" />
                     </Col>
                 </Row>
                 <Row>

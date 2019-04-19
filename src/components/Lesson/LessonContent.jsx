@@ -3,7 +3,8 @@ import { Button as BTN } from "antd";
 import styled from "styled-components";
 import CommentsList from "./CommentsList";
 import MarkdownText from "../MarkdownText";
-
+import Tldr from "./Tldr";
+import LessonAutor from "./LessonAutor";
 const data = [
     {
         id: 1,
@@ -80,19 +81,14 @@ const text = `
 материалы, рекомендуем вести конспект или хотя бы делать заметки. Так материал будет лучше
 запоминаться. И желаем удачи!
 `;
-const tldr = `
-**Сертификаты получают студенты набравшие 50 баллов, студенты набравшие 75 баллов и выше 
-получают сертификат с отличием.** 
-`;
 
 class LessonContent extends Component {
     render() {
         return (
             <Wrapper>
-                <p>Creator: Vladimir Zhdanov</p>
+                <LessonAutor />
                 <MarkdownText text={text} />
-                <h4>TLDR</h4>
-                <MarkdownText text={tldr} />
+                <Tldr />
                 <Button className="next_btn">Следующий шаг</Button>
                 <CommentsList comments={data} />
             </Wrapper>
