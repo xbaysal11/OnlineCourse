@@ -16,9 +16,7 @@ class MyCourses extends Component {
                     <MyCourse>
                         <Row>
                             <Col span={10}>
-                                <Center>
-                                    <img src={Java} />
-                                </Center>
+                                <img src={Java} />
                             </Col>
 
                             <Col span={14}>
@@ -35,9 +33,7 @@ class MyCourses extends Component {
                     <MyCourse>
                         <Row>
                             <Col span={10}>
-                                <Center>
-                                    <img src={Java} />
-                                </Center>
+                                <img src={Java} />
                             </Col>
 
                             <Col span={14}>
@@ -45,7 +41,7 @@ class MyCourses extends Component {
                                     <LessonAutor />
                                     <p>Keep making progress on Learn Java</p>
                                     <Progress
-                                        percent={50}
+                                        percent={23}
                                         size="small"
                                         status="active"
                                     />
@@ -99,9 +95,9 @@ const Courses = styled.div`
     margin-bottom: 30px;
 `;
 const MyCourse = styled.div`
-    border: #d8d8d8 solid 1px;
     padding: 2em;
-    box-shadow: ${shadows.shadow};
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px ,rgba(71, 63, 79, 0.08) 0px
+        2px 4px;
     transition: ${shadows.transition};
     &:hover {
         ${shadows.hover};
@@ -119,6 +115,10 @@ const MyCourse = styled.div`
     h4 {
         color: #949494;
     }
+    img {
+        height: 100%;
+        width: 100%;
+    }
 `;
 
 const Intro = styled.div`
@@ -128,12 +128,6 @@ const Intro = styled.div`
     }
 `;
 
-const Center = styled.div`
-    img {
-        height: 100%;
-        width: 100%;
-    }
-`;
 const Author = styled.div`
     margin-left: 2em;
 `;

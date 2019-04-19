@@ -17,6 +17,7 @@ import SettingsSidebar from "./ProfileSettings/SettingsSidebar";
 import ProfileSettings from "./ProfileSettings/ProfileSettings";
 import AccountSettings from "./ProfileSettings/AccountSettings";
 import NotificationsSettigs from "./ProfileSettings/NotificationsSettigs";
+import LinkedAccounts from "./ProfileSettings/LinkedAccounts";
 import MyCourses from "./ProfileSettings/MyCourses";
 import ProfileGrades from "./ProfileSettings/ProfileGrades";
 import ProfileInfo from "./ProfileSettings/ProfileInfo";
@@ -42,5 +43,6 @@ export {
     LoginModal,
     RegisterModal,
     PageHeader,
-    SettingsSidebar
+    SettingsSidebar,
+    LinkedAccounts
 };

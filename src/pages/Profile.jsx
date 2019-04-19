@@ -21,12 +21,12 @@ import {
     NotificationsSettigs,
     MyCourses,
     ProfileGrades,
-    ProfileInfo
+    ProfileInfo,
+    LinkedAccounts
 } from "../components/index";
 import UserStatus from "../components/ProfileSettings/UserStatus";
 
 import { Route } from "react-router-dom";
-import { NONAME } from "dns";
 
 const props = {
     name: "file",
@@ -159,7 +159,7 @@ class Profile extends Component {
                                     <Row>
                                         <Col span={24}>
                                             <p>
-                                                {" "}
+                                                
                                                 Lorem, ipsum dolor sit amet
                                                 consectetur adipisicing elit.
                                                 Autem fugiat neque, sit maiores
@@ -167,7 +167,7 @@ class Profile extends Component {
                                                 aspernatur, incidunt sapiente
                                                 eveniet in illum debitis
                                                 obcaecati non consectetur
-                                                asperiores quasi officia! Animi!{" "}
+                                                asperiores quasi officia! Animi!
                                             </p>
                                         </Col>
                                     </Row>
@@ -239,6 +239,10 @@ class Profile extends Component {
                                 <Route
                                     path="/profile/notifications_settings"
                                     component={NotificationsSettigs}
+                                />
+                                <Route
+                                    path="/profile/linked_accounts"
+                                    component={LinkedAccounts}
                                 />
                             </Content>
                         </Layout>
