@@ -27,6 +27,7 @@ class OpenModal extends Component {
     }
 }
 
+// eslint-disable-next-line react/display-name
 export default React.forwardRef((props, ref) => (
     <ModalContext.Consumer>
         {value => <OpenModal {...{ ...props, ...value }} ref={ref} />}

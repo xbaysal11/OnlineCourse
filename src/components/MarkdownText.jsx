@@ -32,7 +32,9 @@ const pre = props => {
                         ))}
                         <div className="line-numbers-rows">
                             {tokens.map((_, i) => (
-                                <span className="line-number">{i}</span>
+                                <span key={i} className="line-number">
+                                    {i}
+                                </span>
                             ))}
                         </div>
                     </pre>
@@ -41,6 +43,8 @@ const pre = props => {
         </Wrapper>
     );
 };
+
+pre.propTypes = { children: PT.any };
 
 class MarkdownText extends Component {
     static propTypes = {

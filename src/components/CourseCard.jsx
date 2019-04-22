@@ -6,7 +6,7 @@ import PT from "prop-types";
 
 class Card extends Component {
     static propTypes = {
-        img:PT.string
+        img: PT.string
     };
     render() {
         return (
@@ -18,9 +18,9 @@ class Card extends Component {
                         <Text>
                             <h5>Kelvin Weather</h5>
                             <p>
-                                It's time to build fluency in CSS Fundamentals.
+                                Its time to build fluency in CSS Fundamentals.
                                 <br />
-                                In this next Pro Project, we're going to
+                                In this next Pro Project, were going to
                                 <br />
                                 Visual Rules in CSS
                             </p>
@@ -41,9 +41,8 @@ const Shadow = styled.div`
         ${shadows.hover}
     }
 `;
-    /* shadow:("rgba(46, 41, 51, 0.08) 0px 1px 2px",
+/* shadow:("rgba(46, 41, 51, 0.08) 0px 1px 2px",
     "rgba(71, 63, 79, 0.08) 0px 2px 4px"), */
-
 
 const Wrapper = styled.div`
     img {

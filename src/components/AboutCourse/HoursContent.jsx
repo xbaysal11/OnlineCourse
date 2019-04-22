@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Icon } from "antd";
+import PT from "prop-types";
 
 class Progress extends Component {
+    static propTypes = {
+        children: PT.any
+    };
     render() {
         return (
             <>

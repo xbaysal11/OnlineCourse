@@ -9,7 +9,8 @@ import logo from "../assets/img/logo.png";
 class PageHeader extends Component {
     static propTypes = {
         background: PT.string.isRequired,
-        user: PT.object.isRequired
+        user: PT.object.isRequired,
+        children: PT.any
     };
 
     render() {

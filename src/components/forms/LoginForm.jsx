@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Formik } from "formik";
+import PT from "prop-types";
 
 import styled from "styled-components";
 
@@ -14,6 +15,9 @@ import {
 } from "antd";
 
 class LoginForm extends Component {
+    static propTypes = {
+        form: PT.object
+    };
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -76,7 +80,6 @@ class LoginForm extends Component {
                                 valuePropName: "checked",
                                 initialValue: true
                             })(<Checkbox>Remember me</Checkbox>)}
-
                             <OpenModal name={"restore"}>
                                 <Button type="primary">Forgot password</Button>
                             </OpenModal>

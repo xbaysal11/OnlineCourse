@@ -23,7 +23,14 @@ module.exports = {
     },
     plugins: ["react", "prettier", "import"],
     rules: {
-        indent: ["error", 4],
+        indent: [
+            "error",
+            4,
+            {
+                SwitchCase: 1
+            }
+        ],
+
         "linebreak-style": ["error", "unix"],
         quotes: ["error", "double"],
         semi: ["error", "always"],
@@ -34,6 +41,8 @@ module.exports = {
         "react/jsx-uses-vars": 1,
         "react/jsx-uses-react": 1,
         "react/prop-types": 2,
+        "react/no-unescaped-entities": 0,
+
         // "react/display-name": 0,
         // debug
         "no-console": 0,

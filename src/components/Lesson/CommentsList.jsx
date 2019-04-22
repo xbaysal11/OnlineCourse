@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import PT from "prop-types";
-import { Button } from "antd";
 import CommentEditor from "./CommentEditor";
 import CommentHeader from "./CommentHeader";
 import MarkdownText from "../MarkdownText";
@@ -9,10 +8,12 @@ import MarkdownText from "../MarkdownText";
 const CommentsList = ({ comments }) => (
     <div>
         {comments.map(comment => (
-            <LessonComment comment={comment} />
+            <LessonComment key={comment.id} comment={comment} />
         ))}
     </div>
 );
+
+CommentsList.propTypes = { comments: PT.string };
 
 class LessonComment extends Component {
     static propTypes = {
@@ -118,8 +119,4 @@ const Inside = styled.div`
     margin: 1em 0 1em 5px;
     color: #222;
     font-weight: 500;
-`;
-
-const Outside = styled.div`
-    margin: 1em 0 1em 2em;
 `;

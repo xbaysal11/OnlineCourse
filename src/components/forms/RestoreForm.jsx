@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import PT from "prop-types";
 
 import {
     Form,
     Input as InputAntd,
-    Button as ButtonAntd,
-    Select
+    Button as ButtonAntd
+    // Select
     // AutoComplete
 } from "antd";
 
-const { Option } = Select;
+// const { Option } = Select;
 // const AutoCompleteOption = AutoComplete.Option;
 
 class RestorForm extends Component {
@@ -17,7 +18,9 @@ class RestorForm extends Component {
         confirmDirty: false,
         autoCompleteResult: []
     };
-
+    static propTypes = {
+        form: PT.object
+    };
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
@@ -87,14 +90,14 @@ class RestorForm extends Component {
                 }
             }
         };
-        const prefixSelector = getFieldDecorator("prefix", {
-            initialValue: "996"
-        })(
-            <Select style={{ width: 80 }}>
-                <Option value="996">+996</Option>
-                <Option value="7">+7</Option>
-            </Select>
-        );
+        // const prefixSelector = getFieldDecorator("prefix", {
+        //     initialValue: "996"
+        // })(
+        //     <Select style={{ width: 80 }}>
+        //         <Option value="996">+996</Option>
+        //         <Option value="7">+7</Option>
+        //     </Select>
+        // );
 
         return (
             <Wrapper>

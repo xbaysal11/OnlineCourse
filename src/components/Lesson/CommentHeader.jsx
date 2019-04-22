@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Avatar, Rate, Row, Col } from "antd";
+import { Avatar } from "antd";
 import PT from "prop-types";
 import styled from "styled-components";
 

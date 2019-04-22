@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { PageHeader } from "../components/index";
 import styled from "styled-components";
 import { List, Avatar, Icon, Calendar, Statistic } from "antd";
+import PT from "prop-types";
 
 const listData = [];
 for (let i = 0; i < 23; i++) {
@@ -30,6 +31,7 @@ const IconText = ({ type, text }) => (
     </span>
 );
 
+IconText.propTypes = { type: PT.any, text: PT.any };
 function onPanelChange(value, mode) {
     console.log(value, mode);
 }
@@ -86,9 +88,21 @@ class Home extends Component {
                                 <List.Item
                                     key={item.title}
                                     actions={[
-                                        <IconText type="star-o" text="156" />,
-                                        <IconText type="like-o" text="156" />,
-                                        <IconText type="message" text="2" />
+                                        <IconText
+                                            key={item.id}
+                                            type="star-o"
+                                            text="156"
+                                        />,
+                                        <IconText
+                                            key={item.id}
+                                            type="like-o"
+                                            text="156"
+                                        />,
+                                        <IconText
+                                            key={item.id}
+                                            type="message"
+                                            text="2"
+                                        />
                                     ]}
                                     extra={
                                         <img

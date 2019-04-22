@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button } from "antd";
+import { Row, Col } from "antd";
 import { Container, PageHeader } from "../components/index";
 import { NavLink } from "react-router-dom";
 import Card from "../components/CourseCard";
@@ -22,7 +22,6 @@ class Courses extends Component {
                     <Title>Our Courses </Title>
 
                     <Row type="flex" justify="space-around">
-
                         <Col span={7}>
                             <NavLink to="/java">
                                 <Card img={Python} />
@@ -40,7 +39,6 @@ class Courses extends Component {
                                 <Card img={Js} />
                             </NavLink>
                         </Col>
-                            
                     </Row>
                 </Container>
             </Main>

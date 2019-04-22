@@ -1,14 +1,17 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-
+import PT from "prop-types";
 
 class WeekCounter extends Component {
+    static propTypes = {
+        children: PT.any
+    };
     render() {
         return (
             <>
                 <WeekCount>
-                            <h5>WEEK</h5>
-                           <h1>{this.props.children}</h1>
+                    <h5>WEEK</h5>
+                    <h1>{this.props.children}</h1>
                 </WeekCount>
             </>
         );
@@ -26,4 +29,3 @@ const WeekCount = styled.div`
         color: rgb(110, 118, 127);
     }
 `;
-

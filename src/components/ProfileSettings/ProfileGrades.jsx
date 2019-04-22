@@ -11,6 +11,7 @@ const columns = [
         order: true,
         fixed: "left",
         width: 100,
+        // eslint-disable-next-line react/display-name
         render: text => <span>{text}</span>,
         onCell: () => ({ color: "#F9C152" })
     },

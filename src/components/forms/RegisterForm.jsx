@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import PT from "prop-types";
 
 import {
     Form,
@@ -19,6 +20,9 @@ class RegisterForm extends Component {
     state = {
         confirmDirty: false,
         autoCompleteResult: []
+    };
+    static propTypes = {
+        form: PT.object
     };
 
     handleSubmit = e => {

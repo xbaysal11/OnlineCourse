@@ -25,8 +25,7 @@ class Week extends Component {
                                     able to work on professional conversational
                                     vocabulary and proper word stress and
                                     intonation. After the final lesson you will
-                                    be able to present a short "Elevator
-                                    Speech."
+                                    be able to present a short Elevator Speech.
                                 </p>
                             </WeekHead>
                             <HoursContent>

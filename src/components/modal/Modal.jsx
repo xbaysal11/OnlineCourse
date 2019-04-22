@@ -10,7 +10,8 @@ class Modal extends Component {
         delModal: PT.func,
         openModal: PT.func,
         closeModal: PT.func,
-        isOpen: PT.func
+        isOpen: PT.func,
+        children: PT.any
     };
 
     componentDidMount() {
@@ -35,6 +36,7 @@ class Modal extends Component {
         );
     }
 }
+// eslint-disable-next-line react/display-name
 export default React.forwardRef((props, ref) => (
     <ModalContext.Consumer>
         {value => <Modal {...{ ...props, ...value }} ref={ref} />}
