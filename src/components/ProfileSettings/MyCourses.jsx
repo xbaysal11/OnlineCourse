@@ -23,7 +23,11 @@ class MyCourses extends Component {
                                 <Author>
                                     <LessonAutor />
                                     <p>Keep making progress on Learn Java</p>
-                                    <Button> RESUME 58%</Button>
+                                    <Progress
+                                        percent={23}
+                                        size="small"
+                                        status="active"
+                                    />
                                 </Author>
                             </Col>
                         </Row>
@@ -33,7 +37,7 @@ class MyCourses extends Component {
                     <MyCourse>
                         <Row>
                             <Col span={10}>
-                                <img src={Java} />
+                                <img src={Js} />
                             </Col>
 
                             <Col span={14}>
@@ -96,8 +100,8 @@ const Courses = styled.div`
 `;
 const MyCourse = styled.div`
     padding: 2em;
-    box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px ,rgba(71, 63, 79, 0.08) 0px
-        2px 4px;
+    box-shadow: rgba(46, 41, 51, 0.08) 0px 1px 2px,
+        rgba(71, 63, 79, 0.08) 0px 2px 4px;
     transition: ${shadows.transition};
     &:hover {
         ${shadows.hover};
