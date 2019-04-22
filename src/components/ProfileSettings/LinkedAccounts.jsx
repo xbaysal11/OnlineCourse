@@ -10,7 +10,7 @@ class LinkedAccounts extends Component {
                     <Row>
                         <Col span={12}>
                             <Row>
-                                <Col span={5}>
+                                <Col span={4}>
                                     <Icon
                                         type="google"
                                         style={{
@@ -20,9 +20,9 @@ class LinkedAccounts extends Component {
                                         }}
                                     />
                                 </Col>
-                                <Col span={7}>GOOGLE</Col>
-                                <Col span={12}>
-                                    <Link>LINK ACCOUNT</Link>
+                                <Col span={6}>Google</Col>
+                                <Col span={14}>
+                                    <Link>Link Account</Link>
                                 </Col>
                             </Row>
                         </Col>
@@ -33,7 +33,7 @@ class LinkedAccounts extends Component {
                     <Row>
                         <Col span={12}>
                             <Row>
-                                <Col span={5}>
+                                <Col span={4}>
                                     <Icon
                                         type="github"
                                         style={{
@@ -43,21 +43,20 @@ class LinkedAccounts extends Component {
                                         }}
                                     />
                                 </Col>
-                                <Col span={7}>GITHUB</Col>
-                                <Col span={12}>
-                                    <Link>LINK ACCOUNT</Link>
+                                <Col span={6}>Github</Col>
+                                <Col span={14}>
+                                    <Link>Link Account</Link>
                                 </Col>
                             </Row>
                         </Col>
                         <Col span={12} />
                     </Row>
-                    
                 </Margin>
                 <Margin>
                     <Row>
                         <Col span={12}>
                             <Row>
-                                <Col span={5}>
+                                <Col span={4}>
                                     <Icon
                                         type="facebook"
                                         style={{
@@ -67,9 +66,9 @@ class LinkedAccounts extends Component {
                                         }}
                                     />
                                 </Col>
-                                <Col span={7}>FACEBOOK</Col>
-                                <Col span={12}>
-                                    <Link>LINK ACCOUNT</Link>
+                                <Col span={6}>Facebook</Col>
+                                <Col span={14}>
+                                    <Link>Link Account</Link>
                                 </Col>
                             </Row>
                         </Col>
@@ -80,7 +79,7 @@ class LinkedAccounts extends Component {
                     <Row>
                         <Col span={12}>
                             <Row>
-                                <Col span={5}>
+                                <Col span={4}>
                                     <Icon
                                         type="twitter"
                                         style={{
@@ -90,9 +89,9 @@ class LinkedAccounts extends Component {
                                         }}
                                     />
                                 </Col>
-                                <Col span={7}>TWITTER</Col>
-                                <Col span={12}>
-                                    <Link>LINK ACCOUNT</Link>
+                                <Col span={6}>Twitter</Col>
+                                <Col span={14}>
+                                    <Link>Link Account</Link>
                                 </Col>
                             </Row>
                         </Col>
@@ -117,7 +116,7 @@ const Wrapper = styled.form`
 
 const Margin = styled.div`
     margin-top: 2em;
-
+    font-weight: 500;
 `;
 const Link = styled.a`
     border: #d06667 solid 1px;
