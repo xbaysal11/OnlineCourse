@@ -1,66 +1,86 @@
+/* eslint-disable react/display-name */
 import React, { Component } from "react";
-
 import styled from "styled-components";
-import Table from "fast-table";
+import { Table, Divider, Tag } from "antd";
+
 const columns = [
     {
-        title: "0",
-        align: "left",
-        dataIndex: "key",
-        // sortEnable: true,
-        order: true,
-        fixed: "left",
-        width: 100,
-        // eslint-disable-next-line react/display-name
-        render: text => <span>{text}</span>,
-        onCell: () => ({ color: "#F9C152" })
+        title: "Name",
+        dataIndex: "name",
+        key: "name",
+        render: text => <a href="javascript:;">{text}</a>
     },
     {
-        title: "1",
-        dataIndex: "key0",
-        width: 100,
-        fixed: "left",
-        sortEnable: true
+        title: "Age",
+        dataIndex: "age",
+        key: "age"
     },
     {
-        title: "2",
-        dataIndex: "key1",
-        width: 100
-        // bodyStyle: { background: "#999999", color: "#11A1FF" }
+        title: "Address",
+        dataIndex: "address",
+        key: "address"
     },
     {
-        title: "3",
-        align: "left",
-        dataIndex: "key2",
-        width: 130
+        title: "Tags",
+        key: "tags",
+        dataIndex: "tags",
+        render: tags => (
+            <span>
+                {tags.map(tag => {
+                    let color = tag.length > 5 ? "geekblue" : "green";
+                    if (tag === "loser") {
+                        color = "volcano";
+                    }
+                    return (
+                        <Tag color={color} key={tag}>
+                            {tag.toUpperCase()}
+                        </Tag>
+                    );
+                })}
+            </span>
+        )
     },
     {
-        title: "4",
-        align: "left",
-        dataIndex: "key3",
-        width: 120
-    },
-    {
-        title: "5",
-        align: "left",
-        fixed: "right",
-        dataIndex: "key4",
-        width: 100
+        title: "Action",
+        key: "action",
+        render: (text, record) => (
+            <span>
+                <a href="javascript:;">Invite {record.name}</a>
+                <Divider type="vertical" />
+                <a href="javascript:;">Delete</a>
+            </span>
+        )
     }
 ];
 
-const dataSource = [
-    { key: 0, key0: "a", key1: "b", key2: "c", key3: "d", key4: "e" }
+const data = [
+    {
+        key: "1",
+        name: "John Brown",
+        age: 32,
+        address: "New York No. 1 Lake Park",
+        tags: ["nice", "developer"]
+    },
+    {
+        key: "2",
+        name: "Jim Green",
+        age: 42,
+        address: "London No. 1 Lake Park",
+        tags: ["loser"]
+    },
+    {
+        key: "3",
+        name: "Joe Black",
+        age: 32,
+        address: "Sidney No. 1 Lake Park",
+        tags: ["cool", "teacher"]
+    }
 ];
 class ProfileGrades extends Component {
     render() {
         return (
             <Wrapper>
-                <Table
-                    // bordered={true}
-                    columns={columns}
-                    dataSource={dataSource}
-                />
+                <Table columns={columns} dataSource={data} />
             </Wrapper>
         );
     }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Row, Col, Button, Progress } from "antd";
+import { Row, Col, Progress } from "antd";
 import Card from "../CourseCard";
 import { shadows } from "../../config";
 import Python from "../../assets/img/python.jpg";
